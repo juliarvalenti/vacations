@@ -1,0 +1,43 @@
+---
+// Fullscreen viewer for every `.photo` inside <main>. Arrow keys / buttons step through them in page order.
+---
+<dialog id="lightbox">
+  <button class="close" aria-label="Close">×</button>
+  <button class="lb-arrow lb-prev" aria-label="Previous">‹</button>
+  <img alt="" />
+  <button class="lb-arrow lb-next" aria-label="Next">›</button>
+</dialog>
+
+<style>
+  #lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+  #lightbox::backdrop { background: rgba(10,10,10,.55); backdrop-filter: blur(18px) saturate(.8); -webkit-backdrop-filter: blur(18px) saturate(.8); }
+  #lightbox img { width: 100vw; height: 100vh; object-fit: contain; padding: 32px; filter: drop-shadow(0 20px 50px rgba(0,0,0,.6)); }
+  #lightbox button { position: fixed; z-index: 2; border: 0; background: rgba(255,255,255,.12); color: #fff; cursor: pointer; border-radius: 50%; width: 44px; height: 44px; font-size: 28px; line-height: 1; }
+  #lightbox button:hover { background: rgba(255,255,255,.25); }
+  .close { top: 16px; right: 16px; }
+  .lb-arrow { top: 50%; translate: 0 -50%; }
+  .lb-prev { left: 16px; } .lb-next { right: 16px; }
+</style>
+
+<script>
+  const lb = document.getElementById('lightbox') as HTMLDialogElement;
+  const lbImg = lb.querySelector('img')!;
+  const photos = [...document.querySelectorAll<HTMLImageElement>('main .photo')];
+  let cur = 0;
+  const show = (i: number) => {
+    cur = (i + photos.length) % photos.length;
+    lbImg.src = src(cur);
+    // warm the neighbours so arrow keys feel instant
+    for (const j of [cur + 1, cur - 1]) new Image().src = src((j + photos.length) % photos.length);
+  };
+  const src = (i: number) => photos[i].getAttribute('src')!;
+  photos.forEach((p, i) => p.addEventListener('click', () => { show(i); lb.showModal(); }));
+  lb.querySelector('.lb-prev')!.addEventListener('click', () => show(cur - 1));
+  lb.querySelector('.lb-next')!.addEventListener('click', () => show(cur + 1));
+  lb.querySelector('.close')!.addEventListener('click', () => lb.close());
+  lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') show(cur + 1);
+    if (e.key === 'ArrowLeft') show(cur - 1);
+  });
+</script>

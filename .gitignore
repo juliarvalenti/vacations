@@ -1,0 +1,5 @@
+_import/originals/
+.DS_Store
+node_modules/
+dist/
+.astro/

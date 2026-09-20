@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import Grid from '../components/Grid.astro';
+import Carousel from '../components/Carousel.astro';
+import Photo from '../components/Photo.astro';
+import FloatingToc from '../components/FloatingToc.astro';
+import { trips, bySlug } from '../trips';
+
+export const getStaticPaths = () => trips.map((t) => ({ params: { trip: t.slug } }));
+const trip = bySlug(Astro.params.trip!);
+const heroImgs = trip.hero.flatMap((b) => b.images);
+const [cover, ...restHero] = heroImgs;
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+const sections = trip.sections.map((s) => ({ id: slug(s.heading), heading: s.heading }));
+const total = trip.sections.flatMap((s) => s.blocks).reduce((n, b) => n + b.images.length, 0) + heroImgs.length;
+---
+<Base title={trip.title} trip={trip} sections={sections}>
+  <FloatingToc sections={sections} />
+  <section class="hero">
+    {cover && <Photo img={cover} trip={trip.slug} sizes="100vw" eager class="cover" />}
+    <div class="hero-text wrap">
+      <p class="eyebrow">{trip.year} · {total} photos</p>
+      <h1>{trip.title}</h1>
+      {trip.subtitle && <p class="sub">{trip.subtitle}</p>}
+    </div>
+  </section>
+
+
+  {restHero.length > 0 && <section class="wrap section"><Grid images={restHero} trip={trip.slug} /></section>}
+
+  {trip.sections.map((s, i) => (
+    <section class="wrap section" id={slug(s.heading)} data-heading={s.heading}>
+      <header>
+        <span class="num">{String(i + 1).padStart(2, '0')}</span>
+        <div>
+          {s.subtitle && <p class="eyebrow">{s.subtitle}</p>}
+          <h2>{s.heading}</h2>
+          {s.text.map((t) => <p class="note">{t}</p>)}
+        </div>
+      </header>
+      {s.blocks.map((b) =>
+        b.type === 'carousel'
+          ? <Carousel images={b.images} trip={trip.slug} />
+          : <Grid images={b.images} trip={trip.slug} />
+      )}
+    </section>
+  ))}
+</Base>
+
+<style>
+  .hero { position: relative; min-height: 72vh; display: grid; align-items: end; color: #fff; }
+  :global(.cover) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; cursor: default !important; }
+  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.05) 60%); }
+  .hero-text { position: relative; z-index: 1; padding-block: 48px; width: 100%; }
+  .hero .eyebrow { color: rgba(255,255,255,.75); }
+  h1 { font-size: clamp(44px, 8vw, 112px); }
+  .sub { margin: 10px 0 0; font-size: 18px; opacity: .85; }
+
+  .section { padding-block: 56px 0; display: grid; gap: 22px; scroll-margin-top: 64px; }
+  .section header { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: start; }
+  .num { font-family: var(--serif); font-size: 28px; color: var(--muted); line-height: 1.1; }
+  h2 { font-size: clamp(30px, 4vw, 48px); }
+  .note { max-width: 62ch; color: var(--muted); font-size: 15px; margin: 12px 0 0; }
+  @media (max-width: 700px) { .section header { grid-template-columns: 1fr; } .num { display: none; } }
+</style>

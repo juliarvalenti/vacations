@@ -1,0 +1,58 @@
+---
+import type { Img } from '../trips';
+import Photo from './Photo.astro';
+interface Props { images: Img[]; trip: string }
+const { images, trip } = Astro.props;
+---
+<div class="carousel">
+  <div class="track">
+    {images.map((img) => <div class="slide"><Photo img={img} trip={trip} sizes="(max-width: 800px) 100vw, 1240px" /></div>)}
+  </div>
+  <button class="arrow prev" aria-label="Previous">‹</button>
+  <button class="arrow next" aria-label="Next">›</button>
+  <div class="meta">
+    <span class="count"><span class="i">1</span> / {images.length}</span>
+    <div class="bar"><div class="fill" style={`width:${100 / images.length}%`}></div></div>
+  </div>
+</div>
+
+<style>
+  .carousel { position: relative; background: var(--stage); color: #fff; margin-inline: calc(50% - 50vw); width: 100vw; overflow: hidden; padding: 32px 0 20px; }
+  .track {
+    display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none;
+    height: min(78vh, 760px); width: 100%;
+  }
+  .track::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 100%; width: 100%; height: 100%; min-width: 0; scroll-snap-align: start; padding: 0 clamp(16px, 6vw, 96px); }
+  .slide :global(.photo) { width: 100%; height: 100%; object-fit: contain; background: none !important; cursor: zoom-in; }
+  .arrow {
+    position: absolute; top: 50%; translate: 0 -50%; width: 48px; height: 48px; border: 0; border-radius: 50%;
+    background: rgba(255,255,255,.1); color: #fff; font-size: 30px; line-height: 1; cursor: pointer; transition: background .2s;
+  }
+  .arrow:hover { background: rgba(255,255,255,.28); }
+  .prev { left: clamp(8px, 2vw, 28px); } .next { right: clamp(8px, 2vw, 28px); }
+  .meta { max-width: var(--max); margin: 18px auto 0; padding: 0 clamp(16px, 4vw, 48px); display: flex; align-items: center; gap: 16px; font-size: 12px; letter-spacing: .08em; opacity: .8; font-variant-numeric: tabular-nums; }
+  .bar { flex: 1; height: 1px; background: rgba(255,255,255,.2); position: relative; }
+  .fill { position: absolute; left: 0; top: -1px; height: 3px; background: #fff; transition: left .3s ease; }
+  @media (max-width: 800px) { .track { height: 62vh; } .arrow { display: none; } }
+  /* on wide screens the floating ToC lives in the margin, so keep the band inside the content column */
+  @media (min-width: 1500px) { .carousel { margin-inline: 0; width: auto; border-radius: 8px; } .meta { padding: 0 24px; } }
+</style>
+
+<script>
+  for (const c of document.querySelectorAll<HTMLElement>('.carousel')) {
+    const track = c.querySelector<HTMLElement>('.track')!;
+    const counter = c.querySelector<HTMLElement>('.i')!;
+    const fill = c.querySelector<HTMLElement>('.fill')!;
+    const n = track.children.length;
+    const index = () => Math.round(track.scrollLeft / track.clientWidth);
+    const go = (i: number) => track.scrollTo({ left: ((i + n) % n) * track.clientWidth, behavior: 'smooth' });
+    c.querySelector('.prev')!.addEventListener('click', () => go(index() - 1));
+    c.querySelector('.next')!.addEventListener('click', () => go(index() + 1));
+    track.addEventListener('scroll', () => {
+      const i = index();
+      counter.textContent = String(i + 1);
+      fill.style.left = `${(i / n) * 100}%`;
+    }, { passive: true });
+  }
+</script>

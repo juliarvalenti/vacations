@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+import TopBar from '../components/TopBar.astro';
+import Lightbox from '../components/Lightbox.astro';
+const { title, trip, sections } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <TopBar trip={trip} sections={sections} />
+    <main><slot /></main>
+    <footer class="wrap foot">Family photo albums · {new Date().getFullYear()}</footer>
+
+    <Lightbox />
+  </body>
+</html>
+
+<style>
+  .foot { padding-block: 64px 32px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); margin-top: 48px; }
+
+</style>

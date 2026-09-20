@@ -1,0 +1,26 @@
+---
+// Vertical section index pinned in the right margin on wide screens. Highlights the section in view.
+// Below --toc-bp the TopBar's sections dropdown takes over.
+interface Props { sections: { id: string; heading: string }[] }
+const { sections } = Astro.props;
+---
+<nav class="ftoc" aria-label="Sections">
+  {sections.map((s, i) => (
+    <a href={`#${s.id}`} data-id={s.id}>
+      <span class="k">{String(i + 1).padStart(2, '0')}</span>
+      <span class="h">{s.heading}</span>
+    </a>
+  ))}
+</nav>
+
+<style>
+  .ftoc { display: none; }
+  @media (min-width: 1500px) {
+    .ftoc { position: fixed; right: clamp(20px, calc((100vw - var(--max)) / 2 - 220px), 80px); top: 50%; translate: 0 -50%; z-index: 4; display: flex; flex-direction: column; gap: 2px; width: 200px; font-size: 12.5px; }
+    .ftoc a { display: flex; gap: 8px; align-items: baseline; padding: 5px 10px; color: var(--muted); border-left: 2px solid transparent; transition: color .15s, border-color .15s; }
+    .ftoc a:hover { color: var(--fg); }
+    .ftoc a[aria-current] { color: var(--fg); border-color: var(--accent); }
+    .ftoc .k { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 600; flex: none; }
+    .ftoc .h { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  }
+</style>

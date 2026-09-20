@@ -1,0 +1,84 @@
+---
+// One sticky bar for the whole site: brand · trip switcher · (on trip pages) section index that
+// tracks the section in view.
+import { trips, type Trip } from '../trips';
+interface Props { trip?: Trip; sections?: { id: string; heading: string }[] }
+const { trip, sections = [] } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
+---
+<header class="bar">
+  <div class="wrap row">
+    <a class="brand" href={base}>Vacations</a>
+
+    <details class="menu">
+      <summary>{trip ? `${trip.year} ${cap(trip.slug)}` : 'All trips'} <i>▾</i></summary>
+      <ul>
+        {trips.map((t) => (
+          <li><a href={`${base}${t.slug}/`} aria-current={t.slug === trip?.slug ? 'page' : undefined}>
+            <span class="k">{t.year}</span>{cap(t.slug)}
+          </a></li>
+        ))}
+      </ul>
+    </details>
+
+    {sections.length > 0 && (
+      <details class="menu sections">
+        <summary><span class="k" data-k>01</span><span data-h>{sections[0].heading}</span> <i>▾</i></summary>
+        <ul>
+          {sections.map((s, i) => (
+            <li><a href={`#${s.id}`} data-id={s.id}><span class="k">{String(i + 1).padStart(2, '0')}</span>{s.heading}</a></li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </div>
+</header>
+
+<style>
+  .bar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .row { display: flex; align-items: center; gap: 20px; height: 52px; font-size: 13px; }
+  .brand { font-family: var(--serif); font-size: 19px; margin-right: 4px; }
+  .menu { position: relative; }
+  .menu.sections { margin-left: auto; min-width: 0; }
+  summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 6px; font-weight: 500; white-space: nowrap; user-select: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary:hover, details[open] summary { background: var(--bg-2); }
+  summary i { font-style: normal; font-size: 10px; opacity: .6; }
+  .sections summary [data-h] { overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
+  ul { position: absolute; top: calc(100% + 6px); left: 0; margin: 0; padding: 6px; list-style: none; min-width: 240px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 40px rgba(0,0,0,.14); }
+  .sections ul { left: auto; right: 0; }
+  li a { display: flex; gap: 10px; padding: 8px 10px; border-radius: 5px; color: var(--muted); white-space: nowrap; }
+  li a:hover { background: var(--bg-2); color: var(--fg); }
+  li a[aria-current] { color: var(--fg); font-weight: 500; }
+  .k { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 600; min-width: 2.2em; }
+  @media (min-width: 1500px) { .menu.sections { display: none; } }
+  @media (max-width: 600px) { .brand { display: none; } .row { gap: 8px; } }
+</style>
+
+<script>
+  const menus = [...document.querySelectorAll<HTMLDetailsElement>('.menu')];
+  document.addEventListener('click', (e) => {
+    for (const m of menus) if (!m.contains(e.target as Node)) m.open = false;
+  });
+  menus.forEach((m) => m.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => (m.open = false))));
+
+  // scroll-spy: label the sections menu with whichever section is in view
+  const sec = document.querySelector<HTMLDetailsElement>('.menu.sections');
+  if (sec) {
+    const k = sec.querySelector('[data-k]')!, h = sec.querySelector('[data-h]')!;
+    const links = [...sec.querySelectorAll<HTMLAnchorElement>('a[data-id]')];
+    const floating = [...document.querySelectorAll<HTMLAnchorElement>('.ftoc a[data-id]')];
+    const targets = links.map((a) => document.getElementById(a.dataset.id!)!);
+    const update = () => {
+      const y = window.scrollY + 120;
+      let i = targets.findLastIndex((t) => t.offsetTop <= y);
+      if (i < 0) i = 0;
+      k.textContent = String(i + 1).padStart(2, '0');
+      h.textContent = targets[i].dataset.heading!;
+      links.forEach((a, j) => a.toggleAttribute('aria-current', j === i));
+      floating.forEach((a, j) => a.toggleAttribute('aria-current', j === i));
+    };
+    addEventListener('scroll', update, { passive: true }); update();
+  }
+</script>

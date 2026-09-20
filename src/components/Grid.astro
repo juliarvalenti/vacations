@@ -1,0 +1,18 @@
+---
+import type { Img } from '../trips';
+import Photo from './Photo.astro';
+interface Props { images: Img[]; trip: string }
+const { images, trip } = Astro.props;
+const cols = images.length <= 3 ? images.length : 3;
+---
+<div class="grid" style={`--cols:${cols}`}>
+  {images.map((img) => <Photo img={img} trip={trip} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" />)}
+</div>
+
+<style>
+  .grid { columns: var(--cols); column-gap: var(--gap); }
+  .grid :global(.photo) { margin-bottom: var(--gap); border-radius: 3px; break-inside: avoid; transition: transform .25s ease, box-shadow .25s ease; }
+  .grid :global(.photo:hover) { transform: scale(1.012); box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+  @media (max-width: 1100px) { .grid { columns: min(var(--cols), 2); } }
+  @media (max-width: 700px)  { .grid { columns: 1; } }
+</style>
