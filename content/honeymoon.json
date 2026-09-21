@@ -1,0 +1,946 @@
+{
+  "title": "Hawaiʻi Honeymoon",
+  "subtitle": "September 6–20, 2026",
+  "date": "2026-09-06",
+  "placeholder": true,
+  "hero": [
+    {
+      "type": "grid",
+      "images": [
+        {
+          "id": "placeholder-1",
+          "file": "001",
+          "w": 1600,
+          "h": 2400
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "aloha",
+      "subtitle": "September 6",
+      "text": [
+        "Check in at Horizon Guest House after 2pm",
+        "Dinner at Don's Mai Tai Bar"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-2",
+              "file": "002",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-3",
+              "file": "003",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-4",
+              "file": "004",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-5",
+              "file": "005",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-6",
+              "file": "006",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-7",
+              "file": "007",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "ancients",
+      "subtitle": "September 7",
+      "text": [
+        "Kona coffee: Greenwell",
+        "Birding the Makāula-ʻOʻoma Trail and Honuaʻula Forest Reserve",
+        "Puʻukoholā Heiau National Historic Site",
+        "Na Loko Iʻa O Kalahuipuaʻa Historic Park",
+        "Puakō Petroglyphs",
+        "7pm dinner at CanoeHouse"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-8",
+              "file": "008",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-9",
+              "file": "009",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-10",
+              "file": "010",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-11",
+              "file": "011",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-12",
+              "file": "012",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-13",
+              "file": "013",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "cowboys",
+      "subtitle": "September 8",
+      "text": [
+        "Kona coffee: Hula Daddy",
+        "Hat at Uihā Hat Bar",
+        "1 pm horseback ride at Paniolo Adventures",
+        "6:45 pm dinner at Merriman's Big Island"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-14",
+              "file": "014",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-15",
+              "file": "015",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-16",
+              "file": "016",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-17",
+              "file": "017",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-18",
+              "file": "018",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-19",
+              "file": "019",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "divers",
+      "subtitle": "September 9",
+      "text": [
+        "Snorkel day at Kealakekua / Captain Cook",
+        "Kaloko-Honokōhau National Historical Park (fishponds, shorebirds, petroglyphs)",
+        "8 pm omakase counter at Noio"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-20",
+              "file": "020",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-21",
+              "file": "021",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-22",
+              "file": "022",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-23",
+              "file": "023",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-24",
+              "file": "024",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-25",
+              "file": "025",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "stargazers",
+      "subtitle": "September 10",
+      "text": [
+        "South Point of the US",
+        "Volcano Village Lodge, check in ~1 pm",
+        "Mauna Kea summit and stargazing"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-26",
+              "file": "026",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-27",
+              "file": "027",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-28",
+              "file": "028",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-29",
+              "file": "029",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-30",
+              "file": "030",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-31",
+              "file": "031",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "volcanoes",
+      "subtitle": "September 11",
+      "text": [
+        "Watching Kīlauea, Volcanoes National Park",
+        "6:30 pm dinner at Kilauea Lodge and Restaurant",
+        "Nighttime lava viewing at Halemaʻumaʻu crater, early bedtime"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-32",
+              "file": "032",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-33",
+              "file": "033",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-34",
+              "file": "034",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-35",
+              "file": "035",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-36",
+              "file": "036",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-37",
+              "file": "037",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "honeycreepers",
+      "subtitle": "September 12",
+      "text": [
+        "6 am birding Puʻu Oʻo Trail and Palila Discovery Trail with Jack Jeffrey",
+        "Dinner at Lehua Restaurant"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-38",
+              "file": "038",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-39",
+              "file": "039",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-40",
+              "file": "040",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-41",
+              "file": "041",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-42",
+              "file": "042",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-43",
+              "file": "043",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "samurai",
+      "subtitle": "September 13",
+      "text": [
+        "Driving the Chain of Craters Road, birding Hōlei Sea Arch",
+        "ʻAkaka Falls",
+        "Hawaiʻi Tropical Botanical Garden",
+        "Check in to Hilo Honu Inn 3pm",
+        "Dinner at The Seaside"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-44",
+              "file": "044",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-45",
+              "file": "045",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-46",
+              "file": "046",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-47",
+              "file": "047",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-48",
+              "file": "048",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-49",
+              "file": "049",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "island hoppers",
+      "subtitle": "September 14",
+      "text": [
+        "From Hawaiʻi to Oʻahu: departure 11:27 am",
+        "Check in to the Royal Hawaiian after 4 pm",
+        "Drinks at the Mai Tai Bar",
+        "Dinner at natuRe",
+        "Lewers Lounge at the Halekulani for jazz and a proper nightcap"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-50",
+              "file": "050",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-51",
+              "file": "051",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-52",
+              "file": "052",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-53",
+              "file": "053",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-54",
+              "file": "054",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-55",
+              "file": "055",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "curators",
+      "subtitle": "September 15",
+      "text": [
+        "The Bishop Museum",
+        "Drinks at La Mariana Sailing Club",
+        "Drinks at Skull & Crown Trading Co.",
+        "Dinner at Waikiki Shokudo"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-56",
+              "file": "056",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-57",
+              "file": "057",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-58",
+              "file": "058",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-59",
+              "file": "059",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-60",
+              "file": "060",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-61",
+              "file": "061",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "amakihi? elepaio!",
+      "subtitle": "September 16",
+      "text": [
+        "7 am: birding the ʻAiea Loop Trail at Keaīwa Heiau State Recreation Area",
+        "Scenic drive through Koʻolau, Hoʻomaluhia Botanical Garden, Nuʻuanu Pali Lookout, and Puu Ualakaa State Park",
+        "Lunch at Helena's Hawaiian Food",
+        "Drinks at House Without A Key",
+        "Drinks and dinner at Monkeypod Kitchen",
+        "Drinks at The Green Lady"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-62",
+              "file": "062",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-63",
+              "file": "063",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-64",
+              "file": "064",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-65",
+              "file": "065",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-66",
+              "file": "066",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-67",
+              "file": "067",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "honu",
+      "subtitle": "September 17",
+      "text": [
+        "7:30 am: snorkeling Hanauma Bay",
+        "Birding along Lānaʻi Lookout → Japanese fishing shrine → Hālona blowhole",
+        "Beautiful views from Makapuʻu",
+        "Drinks and dinner at Hau Tree Lanai Restaurant",
+        "Drinks and dinner at Yours Truly"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-68",
+              "file": "068",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-69",
+              "file": "069",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-70",
+              "file": "070",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-71",
+              "file": "071",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-72",
+              "file": "072",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-73",
+              "file": "073",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "royals",
+      "subtitle": "September 18",
+      "text": [
+        "White Tern nests at UH Mānoa",
+        "12–1 pm: The Royal Hawaiian Band at ʻIolani Palace",
+        "1:30 pm: ʻIolani Palace tour",
+        "5:45 pm: Michel's at the Colony Surf"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-74",
+              "file": "074",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-75",
+              "file": "075",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-76",
+              "file": "076",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-77",
+              "file": "077",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-78",
+              "file": "078",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-79",
+              "file": "079",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "seals",
+      "subtitle": "September 19",
+      "text": [
+        "(early) Kaʻena Point, Mokulēʻia trailhead",
+        "Lunch on the North Shore / Haleʻiwa",
+        "Birding James Campbell NWR if open, else along the Kahuku Golf Course → Japanese cemetery",
+        "6:30 pm: prix fixe dinner at Azure"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-80",
+              "file": "080",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-81",
+              "file": "081",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-82",
+              "file": "082",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-83",
+              "file": "083",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-84",
+              "file": "084",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-85",
+              "file": "085",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "???",
+      "subtitle": "Maybes",
+      "text": [
+        "Kawainui Marsh Wildlife Sanctuary",
+        "Koko Crater Botanical Garden",
+        "Pearl Harbor National Wildlife Refuge, Honouliuli unit: koloa, Hawaiian stilt, Hawaiian gallinule, Hawaiian coot"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-86",
+              "file": "086",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-87",
+              "file": "087",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-88",
+              "file": "088",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-89",
+              "file": "089",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-90",
+              "file": "090",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-91",
+              "file": "091",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "aloha ʻoe",
+      "subtitle": "September 20",
+      "text": [
+        "Flight departs Honolulu 12:45"
+      ],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-92",
+              "file": "092",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-93",
+              "file": "093",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-94",
+              "file": "094",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-95",
+              "file": "095",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-96",
+              "file": "096",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-97",
+              "file": "097",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": null
+}

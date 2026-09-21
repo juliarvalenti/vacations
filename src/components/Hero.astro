@@ -1,0 +1,26 @@
+---
+// Full-bleed cover photo with the title over it.
+import type { Img, Trip } from '../trips';
+import { allImages } from '../trips';
+import Photo from './Photo.astro';
+interface Props { trip: Trip; cover?: Img; eyebrow?: string }
+const { trip, cover = trip.hero[0]?.images[0], eyebrow = `${trip.year} · ${allImages(trip).length} photos` } = Astro.props;
+---
+<section class="hero">
+  {cover && <Photo img={cover} trip={trip.slug} sizes="100vw" eager class="cover" />}
+  <div class="hero-text wrap">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{trip.title}</h1>
+    {trip.subtitle && <p class="sub">{trip.subtitle}</p>}
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; min-height: 72vh; display: grid; align-items: end; color: #fff; }
+  :global(.cover) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; cursor: default !important; }
+  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.05) 60%); }
+  .hero-text { position: relative; z-index: 1; padding-block: 48px; width: 100%; }
+  .hero .eyebrow { color: rgba(255,255,255,.75); }
+  h1 { font-size: clamp(44px, 8vw, 112px); }
+  .sub { margin: 10px 0 0; font-size: 18px; opacity: .85; }
+</style>

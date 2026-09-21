@@ -1,0 +1,49 @@
+---
+// STARTER for a bespoke trip page. Copy to src/layouts/trips/<slug>.astro and that trip will use it.
+// (Files starting with "_" are ignored by the picker.)
+//
+// You get `trip` — everything from content/<slug>.json — and can lay it out however you like.
+// Shared pieces you can drop in (or skip):
+//   <Base>        page shell: fonts, theme, sticky top bar, lightbox   ← keep this one
+//   <Hero>        full-bleed cover with title
+//   <Grid>        masonry photo grid
+//   <Carousel>    dark swipeable band
+//   <Photo>       a single image with lazy loading / srcset / placeholder
+//   <FloatingToc> side section list on wide screens (needs the `sections` prop on Base + ids on sections)
+import Base from '../Base.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+import Carousel from '../../components/Carousel.astro';
+import Photo from '../../components/Photo.astro';
+import { allImages, type Trip } from '../../trips';
+interface Props { trip: Trip }
+const { trip } = Astro.props;
+const photos = allImages(trip);           // every photo on the trip, in page order
+const [first, second] = trip.sections;    // pick sections by position…
+const food = trip.sections.find((s) => s.heading === 'Food'); // …or by name
+---
+<Base title={trip.title} trip={trip}>
+  <Hero trip={trip} eyebrow="Our honeymoon" />
+
+  <!-- Free-form HTML: write whatever you want here. -->
+  <section class="wrap intro">
+    <h2>{first?.heading}</h2>
+    <p>Some words about the trip. This is plain HTML — paragraphs, links, anything.</p>
+    {first && <Carousel images={first.blocks[0].images} trip={trip.slug} />}
+  </section>
+
+  <!-- Two photos side by side -->
+  <section class="wrap pair">
+    <Photo img={photos[3]} trip={trip.slug} sizes="50vw" />
+    <Photo img={photos[4]} trip={trip.slug} sizes="50vw" />
+  </section>
+
+  {second && <section class="wrap"><Grid images={second.blocks[0].images} trip={trip.slug} /></section>}
+</Base>
+
+<style>
+  /* Styles here only apply to this page. Site tokens (--accent, --bg, --serif …) are available. */
+  .intro { padding-block: 48px; display: grid; gap: 20px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); padding-block: 48px; }
+  .pair :global(.photo) { aspect-ratio: 4 / 5; object-fit: cover; }
+</style>

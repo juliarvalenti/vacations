@@ -1,0 +1,46 @@
+---
+// Bespoke page for the wedding. Placeholder content — rewrite freely.
+import Base from '../Base.astro';
+import Grid from '../../components/Grid.astro';
+import Carousel from '../../components/Carousel.astro';
+import Photo from '../../components/Photo.astro';
+import { allImages, sectionId, sectionsOf, type Trip } from '../../trips';
+interface Props { trip: Trip }
+const { trip } = Astro.props;
+const photos = allImages(trip);
+---
+<Base title={trip.title} trip={trip} sections={sectionsOf(trip)}>
+  <section class="wrap title">
+    <p class="eyebrow">{trip.subtitle}</p>
+    <h1>{trip.title}</h1>
+    <p class="lede">A few words about the day go here. Who, where, what it felt like.</p>
+  </section>
+
+  <section class="wrap cover">
+    <Photo img={photos[0]} trip={trip.slug} sizes="900px" eager />
+  </section>
+
+  {trip.sections.map((s) => (
+    <section class="wrap chapter" id={sectionId(s.heading)} data-heading={s.heading}>
+      <h2>{s.heading}</h2>
+      <p class="note">Placeholder text for this part of the day.</p>
+      {s.blocks.map((b) =>
+        b.type === 'carousel'
+          ? <Carousel images={b.images} trip={trip.slug} />
+          : <Grid images={b.images} trip={trip.slug} />
+      )}
+    </section>
+  ))}
+</Base>
+
+<style>
+  /* Narrow, centred, calm. */
+  .title { text-align: center; padding-block: 96px 40px; max-width: 760px; }
+  h1 { font-size: clamp(48px, 9vw, 120px); font-weight: 400; font-style: italic; }
+  .lede { color: var(--muted); font-size: 18px; max-width: 48ch; margin: 20px auto 0; }
+  .cover { max-width: 900px; }
+  .cover :global(.photo) { border-radius: 2px; }
+  .chapter { max-width: 900px; padding-block: 80px 0; display: grid; gap: 24px; text-align: center; scroll-margin-top: 64px; }
+  h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 400; }
+  .note { color: var(--muted); max-width: 52ch; margin: -8px auto 0; }
+</style>

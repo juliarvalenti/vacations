@@ -1,6 +1,11 @@
 {
   "title": "2024 Japan",
   "subtitle": null,
+  "date": "2024-12-01",
+  "theme": {
+    "accent": "#c8102e",
+    "displayFont": "Shippori Mincho"
+  },
   "hero": [
     {
       "type": "grid",

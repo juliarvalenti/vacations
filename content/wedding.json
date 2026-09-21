@@ -1,0 +1,217 @@
+{
+  "title": "Our Wedding",
+  "subtitle": "June 6, 2026",
+  "date": "2026-06-06",
+  "placeholder": true,
+  "hero": [
+    {
+      "type": "grid",
+      "images": [
+        {
+          "id": "placeholder-1",
+          "file": "001",
+          "w": 1600,
+          "h": 2400
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Getting Ready",
+      "subtitle": null,
+      "text": [],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-2",
+              "file": "002",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-3",
+              "file": "003",
+              "w": 1600,
+              "h": 900
+            },
+            {
+              "id": "placeholder-4",
+              "file": "004",
+              "w": 1600,
+              "h": 1600
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-5",
+              "file": "005",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-6",
+              "file": "006",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-7",
+              "file": "007",
+              "w": 1600,
+              "h": 2400
+            },
+            {
+              "id": "placeholder-8",
+              "file": "008",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-9",
+              "file": "009",
+              "w": 1600,
+              "h": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Ceremony",
+      "subtitle": null,
+      "text": [],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-10",
+              "file": "010",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-11",
+              "file": "011",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-12",
+              "file": "012",
+              "w": 1600,
+              "h": 1066
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-13",
+              "file": "013",
+              "w": 1600,
+              "h": 2400
+            },
+            {
+              "id": "placeholder-14",
+              "file": "014",
+              "w": 1600,
+              "h": 2000
+            },
+            {
+              "id": "placeholder-15",
+              "file": "015",
+              "w": 1600,
+              "h": 900
+            },
+            {
+              "id": "placeholder-16",
+              "file": "016",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-17",
+              "file": "017",
+              "w": 1600,
+              "h": 1066
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Reception",
+      "subtitle": null,
+      "text": [],
+      "blocks": [
+        {
+          "type": "grid",
+          "images": [
+            {
+              "id": "placeholder-18",
+              "file": "018",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-19",
+              "file": "019",
+              "w": 1600,
+              "h": 2400
+            },
+            {
+              "id": "placeholder-20",
+              "file": "020",
+              "w": 1600,
+              "h": 2000
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "images": [
+            {
+              "id": "placeholder-21",
+              "file": "021",
+              "w": 1600,
+              "h": 900
+            },
+            {
+              "id": "placeholder-22",
+              "file": "022",
+              "w": 1600,
+              "h": 1600
+            },
+            {
+              "id": "placeholder-23",
+              "file": "023",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-24",
+              "file": "024",
+              "w": 1600,
+              "h": 1066
+            },
+            {
+              "id": "placeholder-25",
+              "file": "025",
+              "w": 1600,
+              "h": 2400
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": null
+}

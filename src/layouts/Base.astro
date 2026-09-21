@@ -2,10 +2,16 @@
 import '../styles/global.css';
 import TopBar from '../components/TopBar.astro';
 import Lightbox from '../components/Lightbox.astro';
+import { themeVars, fontsUrl, type Trip } from '../trips';
+interface Props { title: string; trip?: Trip; sections?: { id: string; heading: string }[] }
 const { title, trip, sections } = Astro.props;
+
+// Per-trip stylesheet, if one exists at src/styles/trips/<slug>.css
+const tripCss = import.meta.glob('../styles/trips/*.css', { query: '?inline', import: 'default', eager: true }) as Record<string, string>;
+const extraCss = trip ? tripCss[`../styles/trips/${trip.slug}.css`] : undefined;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-trip={trip?.slug} style={themeVars(trip?.theme)}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +19,8 @@ const { title, trip, sections } = Astro.props;
     <meta name="robots" content="noindex, nofollow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href={fontsUrl(trip?.theme)} rel="stylesheet" />
+    {extraCss && <style set:html={extraCss} />}
   </head>
   <body>
     <TopBar trip={trip} sections={sections} />

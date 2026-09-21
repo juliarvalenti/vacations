@@ -1,0 +1,47 @@
+---
+// The standard trip page: cover hero → numbered sections, each with grids / carousels.
+// A trip gets this unless src/layouts/trips/<slug>.astro exists.
+import Base from '../Base.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+import Carousel from '../../components/Carousel.astro';
+import FloatingToc from '../../components/FloatingToc.astro';
+import { sectionId, sectionsOf, type Trip } from '../../trips';
+interface Props { trip: Trip }
+const { trip } = Astro.props;
+const sections = sectionsOf(trip);
+const [, ...restHero] = trip.hero.flatMap((b) => b.images); // first hero image is the cover
+---
+<Base title={trip.title} trip={trip} sections={sections}>
+  <FloatingToc sections={sections} />
+  <Hero trip={trip} />
+
+  {restHero.length > 0 && <section class="wrap section"><Grid images={restHero} trip={trip.slug} /></section>}
+
+  {trip.sections.map((s, i) => (
+    <section class="wrap section" id={sectionId(s.heading)} data-heading={s.heading}>
+      <header>
+        <span class="num">{String(i + 1).padStart(2, '0')}</span>
+        <div>
+          {s.subtitle && <p class="eyebrow">{s.subtitle}</p>}
+          <h2>{s.heading}</h2>
+          {s.text.map((t) => <p class="note">{t}</p>)}
+        </div>
+      </header>
+      {s.blocks.map((b) =>
+        b.type === 'carousel'
+          ? <Carousel images={b.images} trip={trip.slug} />
+          : <Grid images={b.images} trip={trip.slug} />
+      )}
+    </section>
+  ))}
+</Base>
+
+<style>
+  .section { padding-block: 56px 0; display: grid; gap: 22px; scroll-margin-top: 64px; }
+  .section header { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: start; }
+  .num { font-family: var(--serif); font-size: 28px; color: var(--muted); line-height: 1.1; }
+  h2 { font-size: clamp(30px, 4vw, 48px); }
+  .note { max-width: 62ch; color: var(--muted); font-size: 15px; margin: 12px 0 0; }
+  @media (max-width: 700px) { .section header { grid-template-columns: 1fr; } .num { display: none; } }
+</style>

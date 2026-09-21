@@ -1,0 +1,98 @@
+{
+  "title": "Hawaiʻi Honeymoon",
+  "subtitle": "September 6–20, 2026",
+  "days": [
+    { "date": "September 6", "name": "aloha", "stops": [
+      "Check in at Horizon Guest House after 2pm",
+      "Dinner at Don's Mai Tai Bar"
+    ]},
+    { "date": "September 7", "name": "ancients", "stops": [
+      "Kona coffee: Greenwell",
+      "Birding the Makāula-ʻOʻoma Trail and Honuaʻula Forest Reserve",
+      "Puʻukoholā Heiau National Historic Site",
+      "Na Loko Iʻa O Kalahuipuaʻa Historic Park",
+      "Puakō Petroglyphs",
+      "7pm dinner at CanoeHouse"
+    ]},
+    { "date": "September 8", "name": "cowboys", "stops": [
+      "Kona coffee: Hula Daddy",
+      "Hat at Uihā Hat Bar",
+      "1 pm horseback ride at Paniolo Adventures",
+      "6:45 pm dinner at Merriman's Big Island"
+    ]},
+    { "date": "September 9", "name": "divers", "stops": [
+      "Snorkel day at Kealakekua / Captain Cook",
+      "Kaloko-Honokōhau National Historical Park (fishponds, shorebirds, petroglyphs)",
+      "8 pm omakase counter at Noio"
+    ]},
+    { "date": "September 10", "name": "stargazers", "stops": [
+      "South Point of the US",
+      "Volcano Village Lodge, check in ~1 pm",
+      "Mauna Kea summit and stargazing"
+    ]},
+    { "date": "September 11", "name": "volcanoes", "stops": [
+      "Watching Kīlauea, Volcanoes National Park",
+      "6:30 pm dinner at Kilauea Lodge and Restaurant",
+      "Nighttime lava viewing at Halemaʻumaʻu crater, early bedtime"
+    ]},
+    { "date": "September 12", "name": "honeycreepers", "stops": [
+      "6 am birding Puʻu Oʻo Trail and Palila Discovery Trail with Jack Jeffrey",
+      "Dinner at Lehua Restaurant"
+    ]},
+    { "date": "September 13", "name": "samurai", "stops": [
+      "Driving the Chain of Craters Road, birding Hōlei Sea Arch",
+      "ʻAkaka Falls",
+      "Hawaiʻi Tropical Botanical Garden",
+      "Check in to Hilo Honu Inn 3pm",
+      "Dinner at The Seaside"
+    ]},
+    { "date": "September 14", "name": "island hoppers", "stops": [
+      "From Hawaiʻi to Oʻahu: departure 11:27 am",
+      "Check in to the Royal Hawaiian after 4 pm",
+      "Drinks at the Mai Tai Bar",
+      "Dinner at natuRe",
+      "Lewers Lounge at the Halekulani for jazz and a proper nightcap"
+    ]},
+    { "date": "September 15", "name": "curators", "stops": [
+      "The Bishop Museum",
+      "Drinks at La Mariana Sailing Club",
+      "Drinks at Skull & Crown Trading Co.",
+      "Dinner at Waikiki Shokudo"
+    ]},
+    { "date": "September 16", "name": "amakihi? elepaio!", "stops": [
+      "7 am: birding the ʻAiea Loop Trail at Keaīwa Heiau State Recreation Area",
+      "Scenic drive through Koʻolau, Hoʻomaluhia Botanical Garden, Nuʻuanu Pali Lookout, and Puu Ualakaa State Park",
+      "Lunch at Helena's Hawaiian Food",
+      "Drinks at House Without A Key",
+      "Drinks and dinner at Monkeypod Kitchen",
+      "Drinks at The Green Lady"
+    ]},
+    { "date": "September 17", "name": "honu", "stops": [
+      "7:30 am: snorkeling Hanauma Bay",
+      "Birding along Lānaʻi Lookout → Japanese fishing shrine → Hālona blowhole",
+      "Beautiful views from Makapuʻu",
+      "Drinks and dinner at Hau Tree Lanai Restaurant",
+      "Drinks and dinner at Yours Truly"
+    ]},
+    { "date": "September 18", "name": "royals", "stops": [
+      "White Tern nests at UH Mānoa",
+      "12–1 pm: The Royal Hawaiian Band at ʻIolani Palace",
+      "1:30 pm: ʻIolani Palace tour",
+      "5:45 pm: Michel's at the Colony Surf"
+    ]},
+    { "date": "September 19", "name": "seals", "stops": [
+      "(early) Kaʻena Point, Mokulēʻia trailhead",
+      "Lunch on the North Shore / Haleʻiwa",
+      "Birding James Campbell NWR if open, else along the Kahuku Golf Course → Japanese cemetery",
+      "6:30 pm: prix fixe dinner at Azure"
+    ]},
+    { "date": "Maybes", "name": "???", "stops": [
+      "Kawainui Marsh Wildlife Sanctuary",
+      "Koko Crater Botanical Garden",
+      "Pearl Harbor National Wildlife Refuge, Honouliuli unit: koloa, Hawaiian stilt, Hawaiian gallinule, Hawaiian coot"
+    ]},
+    { "date": "September 20", "name": "aloha ʻoe", "stops": [
+      "Flight departs Honolulu 12:45"
+    ]}
+  ]
+}

@@ -1,0 +1,12 @@
+/* London-only styling. Every rule is scoped with [data-trip="london"] so it can't leak into other trips. */
+
+[data-trip="london"] {
+  --accent: #1d3f8f;
+  --stage: #0d1526;
+}
+
+/* Small-caps section headings, a bit more "guidebook" */
+[data-trip="london"] h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}

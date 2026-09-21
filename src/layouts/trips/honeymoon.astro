@@ -1,0 +1,57 @@
+---
+// Bespoke page for the honeymoon: a day-by-day journal driven by the itinerary.
+// Each section in content/honeymoon.json is one day: heading = the day's name,
+// subtitle = the date, text = the stops. Photos are placeholders until the real ones land.
+import Base from '../Base.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+import Carousel from '../../components/Carousel.astro';
+import { sectionId, sectionsOf, type Trip } from '../../trips';
+interface Props { trip: Trip }
+const { trip } = Astro.props;
+const sections = sectionsOf(trip);
+const islands = (i: number) => (i < 8 ? 'Hawaiʻi' : 'Oʻahu'); // day 9 onward is Oʻahu
+---
+<Base title={trip.title} trip={trip} sections={sections}>
+  <Hero trip={trip} eyebrow={trip.subtitle ?? ''} />
+
+  <section class="wrap intro">
+    <p>Two weeks, two islands, a lot of birds. This is the plan as written — photos to follow.</p>
+  </section>
+
+  {trip.sections.map((s, i) => (
+    <article class="wrap day" id={sectionId(s.heading)} data-heading={s.heading}>
+      <aside class="rail">
+        <span class="date">{s.subtitle}</span>
+        <span class="isl">{islands(i)}</span>
+      </aside>
+      <div class="body">
+        <h2>{s.heading}</h2>
+        <ul class="stops">{s.text.map((t) => <li>{t}</li>)}</ul>
+        {s.blocks.map((b) =>
+          b.type === 'carousel'
+            ? <Carousel images={b.images} trip={trip.slug} />
+            : <Grid images={b.images} trip={trip.slug} />
+        )}
+      </div>
+    </article>
+  ))}
+</Base>
+
+<style>
+  .intro { padding-block: 40px 0; }
+  .intro p { color: var(--muted); font-size: 18px; max-width: 52ch; margin: 0; }
+
+  .day { display: grid; grid-template-columns: 150px 1fr; gap: 32px; padding-block: 64px 0; scroll-margin-top: 64px; }
+  .rail { position: sticky; top: 72px; align-self: start; display: grid; gap: 4px; font-size: 13px; }
+  .date { font-family: var(--serif); font-size: 22px; line-height: 1.1; }
+  .isl { color: var(--accent); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 11px; }
+  .body { display: grid; gap: 20px; min-width: 0; }
+  h2 { font-size: clamp(34px, 5vw, 64px); font-style: italic; font-weight: 400; text-transform: lowercase; }
+  .stops { margin: 0; padding: 0 0 0 1.1em; color: var(--muted); font-size: 15px; max-width: 64ch; display: grid; gap: 4px; }
+  .stops li::marker { color: var(--accent); }
+  @media (max-width: 800px) {
+    .day { grid-template-columns: 1fr; gap: 12px; }
+    .rail { position: static; grid-auto-flow: column; justify-content: start; gap: 12px; align-items: baseline; }
+  }
+</style>

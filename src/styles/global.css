@@ -1,9 +1,16 @@
+/*
+  Site-wide design tokens. Per-trip themes override these via inline vars on <html>
+  (see src/trips.ts themeVars) or via src/styles/trips/<trip>.css. See THEMING.md.
+  Secondary tones (--bg-2, --muted, --line) are derived from --bg/--fg so a theme
+  only has to set the primaries.
+*/
 :root {
-  --bg: #f6f2eb;
-  --bg-2: #ece6db;
-  --fg: #1b1917;
-  --muted: #7a746a;
-  --line: #ddd6c9;
+  --bg-light: #f6f2eb;
+  --fg-light: #1b1917;
+  --bg-dark: #151413;
+  --fg-dark: #ece7de;
+  --bg: var(--bg-light);
+  --fg: var(--fg-light);
   --accent: #b8502a;
   --stage: #121110;
   --max: 1240px;
@@ -11,9 +18,13 @@
   --serif: "Fraunces", Georgia, serif;
   --sans: "Inter", -apple-system, system-ui, sans-serif;
   color-scheme: light dark;
+
+  --bg-2: color-mix(in srgb, var(--bg) 92%, var(--fg));
+  --muted: color-mix(in srgb, var(--fg) 58%, var(--bg));
+  --line: color-mix(in srgb, var(--bg) 86%, var(--fg));
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #151413; --bg-2: #1e1c1a; --fg: #ece7de; --muted: #9a938a; --line: #2c2926; --accent: #e07a4f; }
+  :root { --bg: var(--bg-dark); --fg: var(--fg-dark); }
 }
 * { box-sizing: border-box; }
 html { background: var(--bg); color: var(--fg); scroll-behavior: smooth; }
