@@ -100,6 +100,8 @@ const { trip } = Astro.props;
     if (clip) {
       lbVideo.poster = src(cur);
       lbVideo.src = clip;
+      // try with sound every time; only fall back to muted if the browser refuses autoplay with audio
+      lbVideo.muted = false;
       lbVideo.play().catch(() => { lbVideo.muted = true; lbVideo.play().catch(() => {}); });
     } else {
       lbVideo.removeAttribute('src');
