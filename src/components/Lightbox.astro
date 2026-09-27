@@ -26,6 +26,12 @@ const { trip } = Astro.props;
   .close { top: 16px; right: 16px; }
   .lb-arrow { top: 50%; translate: 0 -50%; }
   .lb-prev { left: 16px; } .lb-next { right: 16px; }
+  /* iOS: rapid taps on the arrows shouldn't double-tap-zoom the page (pinch zoom still works) */
+  #lightbox, #lightbox button { touch-action: manipulation; }
+  @media (pointer: coarse) {
+    #lightbox button { width: 52px; height: 52px; }
+    .lb-prev { left: 8px; } .lb-next { right: 8px; }
+  }
 </style>
 
 <script>
