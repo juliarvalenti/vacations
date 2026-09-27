@@ -18,6 +18,7 @@ import externalLink from 'lucide-static/icons/external-link.svg?raw';
 import plane from 'lucide-static/icons/plane.svg?raw';
 import arrowRight from 'lucide-static/icons/arrow-right.svg?raw';
 import chevronDown from 'lucide-static/icons/chevron-down.svg?raw';
+import play from 'lucide-static/icons/play.svg?raw';
 
 /** Strip the license comment and size the icon to the surrounding text. */
 const clean = (svg: string) =>
@@ -34,5 +35,5 @@ export const KIND_ICONS: Record<string, string> = Object.fromEntries(Object.entr
 
 export const ICONS = {
   map: clean(map), externalLink: clean(externalLink), plane: clean(plane),
-  arrowRight: clean(arrowRight), chevronDown: clean(chevronDown),
+  arrowRight: clean(arrowRight), chevronDown: clean(chevronDown), play: clean(play),
 };

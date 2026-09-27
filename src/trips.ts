@@ -5,7 +5,10 @@ import london from '../content/london.json';
 import wedding from '../content/wedding.json';
 import honeymoon from '../content/honeymoon.json';
 
-export interface Img { id: string; file: string; w: number; h: number; time?: string; place?: string | null }
+export interface Img {
+  id: string; file: string; w: number; h: number; time?: string; place?: string | null;
+  video?: string; // clip file next to the poster images, e.g. "img-6734.mp4"
+}
 export interface Block { type: 'grid' | 'carousel'; images: Img[]; caption?: string | null }
 export interface Section { heading: string; subtitle: string | null; text: string[]; blocks: Block[] }
 /** Per-trip look. Every key is optional; anything left out falls back to the site default. See THEMING.md. */

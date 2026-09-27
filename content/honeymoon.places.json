@@ -144,6 +144,8 @@
       "url": "https://pros.hnl.info/hanauma-bay", "q": "Hanauma Bay Nature Preserve" },
     { "name": "Lānaʻi Lookout", "lat": 21.283, "lon": -157.675, "radius": 0.6, "kind": "nature",
       "blurb": "Lookout on the Kaʻiwi coast; on clear days you can see Lānaʻi and Molokaʻi." },
+    { "name": "Hālona Blowhole", "lat": 21.2826, "lon": -157.6774, "radius": 0.05, "kind": "nature",
+      "blurb": "A lava tube in the shoreline rock that shoots surf up into the air.", "q": "Halona Blowhole Lookout" },
     { "name": "Makapuʻu", "lat": 21.310, "lon": -157.650, "radius": 2, "kind": "nature" },
     { "name": "Hau Tree", "lat": 21.262, "lon": -157.822, "radius": 0.4, "kind": "food" },
 

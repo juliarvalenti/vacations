@@ -64,7 +64,7 @@ def make_handler(slug):
                 if not cached.exists():
                     manifest = json.loads(manifest_path.read_text())
                     src = next((p["name"] for p in manifest["photos"] if p["file"] == file), None)
-                    if not src:
+                    if not src or Path(src).suffix.lower() in {".mov", ".mp4"}:  # rejected clips: no thumbnail
                         return self.send("not found", "text/plain", 404)
                     im = ImageOps.exif_transpose(Image.open(Path(manifest["folder"]) / src)).convert("RGB")
                     im.thumbnail((int(size), int(size)))

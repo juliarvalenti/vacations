@@ -14,8 +14,10 @@ Reads, all in content/:
 Photos with no GPS borrow the place of the nearest-in-time GPS photo that day (two phones, one with
 location off). Consecutive photos at the same place become one captioned block in the day's section.
 
-Writes public/assets/<slug>/NNN-{1600,800}.webp + NNN-24.jpg (no EXIF — locations are NOT published)
-and content/<slug>.json. Videos are skipped.
+Writes public/assets/<slug>/<file>-{1600,800}.webp + <file>-24.jpg (no EXIF — locations are NOT published)
+and content/<slug>.json. Videos (.mov/.mp4) become <file>.mp4 — iPhone HDR mapped to SDR by macOS's
+avconvert, then compressed by ffmpeg with metadata stripped — plus poster frames in the photo sizes, so
+they sit in the grids like photos. Reject unwanted clips in overrides like any photo.
 """
 import json, math, re, subprocess, sys
 from concurrent.futures import ProcessPoolExecutor
@@ -27,13 +29,15 @@ import pillow_heif
 pillow_heif.register_heif_opener()
 ROOT = Path(__file__).resolve().parent.parent
 PHOTO_EXT = {".heic", ".jpg", ".jpeg", ".png"}
+VIDEO_EXT = {".mov", ".mp4"}
 BORROW_WINDOW = timedelta(minutes=45)
 SIZES = [1600, 800]
 
 
 def exif(folder: Path):
     out = subprocess.run(
-        ["exiftool", "-q", "-j", "-n", "-FileName", "-DateTimeOriginal", "-CreateDate",
+        # CreationDate: QuickTime's local-time stamp (a video's CreateDate is UTC)
+        ["exiftool", "-q", "-j", "-n", "-FileName", "-DateTimeOriginal", "-CreationDate", "-CreateDate",
          "-GPSLatitude", "-GPSLongitude", str(folder)],
         capture_output=True, text=True, check=True).stdout
     return json.loads(out)
@@ -88,6 +92,25 @@ def render(args):
     return w, h
 
 
+def render_video(args):
+    """HDR .mov → web .mp4 + poster frames. avconvert does the HLG→SDR mapping (and strips location);
+    ffmpeg then shrinks it (~1 Mbps) with metadata dropped."""
+    src, out_dir, stem = args
+    tmp, poster = out_dir / f"{stem}.tmp.mp4", out_dir / f"{stem}.poster.png"
+    subprocess.run(["avconvert", "-s", str(src), "-p", "Preset1280x720", "-o", str(tmp), "--replace"],
+                   check=True, capture_output=True)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(tmp), "-map_metadata", "-1",
+                    "-c:v", "libx264", "-preset", "slow", "-crf", "27", "-pix_fmt", "yuv420p",
+                    "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", str(out_dir / f"{stem}.mp4")],
+                   check=True)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.8", "-i", str(tmp), "-frames:v", "1",
+                    str(poster)], check=True)
+    tmp.unlink()
+    size = render((poster, out_dir, stem))
+    poster.unlink()
+    return size
+
+
 def main(slug, folder):
     folder = Path(folder)
     content = ROOT / "content"
@@ -100,13 +123,16 @@ def main(slug, folder):
     photos, skipped = [], []
     for x in exif(folder):
         name = x["FileName"]
-        if Path(name).suffix.lower() not in PHOTO_EXT or fixes.get(name) == "skip":
+        ext = Path(name).suffix.lower()
+        if ext not in PHOTO_EXT | VIDEO_EXT or fixes.get(name) == "skip":
             skipped.append(name); continue
         fix = fixes.get(name) or {}
-        when = parse_when(fix.get("when")) or parse_when(x.get("DateTimeOriginal") or x.get("CreateDate"))
+        when = parse_when(fix.get("when")) or parse_when(
+            x.get("DateTimeOriginal") or x.get("CreationDate") or x.get("CreateDate"))
         gps = (x["GPSLatitude"], x["GPSLongitude"]) if "GPSLatitude" in x else None
         # an override with "place" (even null) pins it — GPS/borrowing won't relabel the photo
-        photos.append({"name": name, "when": when, "gps": gps, "place": fix.get("place"), "pinned": "place" in fix})
+        photos.append({"name": name, "when": when, "gps": gps, "place": fix.get("place"), "pinned": "place" in fix,
+                       "video": ext in VIDEO_EXT})
 
     # 2. undated: take the time of the previous dated file in the same filename series
     dated = sorted((series(p["name"]), p["when"]) for p in photos if p["when"] and series(p["name"]))
@@ -158,13 +184,16 @@ def main(slug, folder):
     # 4. render images, named after the source file so reruns only render what's new
     out_dir = ROOT / "public" / "assets" / slug
     out_dir.mkdir(parents=True, exist_ok=True)
-    keep = {f"{p['file']}-{s}" for p in photos for s in [*SIZES, 24]}
+    keep = {f"{p['file']}-{s}" for p in photos for s in [*SIZES, 24]} | {p["file"] for p in photos if p["video"]}
     for old in out_dir.glob("*"):
         if old.stem not in keep:
             old.unlink()
-    todo = [p for p in photos if not (out_dir / f"{p['file']}-24.jpg").exists()]
+    todo = [p for p in photos if not (out_dir / f"{p['file']}-24.jpg").exists()
+            or (p["video"] and not (out_dir / f"{p['file']}.mp4").exists())]
     with ProcessPoolExecutor(8) as ex:
-        list(ex.map(render, [(folder / p["name"], out_dir, p["file"]) for p in todo]))
+        list(ex.map(render, [(folder / p["name"], out_dir, p["file"]) for p in todo if not p["video"]]))
+    with ProcessPoolExecutor(4) as ex:
+        list(ex.map(render_video, [(folder / p["name"], out_dir, p["file"]) for p in todo if p["video"]]))
     dims = []
     for p in photos:
         with Image.open(out_dir / f"{p['file']}-1600.webp") as im:
@@ -173,6 +202,8 @@ def main(slug, folder):
     for p, (w, h) in zip(photos, dims):
         p["img"] = {"id": p["name"], "file": p["file"], "w": w, "h": h,
                     "time": p["when"].strftime("%H:%M"), "place": p["place"]}
+        if p["video"]:
+            p["img"]["video"] = f"{p['file']}.mp4"
 
     # 5. sections per itinerary day, blocks = runs of the same place
     def day_key(d):

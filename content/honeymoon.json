@@ -333,6 +333,13 @@
       "kind": "nature",
       "blurb": "Lookout on the Kaʻiwi coast; on clear days you can see Lānaʻi and Molokaʻi."
     },
+    "Hālona Blowhole": {
+      "lat": 21.2826,
+      "lon": -157.6774,
+      "kind": "nature",
+      "blurb": "A lava tube in the shoreline rock that shoots surf up into the air.",
+      "q": "Halona Blowhole Lookout"
+    },
     "Aliʻi Fish Market": {
       "lat": 21.2945,
       "lon": -157.8255,
@@ -1392,7 +1399,7 @@
       ],
       "blocks": [
         {
-          "type": "grid",
+          "type": "carousel",
           "caption": "Kīlauea caldera",
           "images": [
             {
@@ -1412,6 +1419,15 @@
               "place": "Kīlauea caldera"
             },
             {
+              "id": "IMG_6734.MOV",
+              "file": "img-6734",
+              "w": 720,
+              "h": 1280,
+              "time": "08:35",
+              "place": "Kīlauea caldera",
+              "video": "img-6734.mp4"
+            },
+            {
               "id": "IMG_0692.HEIC",
               "file": "img-0692",
               "w": 1600,
@@ -1426,6 +1442,15 @@
               "h": 811,
               "time": "09:02",
               "place": "Kīlauea caldera"
+            },
+            {
+              "id": "IMG_6736.MOV",
+              "file": "img-6736",
+              "w": 720,
+              "h": 1280,
+              "time": "09:18",
+              "place": "Kīlauea caldera",
+              "video": "img-6736.mp4"
             },
             {
               "id": "IMG_6738.JPG",
@@ -1815,6 +1840,15 @@
               "h": 1200,
               "time": "16:04",
               "place": "ʻAkaka Falls"
+            },
+            {
+              "id": "IMG_6773.MOV",
+              "file": "img-6773",
+              "w": 720,
+              "h": 1280,
+              "time": "16:05",
+              "place": "ʻAkaka Falls",
+              "video": "img-6773.mp4"
             }
           ]
         },
@@ -2266,6 +2300,15 @@
               "place": "ʻAiea Loop Trail"
             },
             {
+              "id": "IMG_1038.MOV",
+              "file": "img-1038",
+              "w": 720,
+              "h": 1280,
+              "time": "08:29",
+              "place": "ʻAiea Loop Trail",
+              "video": "img-1038.mp4"
+            },
+            {
               "id": "IMG_1041.HEIC",
               "file": "img-1041",
               "w": 1200,
@@ -2312,6 +2355,15 @@
               "h": 1600,
               "time": "09:48",
               "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_6842.MOV",
+              "file": "img-6842",
+              "w": 720,
+              "h": 1280,
+              "time": "09:49",
+              "place": "ʻAiea Loop Trail",
+              "video": "img-6842.mp4"
             }
           ]
         },
@@ -2445,7 +2497,28 @@
               "h": 1200,
               "time": "09:14",
               "place": "Lānaʻi Lookout"
-            },
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Hālona Blowhole",
+          "images": [
+            {
+              "id": "IMG_6870.MOV",
+              "file": "img-6870",
+              "w": 720,
+              "h": 1280,
+              "time": "09:15",
+              "place": "Hālona Blowhole",
+              "video": "img-6870.mp4"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Lānaʻi Lookout",
+          "images": [
             {
               "id": "IMG_6871.HEIC",
               "file": "img-6871",
@@ -2527,20 +2600,14 @@
               "h": 1600,
               "time": "17:09",
               "place": "Waikīkī"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Waikīkī Aquarium",
-          "images": [
+            },
             {
               "id": "IMG_6889.HEIC",
               "file": "img-6889",
               "w": 1200,
               "h": 1600,
               "time": "17:28",
-              "place": "Waikīkī Aquarium"
+              "place": "Waikīkī"
             }
           ]
         },
@@ -2621,6 +2688,15 @@
               "h": 1600,
               "time": "09:55",
               "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_1198.MOV",
+              "file": "img-1198",
+              "w": 1280,
+              "h": 720,
+              "time": "10:02",
+              "place": "Kaʻena Point",
+              "video": "img-1198.mp4"
             },
             {
               "id": "IMG_6898.HEIC",

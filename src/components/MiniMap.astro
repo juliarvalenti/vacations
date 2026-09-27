@@ -66,7 +66,7 @@ const route = order.map((n) => pts[n].join(',')).join(' ');
 <style>
   .minimap { position: fixed; left: 16px; bottom: 16px; z-index: 2; margin: 0; width: 260px; padding: 10px; border-radius: 10px;
     background: rgba(20, 20, 20, .55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); color: #fff; }
-  svg { display: block; width: 100%; height: 170px; overflow: visible; }
+  svg { display: block; width: 100%; height: 170px; overflow: hidden; }
   .land { fill: rgba(255,255,255,.14); stroke: rgba(255,255,255,.35); stroke-width: .25; vector-effect: non-scaling-stroke; }
   .route { fill: none; stroke: rgba(255,255,255,.35); stroke-width: 1; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
   .stop { fill: rgba(255,255,255,.4); }

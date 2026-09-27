@@ -1,19 +1,54 @@
 ---
+// One image with srcset / lazy loading / blur placeholder. For a video (img.video) this is its poster
+// frame with a play badge; the lightbox plays the clip itself (data-video).
 import type { Img } from '../trips';
+import { ICONS } from '../icons';
 interface Props { img: Img; trip: string; sizes?: string; eager?: boolean; class?: string }
 const { img, trip, sizes = '(max-width: 800px) 100vw, 50vw', eager = false } = Astro.props;
-const p = `${import.meta.env.BASE_URL}assets/${trip}/${img.file}`;
+const base = `${import.meta.env.BASE_URL}assets/${trip}/`;
+const p = `${base}${img.file}`;
 ---
-<img
-  class:list={['photo', Astro.props.class]}
-  src={`${p}-1600.webp`}
-  srcset={`${p}-800.webp 800w, ${p}-1600.webp 1600w`}
-  sizes={sizes}
-  width={img.w}
-  height={img.h}
-  loading={eager ? 'eager' : 'lazy'}
-  decoding="async"
-  style={`background: url(${p}-24.jpg) center / cover`}
-  alt={img.place ?? ''}
-  data-place={img.place ?? undefined}
-/>
+{img.video ? (
+  <span class="vid">
+    <img
+      class:list={['photo', Astro.props.class]}
+      src={`${p}-1600.webp`}
+      srcset={`${p}-800.webp 800w, ${p}-1600.webp 1600w`}
+      sizes={sizes}
+      width={img.w}
+      height={img.h}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      style={`background: url(${p}-24.jpg) center / cover`}
+      alt={img.place ? `Video: ${img.place}` : 'Video'}
+      data-place={img.place ?? undefined}
+      data-video={`${base}${img.video}`}
+    />
+    <span class="play" set:html={ICONS.play} />
+  </span>
+) : (
+  <img
+    class:list={['photo', Astro.props.class]}
+    src={`${p}-1600.webp`}
+    srcset={`${p}-800.webp 800w, ${p}-1600.webp 1600w`}
+    sizes={sizes}
+    width={img.w}
+    height={img.h}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    style={`background: url(${p}-24.jpg) center / cover`}
+    alt={img.place ?? ''}
+    data-place={img.place ?? undefined}
+  />
+)}
+
+<style>
+  .vid { position: relative; display: block; }
+  .play {
+    position: absolute; left: 50%; top: 50%; translate: -50% -50%; pointer-events: none;
+    display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(0, 0, 0, .45); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    color: #fff; font-size: 24px; padding-left: 3px;
+  }
+  .play :global(svg) { fill: currentColor; }
+</style>
