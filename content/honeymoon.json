@@ -51,8 +51,16 @@
       "lat": 19.946,
       "lon": -155.867,
       "kind": "history",
-      "blurb": "Ancient Hawaiian fishponds on the Mauna Lani shoreline, and our sunset stop before dinner.",
+      "blurb": "Ancient Hawaiian fishponds on the Mauna Lani shoreline.",
       "q": "Kalahuipuaʻa Fishponds, Mauna Lani"
+    },
+    "Mauna Lani": {
+      "lat": 19.946,
+      "lon": -155.867,
+      "kind": "drinks",
+      "blurb": "The Mauna Lani resort on the Kohala Coast. Sunset drinks on the beach before dinner at CanoeHouse.",
+      "url": "https://auberge.com/mauna-lani/",
+      "q": "Mauna Lani, Auberge Resorts Collection"
     },
     "CanoeHouse": {
       "lat": 19.947,
@@ -708,7 +716,7 @@
         },
         {
           "type": "carousel",
-          "caption": "Kalahuipuaʻa fishponds",
+          "caption": "Mauna Lani",
           "images": [
             {
               "id": "IMG_6605.HEIC",
@@ -716,7 +724,7 @@
               "w": 1200,
               "h": 1600,
               "time": "18:17",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_0474.HEIC",
@@ -724,7 +732,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:18",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6606.HEIC",
@@ -732,7 +740,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:18",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6607.HEIC",
@@ -740,7 +748,7 @@
               "w": 1200,
               "h": 1600,
               "time": "18:21",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6608.HEIC",
@@ -748,7 +756,7 @@
               "w": 1200,
               "h": 1600,
               "time": "18:44",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_0476.HEIC",
@@ -756,7 +764,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:45",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_0478.HEIC",
@@ -764,7 +772,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:45",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6609.HEIC",
@@ -772,7 +780,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:45",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6611.HEIC",
@@ -780,7 +788,7 @@
               "w": 1200,
               "h": 1600,
               "time": "18:47",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_0480.HEIC",
@@ -788,7 +796,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:49",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6612.HEIC",
@@ -796,7 +804,7 @@
               "w": 1600,
               "h": 832,
               "time": "18:49",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             },
             {
               "id": "IMG_6613.HEIC",
@@ -804,7 +812,7 @@
               "w": 1600,
               "h": 1200,
               "time": "18:51",
-              "place": "Kalahuipuaʻa fishponds"
+              "place": "Mauna Lani"
             }
           ]
         },
