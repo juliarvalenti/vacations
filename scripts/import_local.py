@@ -198,12 +198,16 @@ def main(slug, folder):
     hero = next((p["img"] for p in photos if p["name"] == ov.get("hero")), photos[0]["img"])
     # Only the gazetteer's coordinates for named places are published, never a photo's own GPS.
     used = {p["place"] for p in photos if p["place"]}
-    place_coords = {pl["name"]: [pl["lat"], pl["lon"]] for pl in places if pl["name"] in used}
+    info = ("lat", "lon", "kind", "blurb", "url", "q")
+    place_coords = {pl["name"]: {k: pl[k] for k in info if k in pl} for pl in places if pl["name"] in used}
     doc = {"title": itin["title"], "subtitle": itin["subtitle"], "date": str(photos[0]["when"].date()),
            "map": itin.get("map"), "places": place_coords,
            "hero": [{"type": "grid", "images": [hero]}], "sections": sections, "source": None}
     (content / f"{slug}.json").write_text(json.dumps(doc, indent=2, ensure_ascii=False))
 
+    no_coords = sorted(used - set(place_coords))
+    if no_coords:
+        print(f"places with no coordinates (no map dot) — add them to {slug}.places.json: {no_coords}")
     labelled = sum(1 for p in photos if p["place"])
     print(f"{slug}: {len(photos)} photos, {labelled} placed, {len(photos) - labelled} unplaced")
     print(f"skipped {len(skipped)} (videos/overrides); undated & dropped: {undated}")

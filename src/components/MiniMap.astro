@@ -1,8 +1,10 @@
 ---
 // Small inline-SVG map for the lightbox: coastline outlines, every visited place as a dot, the
 // route between them, and a highlighted dot the lightbox moves to the current photo's place.
-// The view zooms to whichever island the current place is on.
+// The view zooms to whichever island the current place is on. Below the map: the place's icon,
+// blurb, and Maps / website links (from content/<trip>.places.json via the importer).
 import type { Trip } from '../trips';
+import { KIND_ICONS, ICONS } from '../icons';
 interface Props { trip: Trip }
 const { trip } = Astro.props;
 
@@ -24,7 +26,16 @@ const views = outlines.map((ring) => {
   const xs = ring.map((p) => p[0]), ys = ring.map((p) => p[1]);
   return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
 });
-const pts = Object.fromEntries(Object.entries(places).map(([name, [lat, lon]]) => [name, px(lat, lon)]));
+const pts = Object.fromEntries(Object.entries(places).map(([name, p]) => [name, px(p.lat, p.lon)]));
+
+// per-place card info for the caption, with the Google Maps link built here (no API, no key)
+const mapsUrl = (name: string, p: (typeof places)[string]) => {
+  const q = p.q === 'coords' ? `${p.lat},${p.lon}` : p.q ?? `${name}, Hawaii`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+};
+const info = Object.fromEntries(Object.entries(places).map(([name, p]) => [name, {
+  icon: KIND_ICONS[p.kind ?? ''] ?? '', blurb: p.blurb ?? '', url: p.url ?? '', maps: mapsUrl(name, p),
+}]));
 
 // visiting order = first appearance in the page
 const order: string[] = [];
@@ -37,23 +48,45 @@ const route = order.map((n) => pts[n].join(',')).join(' ');
     {d.map((path) => <path class="land" d={path} />)}
     <polyline class="route" points={route} />
     {Object.values(pts).map(([x, y]) => <circle class="stop" cx={x} cy={y} r="0.5" />)}
-    <circle class="here-ring" r="2" />
-    <circle class="here" r="0.9" />
+    <circle class="here-ring" r="1" />
+    <circle class="here" r="1" />
   </svg>
-  <figcaption><strong></strong><span></span></figcaption>
-  <script type="application/json" set:html={JSON.stringify({ pts, views })} />
+  <figcaption>
+    <strong><span class="icon"></span><span class="name"></span></strong>
+    <p class="blurb"></p>
+    <span class="meta"></span>
+    <nav class="links">
+      <a class="maps" target="_blank" rel="noopener"><Fragment set:html={ICONS.map} /><span>Maps</span></a>
+      <a class="site" target="_blank" rel="noopener"><Fragment set:html={ICONS.externalLink} /><span class="label">Website</span></a>
+    </nav>
+  </figcaption>
+  <script type="application/json" set:html={JSON.stringify({ pts, views, info })} />
 </figure>
 
 <style>
-  .minimap { position: fixed; left: 16px; bottom: 16px; z-index: 2; margin: 0; width: 230px; padding: 10px; border-radius: 10px;
+  .minimap { position: fixed; left: 16px; bottom: 16px; z-index: 2; margin: 0; width: 260px; padding: 10px; border-radius: 10px;
     background: rgba(20, 20, 20, .55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); color: #fff; }
-  svg { display: block; width: 100%; height: 150px; }
+  svg { display: block; width: 100%; height: 170px; overflow: visible; }
   .land { fill: rgba(255,255,255,.14); stroke: rgba(255,255,255,.35); stroke-width: .25; vector-effect: non-scaling-stroke; }
   .route { fill: none; stroke: rgba(255,255,255,.35); stroke-width: 1; stroke-dasharray: 2 3; vector-effect: non-scaling-stroke; }
-  .stop { fill: rgba(255,255,255,.55); }
-  .here { fill: var(--accent); stroke: #fff; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
-  .here-ring { fill: none; stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; opacity: .6; }
-  figcaption { margin-top: 8px; display: grid; gap: 1px; font-size: 12px; line-height: 1.35; }
-  figcaption span { opacity: .7; font-variant-numeric: tabular-nums; }
-  @media (max-width: 700px) { .minimap { width: 160px; } svg { height: 100px; } }
+  .stop { fill: rgba(255,255,255,.4); }
+  .here { fill: var(--accent); stroke: #fff; stroke-width: 2.5; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 4px var(--accent)); }
+  .here-ring { fill: var(--accent); opacity: .5; transform-box: fill-box; transform-origin: center; animation: ping 1.6s ease-out infinite; }
+  @keyframes ping { from { transform: scale(1); opacity: .6; } to { transform: scale(4); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .here-ring { animation: none; opacity: .3; transform: scale(2); } }
+  figcaption { margin-top: 10px; display: grid; gap: 4px; font-size: 12px; line-height: 1.4; }
+  figcaption strong { display: flex; gap: 7px; align-items: center; font-size: 14px; font-weight: 600; }
+  .icon { display: inline-flex; color: var(--accent); font-size: 16px; flex: none; }
+  .icon:empty { display: none; }
+  .blurb { margin: 0; opacity: .85; }
+  .blurb:empty { display: none; }
+  .meta { opacity: .6; }
+  .meta:empty { display: none; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .links a { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px;
+    background: rgba(255,255,255,.1); color: #fff; text-decoration: none; font-weight: 500; transition: background .15s; }
+  .links a:hover { background: rgba(255,255,255,.2); }
+  .links :global(svg) { font-size: 13px; opacity: .8; }
+  .links a[hidden] { display: none; }
+  @media (max-width: 700px) { .minimap { width: 180px; } svg { height: 100px; } .blurb { display: none; } }
 </style>

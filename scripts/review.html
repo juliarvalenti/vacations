@@ -36,6 +36,13 @@
   .tile.no::after { content: '✕'; position: absolute; inset: 0; display: grid; place-items: center; color: var(--no); font-size: 42px; font-weight: 300; }
   .tile .t { position: absolute; left: 4px; bottom: 4px; font-size: 10px; background: rgba(0,0,0,.55); padding: 1px 5px; color: #ddd; }
   body[data-filter="kept"] .tile.no, body[data-filter="rejected"] .tile:not(.no) { display: none; }
+  body[data-filter="nomap"] .tile:not(.nomap), body[data-filter="nomap"] .tile.no { display: none; }
+  body[data-filter="nomap"] .grid:not(:has(.tile.nomap:not(.no))),
+  body[data-filter="nomap"] .place:has(+ .grid:not(:has(.tile.nomap:not(.no)))),
+  body[data-filter="nomap"] .day:not(:has(.tile.nomap:not(.no))) { display: none; }
+  #view .bar input { background: var(--bg-2); color: var(--fg); border: 1px solid var(--line); padding: 5px 8px; font: inherit; width: 260px; }
+  #view .bar input:focus { outline: 1px solid var(--accent); }
+  #view .saved { color: var(--keep); font-size: 12px; min-width: 40px; }
 
   #view { position: fixed; inset: 0; z-index: 10; background: rgba(10,10,10,.92); display: grid; grid-template-rows: 1fr auto; }
   #view[hidden] { display: none; }
@@ -56,6 +63,7 @@
     <button data-f="all" aria-pressed="true">All</button>
     <button data-f="kept" aria-pressed="false">Kept</button>
     <button data-f="rejected" aria-pressed="false">Rejected</button>
+    <button data-f="nomap" aria-pressed="false">No map dot <span id="nnomap"></span></button>
   </div>
   <span class="spacer"></span>
   <span class="status" id="status"></span>
@@ -66,12 +74,24 @@
 
 <div id="view" hidden>
   <img alt="" />
-  <div class="bar"><span id="vpos"></span><span class="verdict" id="verdict"></span><span><kbd>x</kbd> toggle · <kbd>←</kbd><kbd>→</kbd> step · <kbd>Esc</kbd> close</span></div>
+  <div class="bar">
+    <span id="vpos"></span><span class="verdict" id="verdict"></span>
+    <input id="place" list="placelist" placeholder="Where was this? (Enter to save)" autocomplete="off" />
+    <span class="saved" id="psaved"></span>
+    <span><kbd>x</kbd> toggle · <kbd>p</kbd> place · <kbd>←</kbd><kbd>→</kbd> step · <kbd>Esc</kbd> close</span>
+  </div>
 </div>
+<datalist id="placelist"></datalist>
 
 <script>
 const $ = (s) => document.querySelector(s);
-let photos = [], rejected = new Set(), tiles = [], cur = 0;
+let photos = [], rejected = new Set(), tiles = [], cur = 0, known = new Set();
+// a photo gets a map dot only if its place is in the gazetteer (has coordinates)
+const hasDot = (p) => p.place && known.has(p.place);
+function markDots() {
+  photos.forEach((p, i) => tiles[i].classList.toggle('nomap', !hasDot(p)));
+  $('#nnomap').textContent = photos.filter((p) => !hasDot(p) && !rejected.has(p.name)).length;
+}
 
 const fmtDate = (iso) => new Date(iso + 'T12:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
 
@@ -81,6 +101,8 @@ async function load() {
   $('#title').textContent = d.title;
   photos = d.photos;
   rejected = new Set(d.rejected);
+  known = new Set(d.places);
+  $('#placelist').innerHTML = d.places.map((n) => `<option value="${n.replace(/"/g, '&quot;')}">`).join('');
   const dayName = Object.fromEntries(d.days.map((x) => [x.date, x.name]));
 
   const main = $('#main');
@@ -111,8 +133,25 @@ async function load() {
     grid.append(t);
     tiles.push(t);
   });
+  markDots();
   counts();
 }
+
+async function savePlace() {
+  const p = photos[cur], place = $('#place').value.trim() || null;
+  if (place === p.place) return;
+  const r = await fetch('/place', { method: 'POST', body: JSON.stringify({ name: p.name, place }) });
+  if (!r.ok) { $('#psaved').textContent = 'failed!'; return; }
+  p.place = place;
+  markDots();
+  $('#psaved').textContent = place && !known.has(place) ? 'saved (new place — needs coords)' : 'saved';
+  $('#vpos').textContent = `${cur + 1} / ${photos.length} · ${fmtDate(p.date)} ${p.time} · ${p.place ?? 'Unplaced'}`;
+}
+$('#place').addEventListener('keydown', (e) => {
+  e.stopPropagation(); // typing here shouldn't trigger the page shortcuts
+  if (e.key === 'Enter') { savePlace(); $('#place').blur(); }
+  if (e.key === 'Escape') $('#place').blur();
+});
 
 function counts() {
   $('#nrej').textContent = rejected.size;
@@ -149,6 +188,8 @@ function paintView() {
   $('#view').classList.toggle('no', no);
   $('#verdict').textContent = no ? 'Rejected' : 'Kept';
   $('#vpos').textContent = `${cur + 1} / ${photos.length} · ${fmtDate(p.date)} ${p.time} · ${p.place ?? 'Unplaced'}`;
+  $('#place').value = p.place ?? '';
+  $('#psaved').textContent = hasDot(p) ? '' : 'no map dot';
   new Image().src = `/img/1600/${photos[Math.min(cur + 1, photos.length - 1)].file}`;
 }
 
@@ -163,6 +204,7 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'x' || e.key === ' ') toggle(cur);
   else if (e.key === 'Enter') viewing ? ($('#view').hidden = true) : openView(cur);
   else if (e.key === 'Escape') $('#view').hidden = true;
+  else if (e.key === 'p' && viewing) $('#place').focus();
   else return;
   e.preventDefault();
 });

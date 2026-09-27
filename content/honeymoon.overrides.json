@@ -114,35 +114,111 @@
       "when": "2026-09-16 11:40",
       "place": "Nuʻuanu Pali Lookout"
     },
-
-    "IMG_6594.HEIC": { "place": "Makāula-ʻOʻoma Trail" },
-    "IMG_0424.HEIC": { "place": "Makāula-ʻOʻoma Trail" },
-    "IMG_0425.HEIC": { "place": "Makāula-ʻOʻoma Trail" },
-    "IMG_0428.HEIC": { "place": "Makāula-ʻOʻoma Trail" },
-    "IMG_0448.HEIC": { "place": "Kalahuipuaʻa fishponds" },
-    "IMG_0452.HEIC": { "place": "Kalahuipuaʻa fishponds" },
-    "IMG_0455.HEIC": { "place": "Kalahuipuaʻa fishponds" },
-    "IMG_0514.HEIC": { "place": "Paniolo Adventures" },
-    "IMG_0796.HEIC": { "place": "Lehua Restaurant" },
-    "IMG_0830.HEIC": { "place": "Hilo Honu Inn" },
-    "IMG_0831.HEIC": { "place": "Hilo Honu Inn" },
-    "IMG_0835.HEIC": { "place": "ʻAkaka Falls" },
-    "IMG_0836.HEIC": { "place": "ʻAkaka Falls" },
-    "IMG_0853.HEIC": { "place": "Hawaiʻi Tropical Botanical Garden" },
-    "IMG_0867.HEIC": { "place": "Hawaiʻi Tropical Botanical Garden" },
-    "IMG_0868.HEIC": { "place": "Hawaiʻi Tropical Botanical Garden" },
-    "IMG_0872.HEIC": { "place": "Hawaiʻi Tropical Botanical Garden" },
-    "IMG_0875.HEIC": { "place": "Hawaiʻi Tropical Botanical Garden" },
-    "IMG_0892.HEIC": { "place": "Hawaiʻi Tropical Botanical Garden" },
-    "IMG_0962.HEIC": { "place": "Bishop Museum" },
-    "IMG_0963.HEIC": { "place": "Bishop Museum" },
-    "IMG_1067.HEIC": { "place": "Puʻu ʻUalakaʻa" },
-    "IMG_1072.HEIC": { "place": "Helena's Hawaiian Food" },
-    "IMG_1134.HEIC": { "place": null },
-    "IMG_1218.HEIC": { "place": "Kaʻena Point" },
-    "IMG_1221.HEIC": { "place": "Kaʻena Point" },
-    "IMG_1268.HEIC": { "place": "Waikīkī Aquarium" },
-    "IMG_1270.HEIC": { "place": "Waikīkī Aquarium" }
+    "IMG_6594.HEIC": {
+      "place": "Makāula-ʻOʻoma Trail"
+    },
+    "IMG_0424.HEIC": {
+      "place": "Makāula-ʻOʻoma Trail"
+    },
+    "IMG_0425.HEIC": {
+      "place": "Makāula-ʻOʻoma Trail"
+    },
+    "IMG_0428.HEIC": {
+      "place": "Makāula-ʻOʻoma Trail"
+    },
+    "IMG_0448.HEIC": {
+      "place": "Kalahuipuaʻa fishponds"
+    },
+    "IMG_0452.HEIC": {
+      "place": "Kalahuipuaʻa fishponds"
+    },
+    "IMG_0455.HEIC": {
+      "place": "Kalahuipuaʻa fishponds"
+    },
+    "IMG_0514.HEIC": {
+      "place": "Paniolo Adventures"
+    },
+    "IMG_0513.HEIC": {
+      "place": "Hula Daddy"
+    },
+    "IMG_6672.HEIC": {
+      "place": "Horizon Guest House"
+    },
+    "IMG_0716.HEIC": {
+      "place": "Volcano"
+    },
+    "IMG_6780.HEIC": {
+      "place": "Hilo airport"
+    },
+    "IMG_1066.HEIC": {
+      "place": "Nuʻuanu Pali Lookout"
+    },
+    "IMG_1240.HEIC": {
+      "place": "Kawainui Marsh"
+    },
+    "IMG_0722.HEIC": {
+      "place": "Volcano"
+    },
+    "IMG_0796.HEIC": {
+      "place": "Lehua Restaurant"
+    },
+    "IMG_0830.HEIC": {
+      "place": "Hilo Honu Inn"
+    },
+    "IMG_0831.HEIC": {
+      "place": "Hilo Honu Inn"
+    },
+    "IMG_0835.HEIC": {
+      "place": "ʻAkaka Falls"
+    },
+    "IMG_0836.HEIC": {
+      "place": "ʻAkaka Falls"
+    },
+    "IMG_0853.HEIC": {
+      "place": "Hawaiʻi Tropical Botanical Garden"
+    },
+    "IMG_0867.HEIC": {
+      "place": "Hawaiʻi Tropical Botanical Garden"
+    },
+    "IMG_0868.HEIC": {
+      "place": "Hawaiʻi Tropical Botanical Garden"
+    },
+    "IMG_0872.HEIC": {
+      "place": "Hawaiʻi Tropical Botanical Garden"
+    },
+    "IMG_0875.HEIC": {
+      "place": "Hawaiʻi Tropical Botanical Garden"
+    },
+    "IMG_0892.HEIC": {
+      "place": "Hawaiʻi Tropical Botanical Garden"
+    },
+    "IMG_0962.HEIC": {
+      "place": "Bishop Museum"
+    },
+    "IMG_0963.HEIC": {
+      "place": "Bishop Museum"
+    },
+    "IMG_1067.HEIC": {
+      "place": "Puʻu ʻUalakaʻa"
+    },
+    "IMG_1072.HEIC": {
+      "place": "Helena's Hawaiian Food"
+    },
+    "IMG_1134.HEIC": {
+      "place": "Aliʻi Fish Market"
+    },
+    "IMG_1218.HEIC": {
+      "place": "Kaʻena Point"
+    },
+    "IMG_1221.HEIC": {
+      "place": "Kaʻena Point"
+    },
+    "IMG_1268.HEIC": {
+      "place": "Waikīkī Aquarium"
+    },
+    "IMG_1270.HEIC": {
+      "place": "Waikīkī Aquarium"
+    }
   },
   "rejected": [
     "IMG_0469.HEIC",
@@ -283,6 +359,7 @@
     "IMG_6861.JPG",
     "IMG_6863.HEIC",
     "IMG_6864.HEIC",
+    "IMG_6867.HEIC",
     "IMG_6868.HEIC",
     "IMG_6872.HEIC",
     "IMG_6873.HEIC",

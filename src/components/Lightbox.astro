@@ -34,7 +34,8 @@ const { trip } = Astro.props;
   // --- mini map ---
   const map = lb.querySelector<HTMLElement>('.minimap');
   type View = [number, number, number, number];
-  const mapData: { pts: Record<string, [number, number]>; views: View[] } | null =
+  type Info = { icon: string; blurb: string; url: string; maps: string };
+  const mapData: { pts: Record<string, [number, number]>; views: View[]; info: Record<string, Info> } | null =
     map && JSON.parse(map.querySelector('script')!.textContent!);
   const svg = map?.querySelector('svg');
   let view: View | null = null, anim = 0;
@@ -63,10 +64,27 @@ const { trip } = Astro.props;
     // zoom to the island containing the point (or the nearest one)
     const dist = (v: View) => Math.hypot(Math.max(v[0] - x, 0, x - v[2]), Math.max(v[1] - y, 0, y - v[3]));
     const island = mapData.views.reduce((a, b) => (dist(b) < dist(a) ? b : a));
-    zoomTo(pad(island));
+    const target = pad(island);
+    // size the marker in screen pixels (≈6px radius) whatever the zoom: svg units per px at the target view
+    const box = svg.getBoundingClientRect();
+    const [bw, bh] = box.width ? [box.width, box.height] : [240, 170];
+    const unitsPerPx = Math.max(target[2] / bw, target[3] / bh);
+    const r = String(6 * unitsPerPx);
+    for (const c of svg.querySelectorAll('.here, .here-ring')) c.setAttribute('r', r);
+    zoomTo(target);
     const day = photo.closest<HTMLElement>('[data-heading]')?.dataset.heading;
-    map.querySelector('strong')!.textContent = name;
-    map.querySelector('figcaption span')!.textContent = [day, photo.dataset.time].filter(Boolean).join(' · ');
+    const info = mapData.info[name!];
+    const q = <T extends HTMLElement>(s: string) => map.querySelector<T>(s)!;
+    q('.name').textContent = name!;
+    q('.icon').innerHTML = info?.icon ?? ''; // build-time Lucide SVG from our own data
+    q('.blurb').textContent = info?.blurb ?? '';
+    q('.meta').textContent = day ?? '';
+    const maps = q<HTMLAnchorElement>('.maps'), site = q<HTMLAnchorElement>('.site');
+    maps.href = info?.maps ?? '';
+    maps.hidden = !info?.maps;
+    site.href = info?.url ?? '';
+    site.hidden = !info?.url;
+    q('.site .label').textContent = info?.url.includes('yelp.com') ? 'Yelp' : 'Website';
   };
 
   const show = (i: number) => {
@@ -77,7 +95,7 @@ const { trip } = Astro.props;
     for (const j of [cur + 1, cur - 1]) new Image().src = src((j + photos.length) % photos.length);
   };
   const src = (i: number) => photos[i].getAttribute('src')!;
-  photos.forEach((p, i) => p.addEventListener('click', () => { show(i); lb.showModal(); }));
+  photos.forEach((p, i) => p.addEventListener('click', () => { lb.showModal(); show(i); }));
   lb.querySelector('.lb-prev')!.addEventListener('click', () => show(cur - 1));
   lb.querySelector('.lb-next')!.addEventListener('click', () => show(cur + 1));
   lb.querySelector('.close')!.addEventListener('click', () => lb.close());

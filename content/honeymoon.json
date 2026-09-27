@@ -4,190 +4,383 @@
   "date": "2026-09-06",
   "map": "hawaii",
   "places": {
-    "Horizon Guest House": [
-      19.364,
-      -155.873
-    ],
-    "Don's Mai Tai Bar": [
-      19.632,
-      -155.99
-    ],
-    "Makāula-ʻOʻoma Trail": [
-      19.727,
-      -155.955
-    ],
-    "Puʻukoholā Heiau": [
-      20.026,
-      -155.822
-    ],
-    "Puakō Petroglyphs": [
-      19.957,
-      -155.859
-    ],
-    "Kalahuipuaʻa fishponds": [
-      19.946,
-      -155.867
-    ],
-    "CanoeHouse": [
-      19.947,
-      -155.867
-    ],
-    "Hula Daddy": [
-      19.581,
-      -155.967
-    ],
-    "Paniolo Adventures": [
-      20.135,
-      -155.803
-    ],
-    "Kohala Mountain Road": [
-      20.055,
-      -155.74
-    ],
-    "Merriman's": [
-      20.023,
-      -155.677
-    ],
-    "Kealakekua Bay": [
-      19.476,
-      -155.92
-    ],
-    "Noio": [
-      19.829,
-      -155.991
-    ],
-    "South Point": [
-      18.913,
-      -155.681
-    ],
-    "Volcano Village Lodge": [
-      19.437,
-      -155.233
-    ],
-    "Mauna Kea visitor station": [
-      19.76,
-      -155.456
-    ],
-    "Mauna Kea summit": [
-      19.822,
-      -155.47
-    ],
-    "Kīlauea caldera": [
-      19.42,
-      -155.288
-    ],
-    "Volcano House": [
-      19.429,
-      -155.258
-    ],
-    "Puʻu ʻŌʻō Trail": [
-      19.665,
-      -155.388
-    ],
-    "Palila Discovery Trail": [
-      19.83,
-      -155.6
-    ],
-    "Chain of Craters Road": [
-      19.33,
-      -155.19
-    ],
-    "Hōlei Sea Arch": [
-      19.292,
-      -155.107
-    ],
-    "ʻAkaka Falls": [
-      19.854,
-      -155.152
-    ],
-    "Hawaiʻi Tropical Botanical Garden": [
-      19.81,
-      -155.1
-    ],
-    "Hilo Honu Inn": [
-      19.72,
-      -155.09
-    ],
-    "The Seaside": [
-      19.733,
-      -155.029
-    ],
-    "Royal Hawaiian": [
-      21.2775,
-      -157.829
-    ],
-    "Mai Tai Bar": [
-      21.2775,
-      -157.829
-    ],
-    "natuRe": [
-      21.281,
-      -157.827
-    ],
-    "Bishop Museum": [
-      21.333,
-      -157.871
-    ],
-    "La Mariana Sailing Club": [
-      21.322,
-      -157.893
-    ],
-    "Skull & Crown Trading Co.": [
-      21.312,
-      -157.863
-    ],
-    "ʻAiea Loop Trail": [
-      21.402,
-      -157.896
-    ],
-    "Nuʻuanu Pali Lookout": [
-      21.367,
-      -157.793
-    ],
-    "Puʻu ʻUalakaʻa": [
-      21.316,
-      -157.818
-    ],
-    "Helena's Hawaiian Food": [
-      21.334,
-      -157.866
-    ],
-    "House Without A Key": [
-      21.278,
-      -157.8325
-    ],
-    "Hanauma Bay": [
-      21.271,
-      -157.694
-    ],
-    "Lānaʻi Lookout": [
-      21.283,
-      -157.675
-    ],
-    "ʻIolani Palace": [
-      21.3066,
-      -157.8588
-    ],
-    "Waikīkī": [
-      21.272,
-      -157.824
-    ],
-    "Michel's at the Colony Surf": [
-      21.263,
-      -157.821
-    ],
-    "Kaʻena Point": [
-      21.576,
-      -158.25
-    ],
-    "Azure": [
-      21.2775,
-      -157.829
-    ],
-    "Waikīkī Aquarium": [
-      21.2655,
-      -157.8216
-    ]
+    "Horizon Guest House": {
+      "lat": 19.364,
+      "lon": -155.873,
+      "kind": "stay",
+      "blurb": "Four-suite B&B on 40 acres of pasture on Mauna Loa's slope above Hōnaunau, with an ocean-view pool.",
+      "url": "https://horizonguesthouse.com/"
+    },
+    "Don's Mai Tai Bar": {
+      "lat": 19.632,
+      "lon": -155.99,
+      "kind": "drinks",
+      "blurb": "Oceanfront bar at the Royal Kona Resort in Kailua-Kona.",
+      "url": "https://www.royalkona.com/",
+      "q": "Don's Mai Tai Bar, Royal Kona Resort"
+    },
+    "Makāula-ʻOʻoma Trail": {
+      "lat": 19.727,
+      "lon": -155.955,
+      "kind": "birding",
+      "blurb": "Upland forest above Kona — the trip's first birding walk.",
+      "q": "coords"
+    },
+    "Kuleana Rum Shack": {
+      "lat": 19.914,
+      "lon": -155.88,
+      "kind": "food",
+      "blurb": "Kuleana Rum Works' restaurant and bar at Queens' MarketPlace, Waikoloa — rum flights and ahi poke.",
+      "url": "https://kuleanarum.com/kuleana-rum-shack/"
+    },
+    "Puʻukoholā Heiau": {
+      "lat": 20.026,
+      "lon": -155.822,
+      "kind": "history",
+      "blurb": "Temple built by Kamehameha I in 1790–91; a prophecy said building it would let him unite the islands.",
+      "url": "https://www.nps.gov/puhe/"
+    },
+    "Puakō Petroglyphs": {
+      "lat": 19.957,
+      "lon": -155.859,
+      "kind": "history",
+      "blurb": "Thousands of petroglyphs carved into pāhoehoe lava, a short walk from Holoholokai Beach Park.",
+      "q": "Puakō Petroglyph Archaeological Preserve"
+    },
+    "Kalahuipuaʻa fishponds": {
+      "lat": 19.946,
+      "lon": -155.867,
+      "kind": "history",
+      "blurb": "Ancient Hawaiian fishponds on the Mauna Lani shoreline — the sunset stop before dinner.",
+      "q": "Kalahuipuaʻa Fishponds, Mauna Lani"
+    },
+    "CanoeHouse": {
+      "lat": 19.947,
+      "lon": -155.867,
+      "kind": "food",
+      "blurb": "Oceanfront restaurant at Mauna Lani, open since 1989.",
+      "url": "https://auberge.com/mauna-lani/dine/canoe-house/",
+      "q": "CanoeHouse, Mauna Lani"
+    },
+    "Hula Daddy": {
+      "lat": 19.581,
+      "lon": -155.967,
+      "kind": "coffee",
+      "blurb": "100% Kona coffee farm and tasting room in upcountry Holualoa.",
+      "url": "https://huladaddy.com/",
+      "q": "Hula Daddy Kona Coffee"
+    },
+    "Drive to Waimea": {
+      "lat": 19.92,
+      "lon": -155.696,
+      "kind": "travel",
+      "blurb": "Climbing from the Kona side up into Waimea's ranch country.",
+      "q": "coords"
+    },
+    "Paniolo Adventures": {
+      "lat": 20.135,
+      "lon": -155.803,
+      "kind": "adventure",
+      "blurb": "Horseback rides on a working ranch in the Kohala Mountains.",
+      "url": "https://www.panioloadventures.com/"
+    },
+    "Kohala Mountain Road": {
+      "lat": 20.055,
+      "lon": -155.74,
+      "kind": "travel",
+      "blurb": "Highway 250 between Hāwī and Waimea, through ranch land along the Kohala Mountains.",
+      "q": "coords"
+    },
+    "Merriman's": {
+      "lat": 20.023,
+      "lon": -155.677,
+      "kind": "food",
+      "blurb": "Peter Merriman's Waimea flagship, a pioneer of Hawaiʻi Regional Cuisine.",
+      "url": "https://www.merrimanshawaii.com/",
+      "q": "Merriman's Waimea"
+    },
+    "Kealakekua Bay": {
+      "lat": 19.476,
+      "lon": -155.92,
+      "kind": "beach",
+      "blurb": "Marine life conservation district and snorkel spot, home to the Captain Cook monument."
+    },
+    "Noio": {
+      "lat": 19.829,
+      "lon": -155.991,
+      "kind": "food",
+      "blurb": "12-seat omakase counter at the Four Seasons Hualālai.",
+      "url": "https://www.fourseasons.com/hualalai/dining/restaurants/noio/",
+      "q": "Noio, Four Seasons Hualalai"
+    },
+    "South Point": {
+      "lat": 18.913,
+      "lon": -155.681,
+      "kind": "nature",
+      "blurb": "Ka Lae — the southernmost point of the United States.",
+      "q": "Ka Lae South Point, Hawaii"
+    },
+    "Volcano Village Lodge": {
+      "lat": 19.437,
+      "lon": -155.233,
+      "kind": "stay",
+      "blurb": "Rainforest lodge in Volcano Village, just outside the national park.",
+      "url": "https://www.volcanovillagelodge.com/"
+    },
+    "Mauna Kea visitor station": {
+      "lat": 19.76,
+      "lon": -155.456,
+      "kind": "stars",
+      "blurb": "Visitor station at about 9,200 ft on Mauna Kea — stargazing after the summit.",
+      "url": "https://hilo.hawaii.edu/maunakea/",
+      "q": "Maunakea Visitor Information Station"
+    },
+    "Mauna Kea summit": {
+      "lat": 19.822,
+      "lon": -155.47,
+      "kind": "stars",
+      "blurb": "13,803 ft summit ringed by observatories — sunset above the clouds.",
+      "q": "Maunakea Observatories"
+    },
+    "Kīlauea caldera": {
+      "lat": 19.42,
+      "lon": -155.288,
+      "kind": "nature",
+      "blurb": "Kīlauea's summit caldera and Halemaʻumaʻu crater, in Hawaiʻi Volcanoes National Park.",
+      "url": "https://www.nps.gov/havo/"
+    },
+    "Volcano House": {
+      "lat": 19.429,
+      "lon": -155.258,
+      "kind": "food",
+      "blurb": "Historic hotel on the rim of Kīlauea caldera — lunch with a crater view.",
+      "url": "https://hawaiivolcanohouse.com/"
+    },
+    "Volcano": {
+      "lat": 19.428,
+      "lon": -155.238,
+      "kind": "nature",
+      "blurb": "Volcano Village and the ʻōhiʻa rainforest around it.",
+      "q": "Volcano, Hawaii"
+    },
+    "Puʻu ʻŌʻō Trail": {
+      "lat": 19.665,
+      "lon": -155.388,
+      "kind": "birding",
+      "blurb": "Saddle Road trail through native-forest kīpuka — birding with Jack Jeffrey.",
+      "q": "Puu Oo Trailhead, Saddle Road"
+    },
+    "Palila Discovery Trail": {
+      "lat": 19.83,
+      "lon": -155.6,
+      "kind": "birding",
+      "blurb": "Māmane forest on Mauna Kea's slope, habitat of the endangered palila."
+    },
+    "Lehua Restaurant": {
+      "lat": 19.7,
+      "lon": -155.089,
+      "kind": "food",
+      "blurb": "Restaurant in the ʻImiloa Astronomy Center on the UH Hilo campus.",
+      "url": "https://lehuarestaurant.com/",
+      "q": "Lehua Restaurant, Imiloa, Hilo"
+    },
+    "Chain of Craters Road": {
+      "lat": 19.33,
+      "lon": -155.19,
+      "kind": "nature",
+      "blurb": "Road from Kīlauea's summit down to the sea across decades of lava flows.",
+      "url": "https://www.nps.gov/havo/"
+    },
+    "Hōlei Sea Arch": {
+      "lat": 19.292,
+      "lon": -155.107,
+      "kind": "nature",
+      "blurb": "Lava sea arch at the end of Chain of Craters Road."
+    },
+    "ʻAkaka Falls": {
+      "lat": 19.854,
+      "lon": -155.152,
+      "kind": "nature",
+      "blurb": "442-ft waterfall in ʻAkaka Falls State Park near Honomū.",
+      "url": "https://dlnr.hawaii.gov/dsp/parks/hawaii/akaka-falls-state-park/"
+    },
+    "Hawaiʻi Tropical Botanical Garden": {
+      "lat": 19.81,
+      "lon": -155.1,
+      "kind": "nature",
+      "blurb": "Rainforest garden in a valley on the Onomea Bay coast, north of Hilo.",
+      "url": "https://htbg.com/"
+    },
+    "Hilo Honu Inn": {
+      "lat": 19.72,
+      "lon": -155.09,
+      "kind": "stay",
+      "blurb": "Hilo B&B with Japanese-style suites.",
+      "url": "https://www.hilohonu.com/"
+    },
+    "The Seaside": {
+      "lat": 19.733,
+      "lon": -155.029,
+      "kind": "food",
+      "blurb": "Hilo seafood restaurant on a 30-acre fishpond, run by the Nakagawa family since the 1920s.",
+      "url": "https://www.yelp.com/biz/the-seaside-restaurant-and-aqua-farm-hilo",
+      "q": "The Seaside Restaurant and Aqua Farm, Hilo"
+    },
+    "Hilo airport": {
+      "lat": 19.72,
+      "lon": -155.049,
+      "kind": "travel",
+      "q": "Hilo International Airport"
+    },
+    "Royal Hawaiian": {
+      "lat": 21.2775,
+      "lon": -157.829,
+      "kind": "stay",
+      "blurb": "The \"Pink Palace of the Pacific\", on Waikīkī Beach since 1927.",
+      "url": "https://www.royal-hawaiian.com/",
+      "q": "The Royal Hawaiian, Waikiki"
+    },
+    "Mai Tai Bar": {
+      "lat": 21.2775,
+      "lon": -157.829,
+      "kind": "drinks",
+      "blurb": "The Royal Hawaiian's oceanfront bar, steps from the sand.",
+      "url": "https://www.royal-hawaiian.com/dining-overview/mai-tai-bar/",
+      "q": "Mai Tai Bar, Royal Hawaiian"
+    },
+    "natuRe": {
+      "lat": 21.281,
+      "lon": -157.827,
+      "kind": "food",
+      "blurb": "Farm-to-table French tasting menus in Waikīkī.",
+      "url": "https://www.naturewaikiki.com/",
+      "q": "natuRe waikiki"
+    },
+    "Bishop Museum": {
+      "lat": 21.333,
+      "lon": -157.871,
+      "kind": "museum",
+      "blurb": "Hawaiʻi's museum of natural and cultural history, founded in 1889.",
+      "url": "https://www.bishopmuseum.org/"
+    },
+    "La Mariana Sailing Club": {
+      "lat": 21.322,
+      "lon": -157.893,
+      "kind": "drinks",
+      "blurb": "Old-school tiki bar at a Keʻehi Lagoon marina.",
+      "url": "https://www.lamarianasailingclub.com/"
+    },
+    "Skull & Crown Trading Co.": {
+      "lat": 21.312,
+      "lon": -157.863,
+      "kind": "drinks",
+      "blurb": "Horror-tinged Chinatown tiki bar with one of the biggest rum collections in the islands.",
+      "url": "https://www.skullandcrowntrading.com/"
+    },
+    "ʻAiea Loop Trail": {
+      "lat": 21.402,
+      "lon": -157.896,
+      "kind": "birding",
+      "blurb": "Ridge loop in Keaīwa Heiau State Recreation Area — the ʻamakihi / ʻelepaio hunt.",
+      "q": "Aiea Loop Trail"
+    },
+    "Nuʻuanu Pali Lookout": {
+      "lat": 21.367,
+      "lon": -157.793,
+      "kind": "history",
+      "blurb": "Windward cliffs where Kamehameha's forces won the 1795 Battle of Nuʻuanu."
+    },
+    "Puʻu ʻUalakaʻa": {
+      "lat": 21.316,
+      "lon": -157.818,
+      "kind": "nature",
+      "blurb": "State wayside on Round Top, looking across Honolulu to Diamond Head.",
+      "q": "Puu Ualakaa State Wayside"
+    },
+    "Helena's Hawaiian Food": {
+      "lat": 21.334,
+      "lon": -157.866,
+      "kind": "food",
+      "blurb": "Kalihi Hawaiian-food institution, serving since 1946.",
+      "url": "https://www.helenashawaiianfood.com/"
+    },
+    "House Without A Key": {
+      "lat": 21.278,
+      "lon": -157.8325,
+      "kind": "drinks",
+      "blurb": "The Halekulani's oceanfront terrace, with hula under the kiawe tree at sunset.",
+      "url": "https://www.halekulani.com/dining/house-without-a-key/"
+    },
+    "Hanauma Bay": {
+      "lat": 21.271,
+      "lon": -157.694,
+      "kind": "beach",
+      "blurb": "Nature preserve in a volcanic crater — Oʻahu's best-known snorkeling bay.",
+      "url": "https://pros.hnl.info/hanauma-bay",
+      "q": "Hanauma Bay Nature Preserve"
+    },
+    "Lānaʻi Lookout": {
+      "lat": 21.283,
+      "lon": -157.675,
+      "kind": "nature",
+      "blurb": "Lookout on the Kaʻiwi coast; on clear days you can see Lānaʻi and Molokaʻi."
+    },
+    "Aliʻi Fish Market": {
+      "lat": 21.2945,
+      "lon": -157.8255,
+      "kind": "food",
+      "blurb": "Poke counter on South King Street in Mōʻiliʻili. Bomb poke.",
+      "url": "https://www.yelp.com/biz/ali-i-fish-market-honolulu"
+    },
+    "ʻIolani Palace": {
+      "lat": 21.3066,
+      "lon": -157.8588,
+      "kind": "history",
+      "blurb": "Home of Hawaiʻi's last monarchs, King Kalākaua and Queen Liliʻuokalani; completed in 1882.",
+      "url": "https://www.iolanipalace.org/"
+    },
+    "Waikīkī": {
+      "lat": 21.272,
+      "lon": -157.824,
+      "kind": "beach",
+      "q": "coords"
+    },
+    "Michel's at the Colony Surf": {
+      "lat": 21.263,
+      "lon": -157.821,
+      "kind": "food",
+      "blurb": "Classic French dining on the water at the foot of Diamond Head.",
+      "url": "https://www.michelshawaii.com/"
+    },
+    "Kaʻena Point": {
+      "lat": 21.576,
+      "lon": -158.25,
+      "kind": "nature",
+      "blurb": "Oʻahu's remote western tip — a natural area reserve with nesting seabirds and Hawaiian monk seals.",
+      "url": "https://dlnr.hawaii.gov/dsp/parks/oahu/kaena-point-state-park/",
+      "q": "Kaena Point Trailhead, Mokuleia"
+    },
+    "Kawainui Marsh": {
+      "lat": 21.3985,
+      "lon": -157.753,
+      "kind": "birding",
+      "blurb": "Hawaiʻi's largest remaining wetland, on the edge of Kailua — home to endangered waterbirds."
+    },
+    "Azure": {
+      "lat": 21.2775,
+      "lon": -157.829,
+      "kind": "food",
+      "blurb": "The Royal Hawaiian's beachfront fine-dining restaurant.",
+      "url": "https://www.royal-hawaiian.com/dining-overview/azure/",
+      "q": "Azure Restaurant, Royal Hawaiian"
+    },
+    "Waikīkī Aquarium": {
+      "lat": 21.2655,
+      "lon": -157.8216,
+      "kind": "museum",
+      "blurb": "The second-oldest public aquarium in the US, opened in 1904.",
+      "url": "https://www.waikikiaquarium.org/"
+    }
   },
   "hero": [
     {
@@ -209,7 +402,7 @@
       "heading": "aloha",
       "subtitle": "September 6",
       "text": [
-        "Check in at Horizon Guest House after 2pm",
+        "Check in at Horizon Guest House",
         "Dinner at Don's Mai Tai Bar"
       ],
       "blocks": [
@@ -284,7 +477,7 @@
         "Puʻukoholā Heiau National Historic Site",
         "Na Loko Iʻa O Kalahuipuaʻa Historic Park",
         "Puakō Petroglyphs",
-        "7pm dinner at CanoeHouse"
+        "Dinner at CanoeHouse"
       ],
       "blocks": [
         {
@@ -358,14 +551,20 @@
               "h": 1200,
               "time": "13:59",
               "place": null
-            },
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Kuleana Rum Shack",
+          "images": [
             {
               "id": "IMG_6598.HEIC",
               "file": "img-6598",
               "w": 1200,
               "h": 1600,
               "time": "14:25",
-              "place": null
+              "place": "Kuleana Rum Shack"
             }
           ]
         },
@@ -631,8 +830,8 @@
       "text": [
         "Kona coffee: Hula Daddy",
         "Hat at Uihā Hat Bar",
-        "1 pm horseback ride at Paniolo Adventures",
-        "6:45 pm dinner at Merriman's Big Island"
+        "Horseback ride at Paniolo Adventures",
+        "Dinner at Merriman's Big Island"
       ],
       "blocks": [
         {
@@ -646,28 +845,28 @@
               "h": 1600,
               "time": "10:06",
               "place": "Hula Daddy"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": null,
-          "images": [
+            },
             {
               "id": "IMG_0513.HEIC",
               "file": "img-0513",
               "w": 1600,
               "h": 1200,
               "time": "11:20",
-              "place": null
-            },
+              "place": "Hula Daddy"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Drive to Waimea",
+          "images": [
             {
               "id": "IMG_6629.HEIC",
               "file": "img-6629",
               "w": 1600,
               "h": 1200,
               "time": "12:01",
-              "place": null
+              "place": "Drive to Waimea"
             },
             {
               "id": "IMG_6630.HEIC",
@@ -675,7 +874,7 @@
               "w": 1200,
               "h": 1600,
               "time": "12:01",
-              "place": null
+              "place": "Drive to Waimea"
             }
           ]
         },
@@ -777,7 +976,7 @@
       "text": [
         "Snorkel day at Kealakekua / Captain Cook",
         "Kaloko-Honokōhau National Historical Park (fishponds, shorebirds, petroglyphs)",
-        "8 pm omakase counter at Noio"
+        "Omakase counter at Noio"
       ],
       "blocks": [
         {
@@ -804,7 +1003,7 @@
         },
         {
           "type": "grid",
-          "caption": null,
+          "caption": "Horizon Guest House",
           "images": [
             {
               "id": "IMG_6672.HEIC",
@@ -812,7 +1011,7 @@
               "w": 1600,
               "h": 1200,
               "time": "15:09",
-              "place": null
+              "place": "Horizon Guest House"
             }
           ]
         },
@@ -957,7 +1156,7 @@
       "subtitle": "September 10",
       "text": [
         "South Point of the US",
-        "Volcano Village Lodge, check in ~1 pm",
+        "Check in at Volcano Village Lodge",
         "Mauna Kea summit and stargazing"
       ],
       "blocks": [
@@ -1180,7 +1379,7 @@
       "subtitle": "September 11",
       "text": [
         "Watching Kīlauea, Volcanoes National Park",
-        "6:30 pm dinner at Kilauea Lodge and Restaurant",
+        "Dinner at Kilauea Lodge and Restaurant",
         "Nighttime lava viewing at Halemaʻumaʻu crater, early bedtime"
       ],
       "blocks": [
@@ -1270,7 +1469,7 @@
         },
         {
           "type": "grid",
-          "caption": null,
+          "caption": "Volcano",
           "images": [
             {
               "id": "IMG_0716.HEIC",
@@ -1278,7 +1477,7 @@
               "w": 1600,
               "h": 1200,
               "time": "14:04",
-              "place": null
+              "place": "Volcano"
             },
             {
               "id": "IMG_0722.HEIC",
@@ -1286,7 +1485,7 @@
               "w": 1200,
               "h": 1600,
               "time": "14:47",
-              "place": null
+              "place": "Volcano"
             }
           ]
         }
@@ -1296,7 +1495,7 @@
       "heading": "honeycreepers",
       "subtitle": "September 12",
       "text": [
-        "6 am birding Puʻu Oʻo Trail and Palila Discovery Trail with Jack Jeffrey",
+        "Birding Puʻu Oʻo Trail and Palila Discovery Trail with Jack Jeffrey",
         "Dinner at Lehua Restaurant"
       ],
       "blocks": [
@@ -1503,7 +1702,7 @@
         "Driving the Chain of Craters Road, birding Hōlei Sea Arch",
         "ʻAkaka Falls",
         "Hawaiʻi Tropical Botanical Garden",
-        "Check in to Hilo Honu Inn 3pm",
+        "Check in to Hilo Honu Inn",
         "Dinner at The Seaside"
       ],
       "blocks": [
@@ -1701,8 +1900,8 @@
       "heading": "island hoppers",
       "subtitle": "September 14",
       "text": [
-        "From Hawaiʻi to Oʻahu: departure 11:27 am",
-        "Check in to the Royal Hawaiian after 4 pm",
+        "From Hawaiʻi to Oʻahu",
+        "Check in to the Royal Hawaiian",
         "Drinks at the Mai Tai Bar",
         "Dinner at natuRe",
         "Lewers Lounge at the Halekulani for jazz and a proper nightcap"
@@ -1724,7 +1923,7 @@
         },
         {
           "type": "grid",
-          "caption": null,
+          "caption": "Hilo airport",
           "images": [
             {
               "id": "IMG_6780.HEIC",
@@ -1732,7 +1931,7 @@
               "w": 1200,
               "h": 1600,
               "time": "09:12",
-              "place": null
+              "place": "Hilo airport"
             }
           ]
         },
@@ -2046,7 +2245,7 @@
       "heading": "amakihi? elepaio!",
       "subtitle": "September 16",
       "text": [
-        "7 am: birding the ʻAiea Loop Trail at Keaīwa Heiau State Recreation Area",
+        "Birding the ʻAiea Loop Trail at Keaīwa Heiau State Recreation Area",
         "Scenic drive through Koʻolau, Hoʻomaluhia Botanical Garden, Nuʻuanu Pali Lookout, and Puu Ualakaa State Park",
         "Lunch at Helena's Hawaiian Food",
         "Drinks at House Without A Key",
@@ -2135,20 +2334,14 @@
               "h": 900,
               "time": "11:40",
               "place": "Nuʻuanu Pali Lookout"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": null,
-          "images": [
+            },
             {
               "id": "IMG_1066.HEIC",
               "file": "img-1066",
               "w": 1600,
               "h": 1200,
               "time": "12:25",
-              "place": null
+              "place": "Nuʻuanu Pali Lookout"
             }
           ]
         },
@@ -2208,7 +2401,7 @@
       "heading": "honu",
       "subtitle": "September 17",
       "text": [
-        "7:30 am: snorkeling Hanauma Bay",
+        "Snorkeling Hanauma Bay",
         "Birding along Lānaʻi Lookout → Japanese fishing shrine → Hālona blowhole",
         "Beautiful views from Makapuʻu",
         "Drinks and dinner at Hau Tree Lanai Restaurant",
@@ -2236,20 +2429,6 @@
               "place": "Hanauma Bay"
             }
           ]
-        },
-        {
-          "type": "grid",
-          "caption": null,
-          "images": [
-            {
-              "id": "IMG_6867.HEIC",
-              "file": "img-6867",
-              "w": 1200,
-              "h": 1600,
-              "time": "20:39",
-              "place": null
-            }
-          ]
         }
       ]
     },
@@ -2258,9 +2437,9 @@
       "subtitle": "September 18",
       "text": [
         "White Tern nests at UH Mānoa",
-        "12–1 pm: The Royal Hawaiian Band at ʻIolani Palace",
-        "1:30 pm: ʻIolani Palace tour",
-        "5:45 pm: Michel's at the Colony Surf"
+        "The Royal Hawaiian Band at ʻIolani Palace",
+        "ʻIolani Palace tour",
+        "Michel's at the Colony Surf"
       ],
       "blocks": [
         {
@@ -2287,7 +2466,7 @@
         },
         {
           "type": "grid",
-          "caption": null,
+          "caption": "Aliʻi Fish Market",
           "images": [
             {
               "id": "IMG_1134.HEIC",
@@ -2295,7 +2474,7 @@
               "w": 1600,
               "h": 1200,
               "time": "11:07",
-              "place": null
+              "place": "Aliʻi Fish Market"
             }
           ]
         },
@@ -2425,10 +2604,10 @@
       "heading": "seals",
       "subtitle": "September 19",
       "text": [
-        "(early) Kaʻena Point, Mokulēʻia trailhead",
+        "Kaʻena Point, Mokulēʻia trailhead",
         "Lunch on the North Shore / Haleʻiwa",
         "Birding James Campbell NWR if open, else along the Kahuku Golf Course → Japanese cemetery",
-        "6:30 pm: prix fixe dinner at Azure"
+        "Prix fixe dinner at Azure"
       ],
       "blocks": [
         {
@@ -2503,7 +2682,7 @@
         },
         {
           "type": "grid",
-          "caption": null,
+          "caption": "Kawainui Marsh",
           "images": [
             {
               "id": "IMG_1240.HEIC",
@@ -2511,7 +2690,7 @@
               "w": 1600,
               "h": 1200,
               "time": "15:39",
-              "place": null
+              "place": "Kawainui Marsh"
             }
           ]
         },
@@ -2609,7 +2788,7 @@
       "heading": "aloha ʻoe",
       "subtitle": "September 20",
       "text": [
-        "Flight departs Honolulu 12:45"
+        "Flight home from Honolulu"
       ],
       "blocks": [
         {

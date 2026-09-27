@@ -31,7 +31,7 @@ const islands = (i: number) => (i < 8 ? 'Hawaiʻi' : 'Oʻahu'); // day 9 onward 
         <ul class="stops">{s.text.map((t) => <li>{t}</li>)}</ul>
         {s.blocks.map((b) => (
           <div class="stop">
-            {b.caption && <p class="cap"><span>{b.images[0].time}</span>{b.caption}</p>}
+            {b.caption && <p class="cap">{b.caption}</p>}
             {b.type === 'carousel'
               ? <Carousel images={b.images} trip={trip.slug} />
               : <Grid images={b.images} trip={trip.slug} />}
@@ -55,8 +55,7 @@ const islands = (i: number) => (i < 8 ? 'Hawaiʻi' : 'Oʻahu'); // day 9 onward 
   .stops { margin: 0; padding: 0 0 0 1.1em; color: var(--muted); font-size: 15px; max-width: 64ch; display: grid; gap: 4px; }
   .stops li::marker { color: var(--accent); }
   .stop { display: grid; gap: 10px; margin-top: 12px; }
-  .cap { margin: 0; font-size: 13px; font-weight: 600; display: flex; gap: 10px; align-items: baseline; }
-  .cap span { color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums; }
+  .cap { margin: 0; font-size: 13px; font-weight: 600; }
   /* carousels sit inside the day column here, not full-bleed */
   .body :global(.carousel) { margin-inline: 0; width: auto; border-radius: 8px; }
   @media (max-width: 800px) {

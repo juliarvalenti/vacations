@@ -4,7 +4,8 @@
   scripts/review.py <slug> [port]      → opens http://localhost:4400
 
 Shows every candidate photo (from _import/<slug>.manifest.json, written by import_local.py), grouped
-by day and place. Rejections autosave to content/<slug>.overrides.json → "rejected". "Apply" reruns
+by day and place. Rejections autosave to content/<slug>.overrides.json → "rejected"; places typed in
+the large view are pinned in overrides → "files". "Apply" reruns
 import_local.py so rejected photos drop out of the site (and their files out of public/).
 Rejected photos' thumbnails are rendered from the originals into _import/review/ (gitignored),
 never into public/.
@@ -23,6 +24,7 @@ def make_handler(slug):
     manifest_path = ROOT / "_import" / f"{slug}.manifest.json"
     overrides_path = ROOT / "content" / f"{slug}.overrides.json"
     itinerary_path = ROOT / "content" / f"{slug}.itinerary.json"
+    places_path = ROOT / "content" / f"{slug}.places.json"
     public = ROOT / "public" / "assets" / slug
     cache = ROOT / "_import" / "review" / slug
     cache.mkdir(parents=True, exist_ok=True)
@@ -48,8 +50,10 @@ def make_handler(slug):
                 manifest = json.loads(manifest_path.read_text())
                 ov = json.loads(overrides_path.read_text())
                 itin = json.loads(itinerary_path.read_text())
+                places = json.loads(places_path.read_text())["places"] if places_path.exists() else []
                 return self.send(json.dumps({"slug": slug, "title": itin["title"], "days": itin["days"],
-                                             "photos": manifest["photos"], "rejected": ov.get("rejected", [])}))
+                                             "photos": manifest["photos"], "rejected": ov.get("rejected", []),
+                                             "places": sorted({p["name"] for p in places})}))
             if self.path.startswith("/img/"):
                 size, file = self.path.split("/")[2:4]  # /img/<800|1600>/<file>
                 size = "1600" if size == "1600" else "800"
@@ -75,6 +79,17 @@ def make_handler(slug):
                 ov["rejected"] = sorted(set(json.loads(body)))
                 overrides_path.write_text(json.dumps(ov, indent=2, ensure_ascii=False) + "\n")
                 return self.send(json.dumps({"ok": True, "count": len(ov["rejected"])}))
+            if self.path == "/place":
+                # pin a photo's place: {"name": "IMG_1.HEIC", "place": "Somewhere" | null}
+                req = json.loads(body)
+                ov = json.loads(overrides_path.read_text())
+                files = ov.setdefault("files", {})
+                entry = files.get(req["name"])
+                entry = entry if isinstance(entry, dict) else {}
+                entry["place"] = req["place"] or None
+                files[req["name"]] = entry
+                overrides_path.write_text(json.dumps(ov, indent=2, ensure_ascii=False) + "\n")
+                return self.send(json.dumps({"ok": True}))
             if self.path == "/apply":
                 folder = json.loads(manifest_path.read_text())["folder"]
                 r = subprocess.run([sys.executable, str(ROOT / "scripts" / "import_local.py"), slug, folder],
