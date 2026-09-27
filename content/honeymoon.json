@@ -456,6 +456,46 @@
               "h": 1600,
               "time": "16:40",
               "place": "Horizon Guest House"
+            },
+            {
+              "id": "IMG_6591.HEIC",
+              "file": "img-6591",
+              "w": 1600,
+              "h": 1200,
+              "time": "08:11",
+              "place": "Horizon Guest House"
+            },
+            {
+              "id": "IMG_0415.HEIC",
+              "file": "img-0415",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:45",
+              "place": "Horizon Guest House"
+            },
+            {
+              "id": "IMG_6672.HEIC",
+              "file": "img-6672",
+              "w": 1600,
+              "h": 1200,
+              "time": "15:09",
+              "place": "Horizon Guest House"
+            },
+            {
+              "id": "IMG_6675.HEIC",
+              "file": "img-6675",
+              "w": 1600,
+              "h": 666,
+              "time": "08:42",
+              "place": "Horizon Guest House"
+            },
+            {
+              "id": "FullSizeRender.jpeg",
+              "file": "fullsizerender",
+              "w": 1600,
+              "h": 1200,
+              "time": "08:47",
+              "place": "Horizon Guest House"
             }
           ]
         },
@@ -497,28 +537,6 @@
       "blocks": [
         {
           "type": "grid",
-          "caption": "Horizon Guest House",
-          "images": [
-            {
-              "id": "IMG_6591.HEIC",
-              "file": "img-6591",
-              "w": 1600,
-              "h": 1200,
-              "time": "08:11",
-              "place": "Horizon Guest House"
-            },
-            {
-              "id": "IMG_0415.HEIC",
-              "file": "img-0415",
-              "w": 1200,
-              "h": 1600,
-              "time": "08:45",
-              "place": "Horizon Guest House"
-            }
-          ]
-        },
-        {
-          "type": "grid",
           "caption": "Makāula-ʻOʻoma Trail",
           "images": [
             {
@@ -557,7 +575,7 @@
         },
         {
           "type": "grid",
-          "caption": null,
+          "caption": "Kuleana Rum Shack",
           "images": [
             {
               "id": "IMG_6596.HEIC",
@@ -566,13 +584,7 @@
               "h": 1200,
               "time": "13:59",
               "place": null
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Kuleana Rum Shack",
-          "images": [
+            },
             {
               "id": "IMG_6598.HEIC",
               "file": "img-6598",
@@ -584,7 +596,7 @@
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "Puʻukoholā Heiau",
           "images": [
             {
@@ -722,8 +734,8 @@
           ]
         },
         {
-          "type": "carousel",
-          "caption": "Mauna Lani",
+          "type": "grid",
+          "caption": "Mauna Lani · CanoeHouse",
           "images": [
             {
               "id": "IMG_6605.HEIC",
@@ -820,13 +832,7 @@
               "h": 1200,
               "time": "18:51",
               "place": "Mauna Lani"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "CanoeHouse",
-          "images": [
+            },
             {
               "id": "IMG_6618.HEIC",
               "file": "img-6618",
@@ -851,7 +857,7 @@
       "blocks": [
         {
           "type": "grid",
-          "caption": "Hula Daddy",
+          "caption": "Hula Daddy · Drive to Waimea",
           "images": [
             {
               "id": "IMG_6625.HEIC",
@@ -868,13 +874,7 @@
               "h": 1200,
               "time": "11:20",
               "place": "Hula Daddy"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Drive to Waimea",
-          "images": [
+            },
             {
               "id": "IMG_6629.HEIC",
               "file": "img-6629",
@@ -895,7 +895,7 @@
         },
         {
           "type": "grid",
-          "caption": "Paniolo Adventures",
+          "caption": "Paniolo Adventures · Kohala Mountain Road",
           "images": [
             {
               "id": "IMG_6632.HEIC",
@@ -928,13 +928,7 @@
               "h": 1200,
               "time": "15:43",
               "place": "Paniolo Adventures"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Kohala Mountain Road",
-          "images": [
+            },
             {
               "id": "IMG_6660.HEIC",
               "file": "img-6660",
@@ -1018,20 +1012,6 @@
         },
         {
           "type": "grid",
-          "caption": "Horizon Guest House",
-          "images": [
-            {
-              "id": "IMG_6672.HEIC",
-              "file": "img-6672",
-              "w": 1600,
-              "h": 1200,
-              "time": "15:09",
-              "place": "Horizon Guest House"
-            }
-          ]
-        },
-        {
-          "type": "carousel",
           "caption": "Noio",
           "images": [
             {
@@ -1177,29 +1157,7 @@
       "blocks": [
         {
           "type": "grid",
-          "caption": "Horizon Guest House",
-          "images": [
-            {
-              "id": "IMG_6675.HEIC",
-              "file": "img-6675",
-              "w": 1600,
-              "h": 666,
-              "time": "08:42",
-              "place": "Horizon Guest House"
-            },
-            {
-              "id": "FullSizeRender.jpeg",
-              "file": "fullsizerender",
-              "w": 1600,
-              "h": 1200,
-              "time": "08:47",
-              "place": "Horizon Guest House"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "South Point",
+          "caption": "South Point · Volcano Village Lodge",
           "images": [
             {
               "id": "IMG_0588.JPG",
@@ -1208,13 +1166,7 @@
               "h": 900,
               "time": "10:11",
               "place": "South Point"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Volcano Village Lodge",
-          "images": [
+            },
             {
               "id": "IMG_6704.HEIC",
               "file": "img-6704",
@@ -1252,11 +1204,43 @@
               "h": 1600,
               "time": "15:43",
               "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_0671.HEIC",
+              "file": "img-0671",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:27",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_0672.HEIC",
+              "file": "img-0672",
+              "w": 1600,
+              "h": 1200,
+              "time": "21:27",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_6731.HEIC",
+              "file": "img-6731",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:27",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_0674.HEIC",
+              "file": "img-0674",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:28",
+              "place": "Mauna Kea visitor station"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "Mauna Kea summit",
           "images": [
             {
@@ -1348,44 +1332,6 @@
               "place": "Mauna Kea summit"
             }
           ]
-        },
-        {
-          "type": "grid",
-          "caption": "Mauna Kea visitor station",
-          "images": [
-            {
-              "id": "IMG_0671.HEIC",
-              "file": "img-0671",
-              "w": 1200,
-              "h": 1600,
-              "time": "21:27",
-              "place": "Mauna Kea visitor station"
-            },
-            {
-              "id": "IMG_0672.HEIC",
-              "file": "img-0672",
-              "w": 1600,
-              "h": 1200,
-              "time": "21:27",
-              "place": "Mauna Kea visitor station"
-            },
-            {
-              "id": "IMG_6731.HEIC",
-              "file": "img-6731",
-              "w": 1200,
-              "h": 1600,
-              "time": "21:27",
-              "place": "Mauna Kea visitor station"
-            },
-            {
-              "id": "IMG_0674.HEIC",
-              "file": "img-0674",
-              "w": 1200,
-              "h": 1600,
-              "time": "21:28",
-              "place": "Mauna Kea visitor station"
-            }
-          ]
         }
       ]
     },
@@ -1399,7 +1345,7 @@
       ],
       "blocks": [
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "Kīlauea caldera",
           "images": [
             {
@@ -1533,7 +1479,7 @@
       ],
       "blocks": [
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "Puʻu ʻŌʻō Trail",
           "images": [
             {
@@ -1651,8 +1597,8 @@
           ]
         },
         {
-          "type": "carousel",
-          "caption": "Palila Discovery Trail",
+          "type": "grid",
+          "caption": "Palila Discovery Trail · Lehua Restaurant",
           "images": [
             {
               "id": "IMG_6759.HEIC",
@@ -1709,13 +1655,7 @@
               "h": 1600,
               "time": "16:07",
               "place": "Palila Discovery Trail"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Lehua Restaurant",
-          "images": [
+            },
             {
               "id": "IMG_0796.HEIC",
               "file": "img-0796",
@@ -1817,6 +1757,14 @@
               "w": 1600,
               "h": 1200,
               "time": "15:12",
+              "place": "Hilo Honu Inn"
+            },
+            {
+              "id": "IMG_6777.HEIC",
+              "file": "img-6777",
+              "w": 1600,
+              "h": 1200,
+              "time": "06:25",
               "place": "Hilo Honu Inn"
             }
           ]
@@ -1943,21 +1891,7 @@
       "blocks": [
         {
           "type": "grid",
-          "caption": "Hilo Honu Inn",
-          "images": [
-            {
-              "id": "IMG_6777.HEIC",
-              "file": "img-6777",
-              "w": 1600,
-              "h": 1200,
-              "time": "06:25",
-              "place": "Hilo Honu Inn"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Hilo airport",
+          "caption": "Hilo airport · Royal Hawaiian",
           "images": [
             {
               "id": "IMG_6780.HEIC",
@@ -1966,13 +1900,7 @@
               "h": 1600,
               "time": "09:12",
               "place": "Hilo airport"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Royal Hawaiian",
-          "images": [
+            },
             {
               "id": "IMG_6787.HEIC",
               "file": "img-6787",
@@ -2014,7 +1942,7 @@
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "natuRe",
           "images": [
             {
@@ -2120,7 +2048,7 @@
       ],
       "blocks": [
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "Bishop Museum",
           "images": [
             {
@@ -2182,7 +2110,7 @@
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "La Mariana Sailing Club",
           "images": [
             {
@@ -2280,7 +2208,7 @@
       ],
       "blocks": [
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "ʻAiea Loop Trail",
           "images": [
             {
@@ -2369,7 +2297,7 @@
         },
         {
           "type": "grid",
-          "caption": "Nuʻuanu Pali Lookout",
+          "caption": "Nuʻuanu Pali Lookout · Puʻu ʻUalakaʻa · Helena's Hawaiian Food · House Without A Key",
           "images": [
             {
               "id": "IMG_1055.JPG",
@@ -2386,13 +2314,7 @@
               "h": 1200,
               "time": "12:25",
               "place": "Nuʻuanu Pali Lookout"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Puʻu ʻUalakaʻa",
-          "images": [
+            },
             {
               "id": "IMG_1067.HEIC",
               "file": "img-1067",
@@ -2400,13 +2322,7 @@
               "h": 1200,
               "time": "12:58",
               "place": "Puʻu ʻUalakaʻa"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Helena's Hawaiian Food",
-          "images": [
+            },
             {
               "id": "IMG_1072.HEIC",
               "file": "img-1072",
@@ -2414,13 +2330,7 @@
               "h": 1600,
               "time": "13:39",
               "place": "Helena's Hawaiian Food"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "House Without A Key",
-          "images": [
+            },
             {
               "id": "IMG_6856.HEIC",
               "file": "img-6856",
@@ -2488,7 +2398,7 @@
       "blocks": [
         {
           "type": "grid",
-          "caption": "Lānaʻi Lookout",
+          "caption": "Lānaʻi Lookout · Hālona Blowhole · Aliʻi Fish Market",
           "images": [
             {
               "id": "IMG_6869.HEIC",
@@ -2497,13 +2407,15 @@
               "h": 1200,
               "time": "09:14",
               "place": "Lānaʻi Lookout"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Hālona Blowhole",
-          "images": [
+            },
+            {
+              "id": "IMG_6871.HEIC",
+              "file": "img-6871",
+              "w": 1600,
+              "h": 1200,
+              "time": "09:16",
+              "place": "Lānaʻi Lookout"
+            },
             {
               "id": "IMG_6870.MOV",
               "file": "img-6870",
@@ -2512,27 +2424,7 @@
               "time": "09:15",
               "place": "Hālona Blowhole",
               "video": "img-6870.mp4"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Lānaʻi Lookout",
-          "images": [
-            {
-              "id": "IMG_6871.HEIC",
-              "file": "img-6871",
-              "w": 1600,
-              "h": 1200,
-              "time": "09:16",
-              "place": "Lānaʻi Lookout"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Aliʻi Fish Market",
-          "images": [
+            },
             {
               "id": "IMG_1134.HEIC",
               "file": "img-1134",
@@ -2670,8 +2562,8 @@
       ],
       "blocks": [
         {
-          "type": "carousel",
-          "caption": "Kaʻena Point",
+          "type": "grid",
+          "caption": "Kaʻena Point · Kawainui Marsh",
           "images": [
             {
               "id": "IMG_6895.HEIC",
@@ -2737,13 +2629,7 @@
               "h": 1600,
               "time": "11:40",
               "place": "Kaʻena Point"
-            }
-          ]
-        },
-        {
-          "type": "grid",
-          "caption": "Kawainui Marsh",
-          "images": [
+            },
             {
               "id": "IMG_1240.HEIC",
               "file": "img-1240",
@@ -2755,7 +2641,7 @@
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
           "caption": "Azure",
           "images": [
             {

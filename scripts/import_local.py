@@ -205,26 +205,50 @@ def main(slug, folder):
         if p["video"]:
             p["img"]["video"] = f"{p['file']}.mp4"
 
-    # 5. sections per itinerary day, blocks = runs of the same place
+    # 5. sections per itinerary day, grouped into chunks rather than a strict timeline:
+    #    a. a stay (kind "stay") is one chunk — all its photos land on the first day it appears
+    #    b. one block per place per day, in order of first appearance (repeat visits merge)
+    #    c. consecutive small stops (≤ SMALL photos each) share one block, captioned with all their names
+    #    d. a lone photo left on its own joins the block before it (or after, if it's first)
+    SMALL = 2
     def day_key(d):
         try:
             return datetime.strptime(f"{d} {photos[0]['when'].year}", "%B %d %Y").date()
         except ValueError:
             return None
+    stays = {pl["name"] for pl in places if pl.get("kind") == "stay"}
+    first_day = {}
+    for p in photos:
+        first_day.setdefault(p["place"], p["when"].date())
+    for p in photos:
+        p["day"] = first_day[p["place"]] if p["place"] in stays else p["when"].date()
+
     sections = []
     for day in itin["days"]:
         date = day_key(day["date"])
-        todays = [p for p in photos if date and p["when"].date() == date]
-        blocks = []
-        for p in todays:
-            if blocks and blocks[-1]["caption"] == p["place"]:
-                blocks[-1]["images"].append(p["img"])
+        by_place = {}  # insertion order = first appearance that day
+        for p in (p for p in photos if date and p["day"] == date):
+            by_place.setdefault(p["place"], []).append(p["img"])
+        chunks = []
+        for place, imgs in by_place.items():
+            small = len(imgs) <= SMALL
+            if small and chunks and chunks[-1]["small"]:
+                chunks[-1]["places"].append(place)
+                chunks[-1]["images"] += imgs
             else:
-                blocks.append({"caption": p["place"], "images": [p["img"]]})
-        for b in blocks:
-            b["type"] = "carousel" if len(b["images"]) >= 7 else "grid"
-        sections.append({"heading": day["name"], "subtitle": day["date"], "text": day["stops"],
-                         "blocks": [{"type": b["type"], "caption": b["caption"], "images": b["images"]} for b in blocks]})
+                chunks.append({"places": [place], "images": imgs, "small": small})
+        for i in range(len(chunks) - 1, -1, -1):
+            if len(chunks) > 1 and len(chunks[i]["images"]) == 1:
+                lone = chunks.pop(i)
+                if i > 0:
+                    chunks[i - 1]["places"] += lone["places"]; chunks[i - 1]["images"] += lone["images"]
+                else:
+                    chunks[0]["places"][:0] = lone["places"]; chunks[0]["images"][:0] = lone["images"]
+        blocks = []
+        for c in chunks:
+            names = [n for n in c["places"] if n]
+            blocks.append({"type": "grid", "caption": " · ".join(names) or None, "images": c["images"]})
+        sections.append({"heading": day["name"], "subtitle": day["date"], "text": day["stops"], "blocks": blocks})
 
     hero = next((p["img"] for p in photos if p["name"] == ov.get("hero")), photos[0]["img"])
     # Only the gazetteer's coordinates for named places are published, never a photo's own GPS.

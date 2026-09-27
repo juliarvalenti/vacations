@@ -33,7 +33,14 @@ const route = [
   { name: 'Oʻahu', desc: 'palaces · tiki · seals' },
 ];
 const daysOf = (dates: string[]) => trip.sections.filter((s) => dates.includes(s.subtitle ?? ''));
-const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) || '';
+// A block can hold several small stops ("A · B"); show the blurb of the place with most of its photos
+// when one place clearly dominates, else none (each photo's own place is in the lightbox).
+const blurb = (b: Trip['sections'][number]['blocks'][number]) => {
+  const counts = new Map<string, number>();
+  for (const i of b.images) if (i.place) counts.set(i.place, (counts.get(i.place) ?? 0) + 1);
+  const [top, n] = [...counts].sort((x, y) => y[1] - x[1])[0] ?? [];
+  return top && n! > b.images.length / 2 ? trip.places?.[top]?.blurb ?? '' : '';
+};
 ---
 <Base title={trip.title} trip={trip} sections={sectionsOf(trip)}>
   <section class="hero">
@@ -91,7 +98,7 @@ const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) 
                 {b.caption && (
                   <div class="stop-head">
                     <h4>{b.caption}</h4>
-                    {blurb(b.caption) && <p class="detail">{blurb(b.caption)}</p>}
+                    {blurb(b) && <p class="detail">{blurb(b)}</p>}
                   </div>
                 )}
                 <Grid images={b.images} trip={trip.slug} />
