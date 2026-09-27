@@ -2,6 +2,7 @@
 // One sticky bar for the whole site: brand · trip switcher · (on trip pages) section index that
 // tracks the section in view.
 import { trips, type Trip } from '../trips';
+import { ICONS } from '../icons';
 interface Props { trip?: Trip; sections?: { id: string; heading: string }[] }
 const { trip, sections = [] } = Astro.props;
 const base = import.meta.env.BASE_URL;
@@ -12,7 +13,7 @@ const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
     <a class="brand" href={base}>Vacations</a>
 
     <details class="menu">
-      <summary>{trip ? `${trip.year} ${cap(trip.slug)}` : 'All trips'} <i>▾</i></summary>
+      <summary>{trip ? `${trip.year} ${cap(trip.slug)}` : 'All trips'} <i set:html={ICONS.chevronDown} /></summary>
       <ul>
         {trips.map((t) => (
           <li><a href={`${base}${t.slug}/`} aria-current={t.slug === trip?.slug ? 'page' : undefined}>
@@ -24,7 +25,7 @@ const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
 
     {sections.length > 0 && (
       <details class="menu sections">
-        <summary><span class="k" data-k>01</span><span data-h>{sections[0].heading}</span> <i>▾</i></summary>
+        <summary><span class="k" data-k>01</span><span data-h>{sections[0].heading}</span> <i set:html={ICONS.chevronDown} /></summary>
         <ul>
           {sections.map((s, i) => (
             <li><a href={`#${s.id}`} data-id={s.id}><span class="k">{String(i + 1).padStart(2, '0')}</span>{s.heading}</a></li>
@@ -44,7 +45,8 @@ const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
   summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 6px; font-weight: 500; white-space: nowrap; user-select: none; }
   summary::-webkit-details-marker { display: none; }
   summary:hover, details[open] summary { background: var(--bg-2); }
-  summary i { font-style: normal; font-size: 10px; opacity: .6; }
+  summary i { display: inline-flex; font-size: 13px; opacity: .55; transition: transform .15s; }
+  details[open] summary i { transform: rotate(180deg); }
   .sections summary [data-h] { overflow: hidden; text-overflow: ellipsis; max-width: 40vw; }
   ul { position: absolute; top: calc(100% + 6px); left: 0; margin: 0; padding: 6px; list-style: none; min-width: 240px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 40px rgba(0,0,0,.14); }
   .sections ul { left: auto; right: 0; }

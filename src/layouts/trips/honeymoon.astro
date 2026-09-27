@@ -8,6 +8,7 @@ import Base from '../Base.astro';
 import Grid from '../../components/Grid.astro';
 import Photo from '../../components/Photo.astro';
 import { allImages, sectionId, sectionsOf, type Trip } from '../../trips';
+import { ICONS } from '../../icons';
 interface Props { trip: Trip }
 const { trip } = Astro.props;
 const photos = allImages(trip);
@@ -44,19 +45,13 @@ const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) 
     </div>
   </section>
 
-  <section class="narrative">
-    <p>Two weeks, two islands, a lot of birds.</p>
-  </section>
-
-  <div class="divider"></div>
-
   <section class="route-section">
     <h2>The Journey</h2>
-    <p class="route-subtitle">Big Island first, then Oʻahu — coast to volcano to rainforest to the kingdom's capital</p>
+    <p class="route-subtitle">Big Island first, then Oʻahu: coast to volcano to rainforest to the kingdom's capital</p>
     <div class="route-visual">
       {route.map((r, i) => (
         <>
-          {i > 0 && <div class="route-arrow">{r.name === 'Oʻahu' ? '✈' : '→'}</div>}
+          {i > 0 && <div class="route-arrow" set:html={r.name === 'Oʻahu' ? ICONS.plane : ICONS.arrowRight} />}
           <div class="route-stop"><div class="stop-name">{r.name}</div><div class="stop-desc">{r.desc}</div></div>
         </>
       ))}
@@ -116,7 +111,8 @@ const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) 
 
 <style>
   /* ── cover ── */
-  .hero { height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 60px; position: relative; overflow: hidden; }
+  /* fills the screen below the sticky top bar (52px + 1px border); svh so mobile browser chrome doesn't crop it */
+  .hero { height: calc(100vh - 53px); height: calc(100svh - 53px); display: flex; flex-direction: column; justify-content: flex-end; padding: 60px; position: relative; overflow: hidden; }
   :global(.cover) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
   /* parallax (see script below): oversize the image so the drift never shows an edge */
@@ -126,9 +122,7 @@ const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) 
   .hero-text h1 { font-size: 4rem; letter-spacing: .04em; line-height: 1.15; margin-bottom: 12px; text-shadow: 0 2px 20px rgba(0,0,0,.3); }
   .hero-text .subtitle { font-size: 1.3rem; letter-spacing: .08em; text-transform: uppercase; opacity: .9; text-shadow: 0 1px 10px rgba(0,0,0,.3); }
 
-  /* ── narrative + dividers ── */
-  .narrative { max-width: 640px; margin: 0 auto; padding: 80px 30px; }
-  .narrative p { font-size: 1.1rem; margin: 0; text-align: center; font-style: italic; color: var(--ocean); }
+  /* ── dividers ── */
   .divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); max-width: 200px; margin: 0 auto; }
 
   /* ── the journey ── */
@@ -139,7 +133,7 @@ const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) 
   .route-stop { padding: 16px 12px; }
   .stop-name { font-size: 1.05rem; font-weight: 600; color: var(--ocean); }
   .stop-desc { font-size: .8rem; color: #666; margin-top: 4px; }
-  .route-arrow { font-size: 1.5rem; color: var(--gold); padding: 0 8px; }
+  .route-arrow { display: inline-flex; font-size: 1.4rem; color: var(--gold); padding: 0 8px; }
 
   /* ── chapter headers ── */
   .chapter-header { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden; text-align: center; }
@@ -176,7 +170,6 @@ const blurb = (place?: string | null) => (place && trip.places?.[place]?.blurb) 
     .hero { padding: 30px; }
     .hero-text h1 { font-size: 2.5rem; }
     .chapter-title { font-size: 2rem; }
-    .narrative { padding: 50px 24px; }
     .day { padding: 48px 20px; }
   }
 </style>

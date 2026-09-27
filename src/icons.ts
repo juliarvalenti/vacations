@@ -15,6 +15,9 @@ import shoppingBag from 'lucide-static/icons/shopping-bag.svg?raw';
 import mapPin from 'lucide-static/icons/map-pin.svg?raw';
 import map from 'lucide-static/icons/map.svg?raw';
 import externalLink from 'lucide-static/icons/external-link.svg?raw';
+import plane from 'lucide-static/icons/plane.svg?raw';
+import arrowRight from 'lucide-static/icons/arrow-right.svg?raw';
+import chevronDown from 'lucide-static/icons/chevron-down.svg?raw';
 
 /** Strip the license comment and size the icon to the surrounding text. */
 const clean = (svg: string) =>
@@ -29,4 +32,7 @@ export const KIND_ICONS: Record<string, string> = Object.fromEntries(Object.entr
   shop: shoppingBag, town: mapPin,
 }).map(([k, v]) => [k, clean(v)]));
 
-export const ICONS = { map: clean(map), externalLink: clean(externalLink) };
+export const ICONS = {
+  map: clean(map), externalLink: clean(externalLink), plane: clean(plane),
+  arrowRight: clean(arrowRight), chevronDown: clean(chevronDown),
+};

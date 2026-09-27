@@ -23,14 +23,14 @@
       "lat": 19.727,
       "lon": -155.955,
       "kind": "birding",
-      "blurb": "Upland forest above Kona — the trip's first birding walk.",
+      "blurb": "Upland forest above Kona, and the trip's first birding walk.",
       "q": "coords"
     },
     "Kuleana Rum Shack": {
       "lat": 19.914,
       "lon": -155.88,
       "kind": "food",
-      "blurb": "Kuleana Rum Works' restaurant and bar at Queens' MarketPlace, Waikoloa — rum flights and ahi poke.",
+      "blurb": "Kuleana Rum Works' restaurant and bar at Queens' MarketPlace in Waikoloa. Rum flights and ahi poke.",
       "url": "https://kuleanarum.com/kuleana-rum-shack/"
     },
     "Puʻukoholā Heiau": {
@@ -51,7 +51,7 @@
       "lat": 19.946,
       "lon": -155.867,
       "kind": "history",
-      "blurb": "Ancient Hawaiian fishponds on the Mauna Lani shoreline — the sunset stop before dinner.",
+      "blurb": "Ancient Hawaiian fishponds on the Mauna Lani shoreline, and our sunset stop before dinner.",
       "q": "Kalahuipuaʻa Fishponds, Mauna Lani"
     },
     "CanoeHouse": {
@@ -117,7 +117,7 @@
       "lat": 18.913,
       "lon": -155.681,
       "kind": "nature",
-      "blurb": "Ka Lae — the southernmost point of the United States.",
+      "blurb": "Ka Lae, the southernmost point of the United States.",
       "q": "Ka Lae South Point, Hawaii"
     },
     "Volcano Village Lodge": {
@@ -131,7 +131,7 @@
       "lat": 19.76,
       "lon": -155.456,
       "kind": "stars",
-      "blurb": "Visitor station at about 9,200 ft on Mauna Kea — stargazing after the summit.",
+      "blurb": "Visitor station at about 9,200 ft on Mauna Kea, where we stargazed after the summit.",
       "url": "https://hilo.hawaii.edu/maunakea/",
       "q": "Maunakea Visitor Information Station"
     },
@@ -139,7 +139,7 @@
       "lat": 19.822,
       "lon": -155.47,
       "kind": "stars",
-      "blurb": "13,803 ft summit ringed by observatories — sunset above the clouds.",
+      "blurb": "The 13,803 ft summit, ringed by observatories. Sunset above the clouds.",
       "q": "Maunakea Observatories"
     },
     "Kīlauea caldera": {
@@ -153,7 +153,7 @@
       "lat": 19.429,
       "lon": -155.258,
       "kind": "food",
-      "blurb": "Historic hotel on the rim of Kīlauea caldera — lunch with a crater view.",
+      "blurb": "Historic hotel on the rim of Kīlauea caldera. Lunch with a crater view.",
       "url": "https://hawaiivolcanohouse.com/"
     },
     "Volcano": {
@@ -167,7 +167,7 @@
       "lat": 19.665,
       "lon": -155.388,
       "kind": "birding",
-      "blurb": "Saddle Road trail through native-forest kīpuka — birding with Jack Jeffrey.",
+      "blurb": "Saddle Road trail through native-forest kīpuka. Birding with Jack Jeffrey.",
       "q": "Puu Oo Trailhead, Saddle Road"
     },
     "Palila Discovery Trail": {
@@ -281,7 +281,7 @@
       "lat": 21.402,
       "lon": -157.896,
       "kind": "birding",
-      "blurb": "Ridge loop in Keaīwa Heiau State Recreation Area — the ʻamakihi / ʻelepaio hunt.",
+      "blurb": "Ridge loop in Keaīwa Heiau State Recreation Area, on the hunt for ʻamakihi and ʻelepaio.",
       "q": "Aiea Loop Trail"
     },
     "Nuʻuanu Pali Lookout": {
@@ -315,7 +315,7 @@
       "lat": 21.271,
       "lon": -157.694,
       "kind": "beach",
-      "blurb": "Nature preserve in a volcanic crater — Oʻahu's best-known snorkeling bay.",
+      "blurb": "Nature preserve in a volcanic crater, and Oʻahu's best-known snorkeling bay.",
       "url": "https://pros.hnl.info/hanauma-bay",
       "q": "Hanauma Bay Nature Preserve"
     },
@@ -356,7 +356,7 @@
       "lat": 21.576,
       "lon": -158.25,
       "kind": "nature",
-      "blurb": "Oʻahu's remote western tip — a natural area reserve with nesting seabirds and Hawaiian monk seals.",
+      "blurb": "Oʻahu's remote western tip. A natural area reserve with nesting seabirds and Hawaiian monk seals.",
       "url": "https://dlnr.hawaii.gov/dsp/parks/oahu/kaena-point-state-park/",
       "q": "Kaena Point Trailhead, Mokuleia"
     },
@@ -364,7 +364,7 @@
       "lat": 21.3985,
       "lon": -157.753,
       "kind": "birding",
-      "blurb": "Hawaiʻi's largest remaining wetland, on the edge of Kailua — home to endangered waterbirds."
+      "blurb": "Hawaiʻi's largest remaining wetland, on the edge of Kailua. Home to endangered waterbirds."
     },
     "Azure": {
       "lat": 21.2775,
