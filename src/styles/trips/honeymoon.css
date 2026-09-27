@@ -1,0 +1,19 @@
+/* Honeymoon: Emily's itinerary palette — Georgia, sand, ocean, gold. One deliberate light look,
+   so the dark-mode tokens are pinned to the same values.
+   :root[...] outranks global.css's :root tokens regardless of stylesheet order. */
+:root[data-trip="honeymoon"] {
+  --ocean: #1a3a4a;
+  --gold: #c4a35a;
+  --bg-light: #f5f0e8;
+  --bg-dark: #f5f0e8;
+  --fg-light: #333;
+  --fg-dark: #333;
+  --accent: var(--gold);
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: Georgia, 'Times New Roman', serif;
+  color-scheme: light;
+}
+[data-trip="honeymoon"] body { line-height: 1.7; }
+[data-trip="honeymoon"] h1,
+[data-trip="honeymoon"] h2,
+[data-trip="honeymoon"] h3 { font-weight: 400; letter-spacing: 0.02em; }

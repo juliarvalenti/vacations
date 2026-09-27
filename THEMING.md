@@ -54,6 +54,10 @@ Every trip page has `data-trip="<trip>"` on the `<html>` element, so **start eve
 ```css
 [data-trip="london"] h2 { font-variant: small-caps; }
 [data-trip="london"] .carousel { border-radius: 0; }
+
+/* Changing the site's colour/font variables? Use :root[data-trip=…] —
+   a plain [data-trip=…] loses to global.css's :root and silently does nothing. */
+:root[data-trip="london"] { --accent: #1d3f8f; }
 ```
 
 `src/styles/trips/london.css` has a working example.

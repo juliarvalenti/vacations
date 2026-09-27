@@ -1,6 +1,7 @@
-/* London-only styling. Every rule is scoped with [data-trip="london"] so it can't leak into other trips. */
+/* London-only styling. Every rule is scoped with [data-trip="london"] so it can't leak into other trips.
+   Token overrides use :root[data-trip=…] so they outrank global.css's :root regardless of stylesheet order. */
 
-[data-trip="london"] {
+:root[data-trip="london"] {
   --accent: #1d3f8f;
   --stage: #0d1526;
 }
