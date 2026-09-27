@@ -2,16 +2,204 @@
   "title": "Hawaiʻi Honeymoon",
   "subtitle": "September 6–20, 2026",
   "date": "2026-09-06",
-  "placeholder": true,
+  "map": "hawaii",
+  "places": {
+    "Horizon Guest House": [
+      19.364,
+      -155.873
+    ],
+    "Don's Mai Tai Bar": [
+      19.632,
+      -155.99
+    ],
+    "Makāula-ʻOʻoma Trail": [
+      19.727,
+      -155.955
+    ],
+    "Puʻukoholā Heiau": [
+      20.026,
+      -155.822
+    ],
+    "Puakō Petroglyphs": [
+      19.957,
+      -155.859
+    ],
+    "Kalahuipuaʻa fishponds": [
+      19.946,
+      -155.867
+    ],
+    "CanoeHouse": [
+      19.947,
+      -155.867
+    ],
+    "Hula Daddy": [
+      19.581,
+      -155.967
+    ],
+    "Paniolo Adventures": [
+      20.135,
+      -155.803
+    ],
+    "Kohala Mountain Road": [
+      20.055,
+      -155.74
+    ],
+    "Merriman's": [
+      20.023,
+      -155.677
+    ],
+    "Kealakekua Bay": [
+      19.476,
+      -155.92
+    ],
+    "Noio": [
+      19.829,
+      -155.991
+    ],
+    "South Point": [
+      18.913,
+      -155.681
+    ],
+    "Volcano Village Lodge": [
+      19.437,
+      -155.233
+    ],
+    "Mauna Kea visitor station": [
+      19.76,
+      -155.456
+    ],
+    "Mauna Kea summit": [
+      19.822,
+      -155.47
+    ],
+    "Kīlauea caldera": [
+      19.42,
+      -155.288
+    ],
+    "Volcano House": [
+      19.429,
+      -155.258
+    ],
+    "Puʻu ʻŌʻō Trail": [
+      19.665,
+      -155.388
+    ],
+    "Palila Discovery Trail": [
+      19.83,
+      -155.6
+    ],
+    "Chain of Craters Road": [
+      19.33,
+      -155.19
+    ],
+    "Hōlei Sea Arch": [
+      19.292,
+      -155.107
+    ],
+    "ʻAkaka Falls": [
+      19.854,
+      -155.152
+    ],
+    "Hawaiʻi Tropical Botanical Garden": [
+      19.81,
+      -155.1
+    ],
+    "Hilo Honu Inn": [
+      19.72,
+      -155.09
+    ],
+    "The Seaside": [
+      19.733,
+      -155.029
+    ],
+    "Royal Hawaiian": [
+      21.2775,
+      -157.829
+    ],
+    "Mai Tai Bar": [
+      21.2775,
+      -157.829
+    ],
+    "natuRe": [
+      21.281,
+      -157.827
+    ],
+    "Bishop Museum": [
+      21.333,
+      -157.871
+    ],
+    "La Mariana Sailing Club": [
+      21.322,
+      -157.893
+    ],
+    "Skull & Crown Trading Co.": [
+      21.312,
+      -157.863
+    ],
+    "ʻAiea Loop Trail": [
+      21.402,
+      -157.896
+    ],
+    "Nuʻuanu Pali Lookout": [
+      21.367,
+      -157.793
+    ],
+    "Puʻu ʻUalakaʻa": [
+      21.316,
+      -157.818
+    ],
+    "Helena's Hawaiian Food": [
+      21.334,
+      -157.866
+    ],
+    "House Without A Key": [
+      21.278,
+      -157.8325
+    ],
+    "Hanauma Bay": [
+      21.271,
+      -157.694
+    ],
+    "Lānaʻi Lookout": [
+      21.283,
+      -157.675
+    ],
+    "ʻIolani Palace": [
+      21.3066,
+      -157.8588
+    ],
+    "Waikīkī": [
+      21.272,
+      -157.824
+    ],
+    "Michel's at the Colony Surf": [
+      21.263,
+      -157.821
+    ],
+    "Kaʻena Point": [
+      21.576,
+      -158.25
+    ],
+    "Azure": [
+      21.2775,
+      -157.829
+    ],
+    "Waikīkī Aquarium": [
+      21.2655,
+      -157.8216
+    ]
+  },
   "hero": [
     {
       "type": "grid",
       "images": [
         {
-          "id": "placeholder-1",
-          "file": "001",
+          "id": "IMG_6898.HEIC",
+          "file": "img-6898",
           "w": 1600,
-          "h": 2400
+          "h": 599,
+          "time": "10:16",
+          "place": "Kaʻena Point"
         }
       ]
     }
@@ -27,47 +215,61 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Horizon Guest House",
           "images": [
             {
-              "id": "placeholder-2",
-              "file": "002",
-              "w": 1600,
-              "h": 2000
+              "id": "IMG_6583.HEIC",
+              "file": "img-6583",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:34",
+              "place": "Horizon Guest House"
             },
             {
-              "id": "placeholder-3",
-              "file": "003",
+              "id": "IMG_6584.HEIC",
+              "file": "img-6584",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "15:50",
+              "place": "Horizon Guest House"
+            },
+            {
+              "id": "IMG_6586.HEIC",
+              "file": "img-6586",
+              "w": 1200,
+              "h": 1600,
+              "time": "16:38",
+              "place": "Horizon Guest House"
+            },
+            {
+              "id": "IMG_6587.HEIC",
+              "file": "img-6587",
+              "w": 1200,
+              "h": 1600,
+              "time": "16:40",
+              "place": "Horizon Guest House"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": "Don's Mai Tai Bar",
           "images": [
             {
-              "id": "placeholder-4",
-              "file": "004",
+              "id": "IMG_6589.HEIC",
+              "file": "img-6589",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "18:12",
+              "place": "Don's Mai Tai Bar"
             },
             {
-              "id": "placeholder-5",
-              "file": "005",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-6",
-              "file": "006",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-7",
-              "file": "007",
-              "w": 1600,
-              "h": 2400
+              "id": "IMG_0397.PNG",
+              "file": "img-0397",
+              "w": 1590,
+              "h": 1320,
+              "time": "19:05",
+              "place": "Don's Mai Tai Bar"
             }
           ]
         }
@@ -87,47 +289,337 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Horizon Guest House",
           "images": [
             {
-              "id": "placeholder-8",
-              "file": "008",
+              "id": "IMG_6591.HEIC",
+              "file": "img-6591",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "08:11",
+              "place": "Horizon Guest House"
             },
             {
-              "id": "placeholder-9",
-              "file": "009",
+              "id": "IMG_0415.HEIC",
+              "file": "img-0415",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:45",
+              "place": "Horizon Guest House"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Makāula-ʻOʻoma Trail",
+          "images": [
+            {
+              "id": "IMG_6594.HEIC",
+              "file": "img-6594",
+              "w": 1200,
+              "h": 1600,
+              "time": "11:43",
+              "place": "Makāula-ʻOʻoma Trail"
+            },
+            {
+              "id": "IMG_0424.HEIC",
+              "file": "img-0424",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "12:28",
+              "place": "Makāula-ʻOʻoma Trail"
+            },
+            {
+              "id": "IMG_0425.HEIC",
+              "file": "img-0425",
+              "w": 1200,
+              "h": 1600,
+              "time": "12:31",
+              "place": "Makāula-ʻOʻoma Trail"
+            },
+            {
+              "id": "IMG_0428.HEIC",
+              "file": "img-0428",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:10",
+              "place": "Makāula-ʻOʻoma Trail"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": null,
+          "images": [
+            {
+              "id": "IMG_6596.HEIC",
+              "file": "img-6596",
+              "w": 1600,
+              "h": 1200,
+              "time": "13:59",
+              "place": null
+            },
+            {
+              "id": "IMG_6598.HEIC",
+              "file": "img-6598",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:25",
+              "place": null
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "Puʻukoholā Heiau",
           "images": [
             {
-              "id": "placeholder-10",
-              "file": "010",
+              "id": "IMG_0435.HEIC",
+              "file": "img-0435",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "15:37",
+              "place": "Puʻukoholā Heiau"
             },
             {
-              "id": "placeholder-11",
-              "file": "011",
+              "id": "IMG_6599.HEIC",
+              "file": "img-6599",
               "w": 1600,
-              "h": 1066
+              "h": 591,
+              "time": "15:37",
+              "place": "Puʻukoholā Heiau"
             },
             {
-              "id": "placeholder-12",
-              "file": "012",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_0436.HEIC",
+              "file": "img-0436",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:38",
+              "place": "Puʻukoholā Heiau"
             },
             {
-              "id": "placeholder-13",
-              "file": "013",
+              "id": "IMG_6600.HEIC",
+              "file": "img-6600",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:38",
+              "place": "Puʻukoholā Heiau"
+            },
+            {
+              "id": "IMG_6601.HEIC",
+              "file": "img-6601",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "15:39",
+              "place": "Puʻukoholā Heiau"
+            },
+            {
+              "id": "IMG_6602.HEIC",
+              "file": "img-6602",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:45",
+              "place": "Puʻukoholā Heiau"
+            },
+            {
+              "id": "IMG_0442.HEIC",
+              "file": "img-0442",
+              "w": 1600,
+              "h": 1200,
+              "time": "15:49",
+              "place": "Puʻukoholā Heiau"
+            },
+            {
+              "id": "IMG_6603.HEIC",
+              "file": "img-6603",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:57",
+              "place": "Puʻukoholā Heiau"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Kalahuipuaʻa fishponds",
+          "images": [
+            {
+              "id": "IMG_0448.HEIC",
+              "file": "img-0448",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:30",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_0452.HEIC",
+              "file": "img-0452",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:33",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_0455.HEIC",
+              "file": "img-0455",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:39",
+              "place": "Kalahuipuaʻa fishponds"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Puakō Petroglyphs",
+          "images": [
+            {
+              "id": "IMG_0458.HEIC",
+              "file": "img-0458",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:47",
+              "place": "Puakō Petroglyphs"
+            },
+            {
+              "id": "IMG_0467.HEIC",
+              "file": "img-0467",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:30",
+              "place": "Puakō Petroglyphs"
+            },
+            {
+              "id": "IMG_6604.HEIC",
+              "file": "img-6604",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:30",
+              "place": "Puakō Petroglyphs"
+            },
+            {
+              "id": "IMG_0471.HEIC",
+              "file": "img-0471",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:39",
+              "place": "Puakō Petroglyphs"
+            }
+          ]
+        },
+        {
+          "type": "carousel",
+          "caption": "Kalahuipuaʻa fishponds",
+          "images": [
+            {
+              "id": "IMG_6605.HEIC",
+              "file": "img-6605",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:17",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_0474.HEIC",
+              "file": "img-0474",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:18",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6606.HEIC",
+              "file": "img-6606",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:18",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6607.HEIC",
+              "file": "img-6607",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:21",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6608.HEIC",
+              "file": "img-6608",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:44",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_0476.HEIC",
+              "file": "img-0476",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:45",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_0478.HEIC",
+              "file": "img-0478",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:45",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6609.HEIC",
+              "file": "img-6609",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:45",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6611.HEIC",
+              "file": "img-6611",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:47",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_0480.HEIC",
+              "file": "img-0480",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:49",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6612.HEIC",
+              "file": "img-6612",
+              "w": 1600,
+              "h": 832,
+              "time": "18:49",
+              "place": "Kalahuipuaʻa fishponds"
+            },
+            {
+              "id": "IMG_6613.HEIC",
+              "file": "img-6613",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:51",
+              "place": "Kalahuipuaʻa fishponds"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "CanoeHouse",
+          "images": [
+            {
+              "id": "IMG_6618.HEIC",
+              "file": "img-6618",
+              "w": 1200,
+              "h": 1600,
+              "time": "20:21",
+              "place": "CanoeHouse"
             }
           ]
         }
@@ -145,47 +637,135 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Hula Daddy",
           "images": [
             {
-              "id": "placeholder-14",
-              "file": "014",
-              "w": 1600,
-              "h": 2000
-            },
-            {
-              "id": "placeholder-15",
-              "file": "015",
-              "w": 1600,
-              "h": 900
+              "id": "IMG_6625.HEIC",
+              "file": "img-6625",
+              "w": 1200,
+              "h": 1600,
+              "time": "10:06",
+              "place": "Hula Daddy"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": null,
           "images": [
             {
-              "id": "placeholder-16",
-              "file": "016",
+              "id": "IMG_0513.HEIC",
+              "file": "img-0513",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "11:20",
+              "place": null
             },
             {
-              "id": "placeholder-17",
-              "file": "017",
+              "id": "IMG_6629.HEIC",
+              "file": "img-6629",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "12:01",
+              "place": null
             },
             {
-              "id": "placeholder-18",
-              "file": "018",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_6630.HEIC",
+              "file": "img-6630",
+              "w": 1200,
+              "h": 1600,
+              "time": "12:01",
+              "place": null
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Paniolo Adventures",
+          "images": [
+            {
+              "id": "IMG_6632.HEIC",
+              "file": "img-6632",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:03",
+              "place": "Paniolo Adventures"
             },
             {
-              "id": "placeholder-19",
-              "file": "019",
+              "id": "IMG_6633.HEIC",
+              "file": "img-6633",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:56",
+              "place": "Paniolo Adventures"
+            },
+            {
+              "id": "IMG_6650.HEIC",
+              "file": "img-6650",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:22",
+              "place": "Paniolo Adventures"
+            },
+            {
+              "id": "IMG_0514.HEIC",
+              "file": "img-0514",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "15:43",
+              "place": "Paniolo Adventures"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Kohala Mountain Road",
+          "images": [
+            {
+              "id": "IMG_6660.HEIC",
+              "file": "img-6660",
+              "w": 1200,
+              "h": 1600,
+              "time": "16:08",
+              "place": "Kohala Mountain Road"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Merriman's",
+          "images": [
+            {
+              "id": "IMG_6664.HEIC",
+              "file": "img-6664",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:27",
+              "place": "Merriman's"
+            },
+            {
+              "id": "IMG_6665.HEIC",
+              "file": "img-6665",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:40",
+              "place": "Merriman's"
+            },
+            {
+              "id": "IMG_0520.HEIC",
+              "file": "img-0520",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:55",
+              "place": "Merriman's"
+            },
+            {
+              "id": "IMG_6666.HEIC",
+              "file": "img-6666",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:55",
+              "place": "Merriman's"
             }
           ]
         }
@@ -202,47 +782,171 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Kealakekua Bay",
           "images": [
             {
-              "id": "placeholder-20",
-              "file": "020",
+              "id": "IMG_6668.HEIC",
+              "file": "img-6668",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "08:54",
+              "place": "Kealakekua Bay"
             },
             {
-              "id": "placeholder-21",
-              "file": "021",
+              "id": "IMG_0555.HEIC",
+              "file": "img-0555",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "09:16",
+              "place": "Kealakekua Bay"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": null,
+          "images": [
+            {
+              "id": "IMG_6672.HEIC",
+              "file": "img-6672",
+              "w": 1600,
+              "h": 1200,
+              "time": "15:09",
+              "place": null
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "Noio",
           "images": [
             {
-              "id": "placeholder-22",
-              "file": "022",
+              "id": "IMG_0565.HEIC",
+              "file": "img-0565",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "19:18",
+              "place": "Noio"
             },
             {
-              "id": "placeholder-23",
-              "file": "023",
+              "id": "IMG_0566.HEIC",
+              "file": "img-0566",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "19:19",
+              "place": "Noio"
             },
             {
-              "id": "placeholder-24",
-              "file": "024",
+              "id": "IMG_0568.HEIC",
+              "file": "img-0568",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "20:00",
+              "place": "Noio"
             },
             {
-              "id": "placeholder-25",
-              "file": "025",
+              "id": "IMG_0570.HEIC",
+              "file": "img-0570",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "20:01",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0571.HEIC",
+              "file": "img-0571",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:02",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_6679.JPG",
+              "file": "img-6679",
+              "w": 1280,
+              "h": 960,
+              "time": "20:04",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_6690.JPG",
+              "file": "img-6690",
+              "w": 960,
+              "h": 1280,
+              "time": "20:12",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0573.HEIC",
+              "file": "img-0573",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:17",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0574.HEIC",
+              "file": "img-0574",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:26",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0575.HEIC",
+              "file": "img-0575",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:52",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0576.HEIC",
+              "file": "img-0576",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:59",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0578.HEIC",
+              "file": "img-0578",
+              "w": 1600,
+              "h": 1200,
+              "time": "21:08",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_6674.HEIC",
+              "file": "img-6674",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:08",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_0580.HEIC",
+              "file": "img-0580",
+              "w": 1600,
+              "h": 1200,
+              "time": "21:20",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_6687.JPG",
+              "file": "img-6687",
+              "w": 1280,
+              "h": 960,
+              "time": "21:30",
+              "place": "Noio"
+            },
+            {
+              "id": "IMG_6688.JPG",
+              "file": "img-6688",
+              "w": 1280,
+              "h": 960,
+              "time": "21:31",
+              "place": "Noio"
             }
           ]
         }
@@ -259,47 +963,213 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Horizon Guest House",
           "images": [
             {
-              "id": "placeholder-26",
-              "file": "026",
+              "id": "IMG_6675.HEIC",
+              "file": "img-6675",
               "w": 1600,
-              "h": 2000
+              "h": 666,
+              "time": "08:42",
+              "place": "Horizon Guest House"
             },
             {
-              "id": "placeholder-27",
-              "file": "027",
+              "id": "FullSizeRender.jpeg",
+              "file": "fullsizerender",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "08:47",
+              "place": "Horizon Guest House"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "South Point",
+          "images": [
+            {
+              "id": "IMG_0588.JPG",
+              "file": "img-0588",
+              "w": 1600,
+              "h": 900,
+              "time": "10:11",
+              "place": "South Point"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Volcano Village Lodge",
+          "images": [
+            {
+              "id": "IMG_6704.HEIC",
+              "file": "img-6704",
+              "w": 1600,
+              "h": 602,
+              "time": "12:07",
+              "place": "Volcano Village Lodge"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Mauna Kea visitor station",
+          "images": [
+            {
+              "id": "IMG_6708.HEIC",
+              "file": "img-6708",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:15",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_6710.HEIC",
+              "file": "img-6710",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:42",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_6711.JPG",
+              "file": "img-6711",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:43",
+              "place": "Mauna Kea visitor station"
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "Mauna Kea summit",
           "images": [
             {
-              "id": "placeholder-28",
-              "file": "028",
+              "id": "IMG_0608.HEIC",
+              "file": "img-0608",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "17:34",
+              "place": "Mauna Kea summit"
             },
             {
-              "id": "placeholder-29",
-              "file": "029",
+              "id": "IMG_6713.HEIC",
+              "file": "img-6713",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "17:53",
+              "place": "Mauna Kea summit"
             },
             {
-              "id": "placeholder-30",
-              "file": "030",
+              "id": "IMG_6714.HEIC",
+              "file": "img-6714",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "17:54",
+              "place": "Mauna Kea summit"
             },
             {
-              "id": "placeholder-31",
-              "file": "031",
+              "id": "IMG_6715.HEIC",
+              "file": "img-6715",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "17:54",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_0619.HEIC",
+              "file": "img-0619",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:55",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_0623.HEIC",
+              "file": "img-0623",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:55",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_6716.HEIC",
+              "file": "img-6716",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:07",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_0634.HEIC",
+              "file": "img-0634",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:25",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_6718.HEIC",
+              "file": "img-6718",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:30",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_6719.HEIC",
+              "file": "img-6719",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:15",
+              "place": "Mauna Kea summit"
+            },
+            {
+              "id": "IMG_6721.HEIC",
+              "file": "img-6721",
+              "w": 1200,
+              "h": 1600,
+              "time": "20:16",
+              "place": "Mauna Kea summit"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Mauna Kea visitor station",
+          "images": [
+            {
+              "id": "IMG_0671.HEIC",
+              "file": "img-0671",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:27",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_0672.HEIC",
+              "file": "img-0672",
+              "w": 1600,
+              "h": 1200,
+              "time": "21:27",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_6731.HEIC",
+              "file": "img-6731",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:27",
+              "place": "Mauna Kea visitor station"
+            },
+            {
+              "id": "IMG_0674.HEIC",
+              "file": "img-0674",
+              "w": 1200,
+              "h": 1600,
+              "time": "21:28",
+              "place": "Mauna Kea visitor station"
             }
           ]
         }
@@ -316,47 +1186,107 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Kīlauea caldera",
           "images": [
             {
-              "id": "placeholder-32",
-              "file": "032",
-              "w": 1600,
-              "h": 2000
+              "id": "IMG_0687.HEIC",
+              "file": "img-0687",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:23",
+              "place": "Kīlauea caldera"
             },
             {
-              "id": "placeholder-33",
-              "file": "033",
+              "id": "IMG_6733.HEIC",
+              "file": "img-6733",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:33",
+              "place": "Kīlauea caldera"
+            },
+            {
+              "id": "IMG_0692.HEIC",
+              "file": "img-0692",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "09:02",
+              "place": "Kīlauea caldera"
+            },
+            {
+              "id": "IMG_6735.HEIC",
+              "file": "img-6735",
+              "w": 1600,
+              "h": 811,
+              "time": "09:02",
+              "place": "Kīlauea caldera"
+            },
+            {
+              "id": "IMG_6738.JPG",
+              "file": "img-6738",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:19",
+              "place": "Kīlauea caldera"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": "Volcano House",
           "images": [
             {
-              "id": "placeholder-34",
-              "file": "034",
-              "w": 1600,
-              "h": 1600
+              "id": "IMG_0701.HEIC",
+              "file": "img-0701",
+              "w": 1200,
+              "h": 1600,
+              "time": "10:41",
+              "place": "Volcano House"
             },
             {
-              "id": "placeholder-35",
-              "file": "035",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_6739.HEIC",
+              "file": "img-6739",
+              "w": 1200,
+              "h": 1600,
+              "time": "11:08",
+              "place": "Volcano House"
             },
             {
-              "id": "placeholder-36",
-              "file": "036",
+              "id": "IMG_0705.HEIC",
+              "file": "img-0705",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "11:19",
+              "place": "Volcano House"
             },
             {
-              "id": "placeholder-37",
-              "file": "037",
+              "id": "IMG_6741.HEIC",
+              "file": "img-6741",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "11:29",
+              "place": "Volcano House"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": null,
+          "images": [
+            {
+              "id": "IMG_0716.HEIC",
+              "file": "img-0716",
+              "w": 1600,
+              "h": 1200,
+              "time": "14:04",
+              "place": null
+            },
+            {
+              "id": "IMG_0722.HEIC",
+              "file": "img-0722",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:47",
+              "place": null
             }
           ]
         }
@@ -371,48 +1301,196 @@
       ],
       "blocks": [
         {
-          "type": "grid",
+          "type": "carousel",
+          "caption": "Puʻu ʻŌʻō Trail",
           "images": [
             {
-              "id": "placeholder-38",
-              "file": "038",
+              "id": "IMG_0737.HEIC",
+              "file": "img-0737",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "06:56",
+              "place": "Puʻu ʻŌʻō Trail"
             },
             {
-              "id": "placeholder-39",
-              "file": "039",
+              "id": "IMG_6748.HEIC",
+              "file": "img-6748",
+              "w": 1200,
+              "h": 1600,
+              "time": "07:03",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6749.HEIC",
+              "file": "img-6749",
+              "w": 1200,
+              "h": 1600,
+              "time": "07:56",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6750.HEIC",
+              "file": "img-6750",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:14",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6751.HEIC",
+              "file": "img-6751",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:14",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6752.HEIC",
+              "file": "img-6752",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:15",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6753.HEIC",
+              "file": "img-6753",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:48",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_0748.HEIC",
+              "file": "img-0748",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "08:52",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_0749.HEIC",
+              "file": "img-0749",
+              "w": 1600,
+              "h": 1200,
+              "time": "08:58",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_0750.HEIC",
+              "file": "img-0750",
+              "w": 1600,
+              "h": 1200,
+              "time": "08:58",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6755.HEIC",
+              "file": "img-6755",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:29",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6756.HEIC",
+              "file": "img-6756",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:29",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_0758.HEIC",
+              "file": "img-0758",
+              "w": 1600,
+              "h": 1200,
+              "time": "10:22",
+              "place": "Puʻu ʻŌʻō Trail"
+            },
+            {
+              "id": "IMG_6757.HEIC",
+              "file": "img-6757",
+              "w": 1600,
+              "h": 1200,
+              "time": "11:05",
+              "place": "Puʻu ʻŌʻō Trail"
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "Palila Discovery Trail",
           "images": [
             {
-              "id": "placeholder-40",
-              "file": "040",
-              "w": 1600,
-              "h": 1600
+              "id": "IMG_6759.HEIC",
+              "file": "img-6759",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:22",
+              "place": "Palila Discovery Trail"
             },
             {
-              "id": "placeholder-41",
-              "file": "041",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_6760.HEIC",
+              "file": "img-6760",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:35",
+              "place": "Palila Discovery Trail"
             },
             {
-              "id": "placeholder-42",
-              "file": "042",
+              "id": "IMG_0775.HEIC",
+              "file": "img-0775",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "13:54",
+              "place": "Palila Discovery Trail"
             },
             {
-              "id": "placeholder-43",
-              "file": "043",
-              "w": 1600,
-              "h": 2400
+              "id": "IMG_6761.HEIC",
+              "file": "img-6761",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:11",
+              "place": "Palila Discovery Trail"
+            },
+            {
+              "id": "IMG_0778.HEIC",
+              "file": "img-0778",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:46",
+              "place": "Palila Discovery Trail"
+            },
+            {
+              "id": "IMG_6763.HEIC",
+              "file": "img-6763",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:26",
+              "place": "Palila Discovery Trail"
+            },
+            {
+              "id": "IMG_0784.HEIC",
+              "file": "img-0784",
+              "w": 1200,
+              "h": 1600,
+              "time": "16:07",
+              "place": "Palila Discovery Trail"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Lehua Restaurant",
+          "images": [
+            {
+              "id": "IMG_0796.HEIC",
+              "file": "img-0796",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:28",
+              "place": "Lehua Restaurant"
             }
           ]
         }
@@ -431,47 +1509,189 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Chain of Craters Road",
           "images": [
             {
-              "id": "placeholder-44",
-              "file": "044",
+              "id": "IMG_6768.HEIC",
+              "file": "img-6768",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "12:26",
+              "place": "Chain of Craters Road"
             },
             {
-              "id": "placeholder-45",
-              "file": "045",
+              "id": "IMG_6769.HEIC",
+              "file": "img-6769",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "12:31",
+              "place": "Chain of Craters Road"
+            },
+            {
+              "id": "IMG_6770.HEIC",
+              "file": "img-6770",
+              "w": 1600,
+              "h": 1200,
+              "time": "12:59",
+              "place": "Chain of Craters Road"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": "Hōlei Sea Arch",
           "images": [
             {
-              "id": "placeholder-46",
-              "file": "046",
+              "id": "IMG_0819.HEIC",
+              "file": "img-0819",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "13:13",
+              "place": "Hōlei Sea Arch"
             },
             {
-              "id": "placeholder-47",
-              "file": "047",
+              "id": "IMG_0825.HEIC",
+              "file": "img-0825",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "13:30",
+              "place": "Hōlei Sea Arch"
             },
             {
-              "id": "placeholder-48",
-              "file": "048",
+              "id": "IMG_0827.HEIC",
+              "file": "img-0827",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "13:31",
+              "place": "Hōlei Sea Arch"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Hilo Honu Inn",
+          "images": [
+            {
+              "id": "IMG_0830.HEIC",
+              "file": "img-0830",
+              "w": 1600,
+              "h": 1200,
+              "time": "15:12",
+              "place": "Hilo Honu Inn"
             },
             {
-              "id": "placeholder-49",
-              "file": "049",
+              "id": "IMG_0831.HEIC",
+              "file": "img-0831",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "15:12",
+              "place": "Hilo Honu Inn"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "ʻAkaka Falls",
+          "images": [
+            {
+              "id": "IMG_0835.HEIC",
+              "file": "img-0835",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:00",
+              "place": "ʻAkaka Falls"
+            },
+            {
+              "id": "IMG_0836.HEIC",
+              "file": "img-0836",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:04",
+              "place": "ʻAkaka Falls"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Hawaiʻi Tropical Botanical Garden",
+          "images": [
+            {
+              "id": "IMG_0853.HEIC",
+              "file": "img-0853",
+              "w": 1600,
+              "h": 1200,
+              "time": "17:02",
+              "place": "Hawaiʻi Tropical Botanical Garden"
+            },
+            {
+              "id": "IMG_0867.HEIC",
+              "file": "img-0867",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:19",
+              "place": "Hawaiʻi Tropical Botanical Garden"
+            },
+            {
+              "id": "IMG_0868.HEIC",
+              "file": "img-0868",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:26",
+              "place": "Hawaiʻi Tropical Botanical Garden"
+            },
+            {
+              "id": "IMG_0872.HEIC",
+              "file": "img-0872",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:29",
+              "place": "Hawaiʻi Tropical Botanical Garden"
+            },
+            {
+              "id": "IMG_0875.HEIC",
+              "file": "img-0875",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:29",
+              "place": "Hawaiʻi Tropical Botanical Garden"
+            },
+            {
+              "id": "IMG_0892.HEIC",
+              "file": "img-0892",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:38",
+              "place": "Hawaiʻi Tropical Botanical Garden"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "The Seaside",
+          "images": [
+            {
+              "id": "IMG_6774.HEIC",
+              "file": "img-6774",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:50",
+              "place": "The Seaside"
+            },
+            {
+              "id": "IMG_0903.HEIC",
+              "file": "img-0903",
+              "w": 1200,
+              "h": 1600,
+              "time": "19:18",
+              "place": "The Seaside"
+            },
+            {
+              "id": "IMG_6775.HEIC",
+              "file": "img-6775",
+              "w": 1200,
+              "h": 1600,
+              "time": "19:18",
+              "place": "The Seaside"
             }
           ]
         }
@@ -490,47 +1710,167 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Hilo Honu Inn",
           "images": [
             {
-              "id": "placeholder-50",
-              "file": "050",
+              "id": "IMG_6777.HEIC",
+              "file": "img-6777",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "06:25",
+              "place": "Hilo Honu Inn"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": null,
+          "images": [
+            {
+              "id": "IMG_6780.HEIC",
+              "file": "img-6780",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:12",
+              "place": null
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Royal Hawaiian",
+          "images": [
+            {
+              "id": "IMG_6787.HEIC",
+              "file": "img-6787",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:14",
+              "place": "Royal Hawaiian"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Mai Tai Bar",
+          "images": [
+            {
+              "id": "IMG_0927.HEIC",
+              "file": "img-0927",
+              "w": 1600,
+              "h": 1200,
+              "time": "16:04",
+              "place": "Mai Tai Bar"
             },
             {
-              "id": "placeholder-51",
-              "file": "051",
+              "id": "IMG_0929.HEIC",
+              "file": "img-0929",
+              "w": 1200,
+              "h": 1600,
+              "time": "16:44",
+              "place": "Mai Tai Bar"
+            },
+            {
+              "id": "IMG_6795.HEIC",
+              "file": "img-6795",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "16:58",
+              "place": "Mai Tai Bar"
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "natuRe",
           "images": [
             {
-              "id": "placeholder-52",
-              "file": "052",
-              "w": 1600,
-              "h": 1600
+              "id": "IMG_6802.HEIC",
+              "file": "img-6802",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:17",
+              "place": "natuRe"
             },
             {
-              "id": "placeholder-53",
-              "file": "053",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_6805.HEIC",
+              "file": "img-6805",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:24",
+              "place": "natuRe"
             },
             {
-              "id": "placeholder-54",
-              "file": "054",
+              "id": "IMG_0934.HEIC",
+              "file": "img-0934",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "18:26",
+              "place": "natuRe"
             },
             {
-              "id": "placeholder-55",
-              "file": "055",
+              "id": "IMG_0936.HEIC",
+              "file": "img-0936",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "18:34",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_0938.HEIC",
+              "file": "img-0938",
+              "w": 1600,
+              "h": 1200,
+              "time": "18:49",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_0939.HEIC",
+              "file": "img-0939",
+              "w": 1200,
+              "h": 1600,
+              "time": "19:03",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_0941.HEIC",
+              "file": "img-0941",
+              "w": 1600,
+              "h": 1200,
+              "time": "19:05",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_0943.HEIC",
+              "file": "img-0943",
+              "w": 1600,
+              "h": 1200,
+              "time": "19:21",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_0945.HEIC",
+              "file": "img-0945",
+              "w": 1600,
+              "h": 1200,
+              "time": "19:43",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_6808.HEIC",
+              "file": "img-6808",
+              "w": 1600,
+              "h": 1200,
+              "time": "19:43",
+              "place": "natuRe"
+            },
+            {
+              "id": "IMG_0946.HEIC",
+              "file": "img-0946",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:10",
+              "place": "natuRe"
             }
           ]
         }
@@ -547,48 +1887,156 @@
       ],
       "blocks": [
         {
-          "type": "grid",
+          "type": "carousel",
+          "caption": "Bishop Museum",
           "images": [
             {
-              "id": "placeholder-56",
-              "file": "056",
+              "id": "IMG_0962.HEIC",
+              "file": "img-0962",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "12:07",
+              "place": "Bishop Museum"
             },
             {
-              "id": "placeholder-57",
-              "file": "057",
+              "id": "IMG_0963.HEIC",
+              "file": "img-0963",
+              "w": 1200,
+              "h": 1600,
+              "time": "12:12",
+              "place": "Bishop Museum"
+            },
+            {
+              "id": "IMG_0975.HEIC",
+              "file": "img-0975",
+              "w": 1200,
+              "h": 1600,
+              "time": "12:21",
+              "place": "Bishop Museum"
+            },
+            {
+              "id": "IMG_0997.HEIC",
+              "file": "img-0997",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "13:23",
+              "place": "Bishop Museum"
+            },
+            {
+              "id": "IMG_1007.HEIC",
+              "file": "img-1007",
+              "w": 1600,
+              "h": 1200,
+              "time": "13:31",
+              "place": "Bishop Museum"
+            },
+            {
+              "id": "IMG_1008.HEIC",
+              "file": "img-1008",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:31",
+              "place": "Bishop Museum"
+            },
+            {
+              "id": "IMG_6815.HEIC",
+              "file": "img-6815",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:38",
+              "place": "Bishop Museum"
+            },
+            {
+              "id": "IMG_6817.HEIC",
+              "file": "img-6817",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:38",
+              "place": "Bishop Museum"
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "La Mariana Sailing Club",
           "images": [
             {
-              "id": "placeholder-58",
-              "file": "058",
+              "id": "IMG_1015.HEIC",
+              "file": "img-1015",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "15:25",
+              "place": "La Mariana Sailing Club"
             },
             {
-              "id": "placeholder-59",
-              "file": "059",
+              "id": "IMG_6820.HEIC",
+              "file": "img-6820",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "15:25",
+              "place": "La Mariana Sailing Club"
             },
             {
-              "id": "placeholder-60",
-              "file": "060",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_6821.HEIC",
+              "file": "img-6821",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:28",
+              "place": "La Mariana Sailing Club"
             },
             {
-              "id": "placeholder-61",
-              "file": "061",
-              "w": 1600,
-              "h": 2400
+              "id": "IMG_6822.HEIC",
+              "file": "img-6822",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:28",
+              "place": "La Mariana Sailing Club"
+            },
+            {
+              "id": "IMG_6823.HEIC",
+              "file": "img-6823",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:37",
+              "place": "La Mariana Sailing Club"
+            },
+            {
+              "id": "IMG_1018.HEIC",
+              "file": "img-1018",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:38",
+              "place": "La Mariana Sailing Club"
+            },
+            {
+              "id": "IMG_6824.HEIC",
+              "file": "img-6824",
+              "w": 1200,
+              "h": 1600,
+              "time": "16:36",
+              "place": "La Mariana Sailing Club"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Skull & Crown Trading Co.",
+          "images": [
+            {
+              "id": "IMG_6827.HEIC",
+              "file": "img-6827",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:18",
+              "place": "Skull & Crown Trading Co."
+            },
+            {
+              "id": "IMG_6828.HEIC",
+              "file": "img-6828",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:32",
+              "place": "Skull & Crown Trading Co."
             }
           ]
         }
@@ -607,48 +2055,150 @@
       ],
       "blocks": [
         {
-          "type": "grid",
+          "type": "carousel",
+          "caption": "ʻAiea Loop Trail",
           "images": [
             {
-              "id": "placeholder-62",
-              "file": "062",
-              "w": 1600,
-              "h": 2000
+              "id": "IMG_6835.HEIC",
+              "file": "img-6835",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:01",
+              "place": "ʻAiea Loop Trail"
             },
             {
-              "id": "placeholder-63",
-              "file": "063",
+              "id": "IMG_6837.HEIC",
+              "file": "img-6837",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:26",
+              "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_1041.HEIC",
+              "file": "img-1041",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:30",
+              "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_6838.HEIC",
+              "file": "img-6838",
+              "w": 1200,
+              "h": 1600,
+              "time": "08:33",
+              "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_1044.HEIC",
+              "file": "img-1044",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "08:44",
+              "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_1048.HEIC",
+              "file": "img-1048",
+              "w": 1600,
+              "h": 1200,
+              "time": "09:08",
+              "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_6839.HEIC",
+              "file": "img-6839",
+              "w": 1600,
+              "h": 1200,
+              "time": "09:29",
+              "place": "ʻAiea Loop Trail"
+            },
+            {
+              "id": "IMG_6840.HEIC",
+              "file": "img-6840",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:48",
+              "place": "ʻAiea Loop Trail"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": "Nuʻuanu Pali Lookout",
           "images": [
             {
-              "id": "placeholder-64",
-              "file": "064",
+              "id": "IMG_1055.JPG",
+              "file": "img-1055",
               "w": 1600,
-              "h": 1600
+              "h": 900,
+              "time": "11:40",
+              "place": "Nuʻuanu Pali Lookout"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": null,
+          "images": [
+            {
+              "id": "IMG_1066.HEIC",
+              "file": "img-1066",
+              "w": 1600,
+              "h": 1200,
+              "time": "12:25",
+              "place": null
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Puʻu ʻUalakaʻa",
+          "images": [
+            {
+              "id": "IMG_1067.HEIC",
+              "file": "img-1067",
+              "w": 1600,
+              "h": 1200,
+              "time": "12:58",
+              "place": "Puʻu ʻUalakaʻa"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Helena's Hawaiian Food",
+          "images": [
+            {
+              "id": "IMG_1072.HEIC",
+              "file": "img-1072",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:39",
+              "place": "Helena's Hawaiian Food"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "House Without A Key",
+          "images": [
+            {
+              "id": "IMG_6856.HEIC",
+              "file": "img-6856",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:43",
+              "place": "House Without A Key"
             },
             {
-              "id": "placeholder-65",
-              "file": "065",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-66",
-              "file": "066",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-67",
-              "file": "067",
-              "w": 1600,
-              "h": 2400
+              "id": "IMG_6857.HEIC",
+              "file": "img-6857",
+              "w": 1200,
+              "h": 1600,
+              "time": "15:43",
+              "place": "House Without A Key"
             }
           ]
         }
@@ -667,47 +2217,37 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Hanauma Bay",
           "images": [
             {
-              "id": "placeholder-68",
-              "file": "068",
+              "id": "IMG_1106.HEIC",
+              "file": "img-1106",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "11:34",
+              "place": "Hanauma Bay"
             },
             {
-              "id": "placeholder-69",
-              "file": "069",
+              "id": "IMG_1111.HEIC",
+              "file": "img-1111",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "11:36",
+              "place": "Hanauma Bay"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": null,
           "images": [
             {
-              "id": "placeholder-70",
-              "file": "070",
-              "w": 1600,
-              "h": 1600
-            },
-            {
-              "id": "placeholder-71",
-              "file": "071",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-72",
-              "file": "072",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-73",
-              "file": "073",
-              "w": 1600,
-              "h": 2400
+              "id": "IMG_6867.HEIC",
+              "file": "img-6867",
+              "w": 1200,
+              "h": 1600,
+              "time": "20:39",
+              "place": null
             }
           ]
         }
@@ -725,47 +2265,157 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Lānaʻi Lookout",
           "images": [
             {
-              "id": "placeholder-74",
-              "file": "074",
+              "id": "IMG_6869.HEIC",
+              "file": "img-6869",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "09:14",
+              "place": "Lānaʻi Lookout"
             },
             {
-              "id": "placeholder-75",
-              "file": "075",
+              "id": "IMG_6871.HEIC",
+              "file": "img-6871",
               "w": 1600,
-              "h": 900
+              "h": 1200,
+              "time": "09:16",
+              "place": "Lānaʻi Lookout"
             }
           ]
         },
         {
-          "type": "carousel",
+          "type": "grid",
+          "caption": null,
           "images": [
             {
-              "id": "placeholder-76",
-              "file": "076",
+              "id": "IMG_1134.HEIC",
+              "file": "img-1134",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "11:07",
+              "place": null
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "ʻIolani Palace",
+          "images": [
+            {
+              "id": "IMG_6879.HEIC",
+              "file": "img-6879",
+              "w": 1600,
+              "h": 1200,
+              "time": "12:24",
+              "place": "ʻIolani Palace"
             },
             {
-              "id": "placeholder-77",
-              "file": "077",
-              "w": 1600,
-              "h": 1066
+              "id": "IMG_1139.HEIC",
+              "file": "img-1139",
+              "w": 1200,
+              "h": 1600,
+              "time": "13:23",
+              "place": "ʻIolani Palace"
             },
             {
-              "id": "placeholder-78",
-              "file": "078",
+              "id": "IMG_1145.HEIC",
+              "file": "img-1145",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "13:52",
+              "place": "ʻIolani Palace"
             },
             {
-              "id": "placeholder-79",
-              "file": "079",
+              "id": "IMG_1157.HEIC",
+              "file": "img-1157",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:09",
+              "place": "ʻIolani Palace"
+            },
+            {
+              "id": "IMG_6880.HEIC",
+              "file": "img-6880",
+              "w": 1200,
+              "h": 1600,
+              "time": "14:13",
+              "place": "ʻIolani Palace"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Waikīkī",
+          "images": [
+            {
+              "id": "IMG_6885.HEIC",
+              "file": "img-6885",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:09",
+              "place": "Waikīkī"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Waikīkī Aquarium",
+          "images": [
+            {
+              "id": "IMG_6889.HEIC",
+              "file": "img-6889",
+              "w": 1200,
+              "h": 1600,
+              "time": "17:28",
+              "place": "Waikīkī Aquarium"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": "Michel's at the Colony Surf",
+          "images": [
+            {
+              "id": "IMG_1173.HEIC",
+              "file": "img-1173",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "18:11",
+              "place": "Michel's at the Colony Surf"
+            },
+            {
+              "id": "IMG_6890.HEIC",
+              "file": "img-6890",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:11",
+              "place": "Michel's at the Colony Surf"
+            },
+            {
+              "id": "IMG_6894.HEIC",
+              "file": "img-6894",
+              "w": 1200,
+              "h": 1600,
+              "time": "18:45",
+              "place": "Michel's at the Colony Surf"
+            },
+            {
+              "id": "IMG_1179.HEIC",
+              "file": "img-1179",
+              "w": 1600,
+              "h": 1200,
+              "time": "19:10",
+              "place": "Michel's at the Colony Surf"
+            },
+            {
+              "id": "IMG_1180.HEIC",
+              "file": "img-1180",
+              "w": 1200,
+              "h": 1600,
+              "time": "19:20",
+              "place": "Michel's at the Colony Surf"
             }
           ]
         }
@@ -782,48 +2432,164 @@
       ],
       "blocks": [
         {
-          "type": "grid",
+          "type": "carousel",
+          "caption": "Kaʻena Point",
           "images": [
             {
-              "id": "placeholder-80",
-              "file": "080",
+              "id": "IMG_6895.HEIC",
+              "file": "img-6895",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "09:43",
+              "place": "Kaʻena Point"
             },
             {
-              "id": "placeholder-81",
-              "file": "081",
+              "id": "IMG_6897.HEIC",
+              "file": "img-6897",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:55",
+              "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_6898.HEIC",
+              "file": "img-6898",
               "w": 1600,
-              "h": 900
+              "h": 599,
+              "time": "10:16",
+              "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_6899.HEIC",
+              "file": "img-6899",
+              "w": 1200,
+              "h": 1600,
+              "time": "10:16",
+              "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_1203.HEIC",
+              "file": "img-1203",
+              "w": 1600,
+              "h": 1200,
+              "time": "10:25",
+              "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_1209.HEIC",
+              "file": "img-1209",
+              "w": 1600,
+              "h": 1200,
+              "time": "10:57",
+              "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_1218.HEIC",
+              "file": "img-1218",
+              "w": 1600,
+              "h": 1200,
+              "time": "11:33",
+              "place": "Kaʻena Point"
+            },
+            {
+              "id": "IMG_1221.HEIC",
+              "file": "img-1221",
+              "w": 1200,
+              "h": 1600,
+              "time": "11:40",
+              "place": "Kaʻena Point"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "caption": null,
+          "images": [
+            {
+              "id": "IMG_1240.HEIC",
+              "file": "img-1240",
+              "w": 1600,
+              "h": 1200,
+              "time": "15:39",
+              "place": null
             }
           ]
         },
         {
           "type": "carousel",
+          "caption": "Azure",
           "images": [
             {
-              "id": "placeholder-82",
-              "file": "082",
+              "id": "IMG_1247.HEIC",
+              "file": "img-1247",
               "w": 1600,
-              "h": 1600
+              "h": 1200,
+              "time": "18:50",
+              "place": "Azure"
             },
             {
-              "id": "placeholder-83",
-              "file": "083",
+              "id": "IMG_6904.HEIC",
+              "file": "img-6904",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "18:50",
+              "place": "Azure"
             },
             {
-              "id": "placeholder-84",
-              "file": "084",
+              "id": "IMG_1251.HEIC",
+              "file": "img-1251",
               "w": 1600,
-              "h": 1066
+              "h": 1200,
+              "time": "19:08",
+              "place": "Azure"
             },
             {
-              "id": "placeholder-85",
-              "file": "085",
+              "id": "IMG_1253.HEIC",
+              "file": "img-1253",
               "w": 1600,
-              "h": 2400
+              "h": 1200,
+              "time": "19:34",
+              "place": "Azure"
+            },
+            {
+              "id": "IMG_6909.HEIC",
+              "file": "img-6909",
+              "w": 1600,
+              "h": 1200,
+              "time": "19:34",
+              "place": "Azure"
+            },
+            {
+              "id": "IMG_1254.HEIC",
+              "file": "img-1254",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:00",
+              "place": "Azure"
+            },
+            {
+              "id": "IMG_6910.HEIC",
+              "file": "img-6910",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:00",
+              "place": "Azure"
+            },
+            {
+              "id": "IMG_1256.HEIC",
+              "file": "img-1256",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:35",
+              "place": "Azure"
+            },
+            {
+              "id": "IMG_6911.HEIC",
+              "file": "img-6911",
+              "w": 1600,
+              "h": 1200,
+              "time": "20:35",
+              "place": "Azure"
             }
           ]
         }
@@ -837,54 +2603,7 @@
         "Koko Crater Botanical Garden",
         "Pearl Harbor National Wildlife Refuge, Honouliuli unit: koloa, Hawaiian stilt, Hawaiian gallinule, Hawaiian coot"
       ],
-      "blocks": [
-        {
-          "type": "grid",
-          "images": [
-            {
-              "id": "placeholder-86",
-              "file": "086",
-              "w": 1600,
-              "h": 2000
-            },
-            {
-              "id": "placeholder-87",
-              "file": "087",
-              "w": 1600,
-              "h": 900
-            }
-          ]
-        },
-        {
-          "type": "carousel",
-          "images": [
-            {
-              "id": "placeholder-88",
-              "file": "088",
-              "w": 1600,
-              "h": 1600
-            },
-            {
-              "id": "placeholder-89",
-              "file": "089",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-90",
-              "file": "090",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-91",
-              "file": "091",
-              "w": 1600,
-              "h": 2400
-            }
-          ]
-        }
-      ]
+      "blocks": []
     },
     {
       "heading": "aloha ʻoe",
@@ -895,47 +2614,23 @@
       "blocks": [
         {
           "type": "grid",
+          "caption": "Waikīkī Aquarium",
           "images": [
             {
-              "id": "placeholder-92",
-              "file": "092",
+              "id": "IMG_1268.HEIC",
+              "file": "img-1268",
               "w": 1600,
-              "h": 2000
+              "h": 1200,
+              "time": "09:36",
+              "place": "Waikīkī Aquarium"
             },
             {
-              "id": "placeholder-93",
-              "file": "093",
-              "w": 1600,
-              "h": 900
-            }
-          ]
-        },
-        {
-          "type": "carousel",
-          "images": [
-            {
-              "id": "placeholder-94",
-              "file": "094",
-              "w": 1600,
-              "h": 1600
-            },
-            {
-              "id": "placeholder-95",
-              "file": "095",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-96",
-              "file": "096",
-              "w": 1600,
-              "h": 1066
-            },
-            {
-              "id": "placeholder-97",
-              "file": "097",
-              "w": 1600,
-              "h": 2400
+              "id": "IMG_1270.HEIC",
+              "file": "img-1270",
+              "w": 1200,
+              "h": 1600,
+              "time": "09:37",
+              "place": "Waikīkī Aquarium"
             }
           ]
         }

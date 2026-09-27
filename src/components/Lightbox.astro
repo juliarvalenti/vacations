@@ -1,11 +1,17 @@
 ---
 // Fullscreen viewer for every `.photo` inside <main>. Arrow keys / buttons step through them in page order.
+// On trips with a map (trip.map + trip.places) a mini map shows where the current photo was taken.
+import type { Trip } from '../trips';
+import MiniMap from './MiniMap.astro';
+interface Props { trip?: Trip }
+const { trip } = Astro.props;
 ---
 <dialog id="lightbox">
   <button class="close" aria-label="Close">×</button>
   <button class="lb-arrow lb-prev" aria-label="Previous">‹</button>
   <img alt="" />
   <button class="lb-arrow lb-next" aria-label="Next">›</button>
+  {trip?.map && trip.places && <MiniMap trip={trip} />}
 </dialog>
 
 <style>
@@ -24,9 +30,49 @@
   const lbImg = lb.querySelector('img')!;
   const photos = [...document.querySelectorAll<HTMLImageElement>('main .photo')];
   let cur = 0;
+
+  // --- mini map ---
+  const map = lb.querySelector<HTMLElement>('.minimap');
+  type View = [number, number, number, number];
+  const mapData: { pts: Record<string, [number, number]>; views: View[] } | null =
+    map && JSON.parse(map.querySelector('script')!.textContent!);
+  const svg = map?.querySelector('svg');
+  let view: View | null = null, anim = 0;
+  const pad = (v: View): View => {
+    const p = Math.max(v[2] - v[0], v[3] - v[1]) * 0.08;
+    return [v[0] - p, v[1] - p, v[2] - v[0] + 2 * p, v[3] - v[1] + 2 * p];
+  };
+  const zoomTo = (target: View) => {
+    const from = view ?? target, t0 = performance.now();
+    cancelAnimationFrame(anim);
+    const step = (t: number) => {
+      const e = Math.min(1, (t - t0) / 350), ease = 1 - (1 - e) ** 3;
+      view = from.map((f, i) => f + (target[i] - f) * ease) as View;
+      svg!.setAttribute('viewBox', view.join(' '));
+      if (e < 1) anim = requestAnimationFrame(step);
+    };
+    anim = requestAnimationFrame(step);
+  };
+  const updateMap = (photo: HTMLImageElement) => {
+    if (!map || !mapData || !svg) return;
+    const name = photo.dataset.place, pt = name && mapData.pts[name];
+    map.hidden = !pt;
+    if (!pt) return;
+    const [x, y] = pt;
+    for (const c of svg.querySelectorAll('.here, .here-ring')) { c.setAttribute('cx', String(x)); c.setAttribute('cy', String(y)); }
+    // zoom to the island containing the point (or the nearest one)
+    const dist = (v: View) => Math.hypot(Math.max(v[0] - x, 0, x - v[2]), Math.max(v[1] - y, 0, y - v[3]));
+    const island = mapData.views.reduce((a, b) => (dist(b) < dist(a) ? b : a));
+    zoomTo(pad(island));
+    const day = photo.closest<HTMLElement>('[data-heading]')?.dataset.heading;
+    map.querySelector('strong')!.textContent = name;
+    map.querySelector('figcaption span')!.textContent = [day, photo.dataset.time].filter(Boolean).join(' · ');
+  };
+
   const show = (i: number) => {
     cur = (i + photos.length) % photos.length;
     lbImg.src = src(cur);
+    updateMap(photos[cur]);
     // warm the neighbours so arrow keys feel instant
     for (const j of [cur + 1, cur - 1]) new Image().src = src((j + photos.length) % photos.length);
   };

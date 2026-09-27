@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Photo review</title>
+<style>
+  :root { --bg: #141312; --bg-2: #1f1d1b; --fg: #ece7de; --muted: #8f887e; --line: #2d2a27; --keep: #7bc47f; --no: #e5534b; --accent: #e07a4f; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.4 -apple-system, system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 12px 24px;
+    background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  h1 { font-size: 17px; margin: 0 8px 0 0; font-weight: 600; }
+  .counts { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .counts b { color: var(--fg); font-weight: 600; }
+  .tabs { display: flex; border: 1px solid var(--line); }
+  .tabs button { border: 0; background: none; color: var(--muted); padding: 6px 12px; cursor: pointer; font: inherit; }
+  .tabs button[aria-pressed="true"] { background: var(--bg-2); color: var(--fg); }
+  .spacer { flex: 1; }
+  .status { color: var(--muted); font-size: 12px; min-width: 60px; text-align: right; }
+  .apply { border: 0; background: var(--accent); color: #111; font: inherit; font-weight: 600; padding: 7px 14px; cursor: pointer; }
+  .apply:disabled { opacity: .5; cursor: wait; }
+  .help { color: var(--muted); font-size: 12px; padding: 10px 24px 0; }
+  kbd { border: 1px solid var(--line); padding: 0 5px; font: 11px ui-monospace, monospace; }
+
+  main { padding: 8px 24px 80px; }
+  .day h2 { font-size: 22px; font-weight: 500; margin: 32px 0 4px; }
+  .day h2 span { color: var(--muted); font-size: 14px; margin-left: 10px; }
+  .place { font-size: 12px; font-weight: 600; color: var(--muted); margin: 16px 0 8px; }
+  .place span { font-weight: 400; margin-right: 8px; font-variant-numeric: tabular-nums; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+  .tile { position: relative; aspect-ratio: 1; border: 0; padding: 0; background: var(--bg-2); cursor: pointer; outline: none; }
+  .tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .15s, filter .15s; }
+  .tile:focus-visible, .tile.focus { box-shadow: 0 0 0 3px var(--accent); z-index: 1; }
+  .tile.no img { opacity: .25; filter: grayscale(1); }
+  .tile.no::after { content: '✕'; position: absolute; inset: 0; display: grid; place-items: center; color: var(--no); font-size: 42px; font-weight: 300; }
+  .tile .t { position: absolute; left: 4px; bottom: 4px; font-size: 10px; background: rgba(0,0,0,.55); padding: 1px 5px; color: #ddd; }
+  body[data-filter="kept"] .tile.no, body[data-filter="rejected"] .tile:not(.no) { display: none; }
+
+  #view { position: fixed; inset: 0; z-index: 10; background: rgba(10,10,10,.92); display: grid; grid-template-rows: 1fr auto; }
+  #view[hidden] { display: none; }
+  #view img { width: 100%; height: 100%; object-fit: contain; padding: 24px 24px 0; min-height: 0; }
+  #view.no img { opacity: .35; filter: grayscale(1); }
+  #view .bar { display: flex; gap: 16px; align-items: center; justify-content: center; padding: 14px; color: var(--muted); font-size: 13px; }
+  #view .verdict { font-weight: 600; color: var(--keep); min-width: 80px; text-align: center; }
+  #view.no .verdict { color: var(--no); }
+  pre.out { position: fixed; right: 16px; bottom: 16px; max-width: 520px; max-height: 40vh; overflow: auto; margin: 0; padding: 12px;
+    background: var(--bg-2); border: 1px solid var(--line); font-size: 12px; white-space: pre-wrap; z-index: 6; }
+</style>
+</head>
+<body data-filter="all">
+<header>
+  <h1 id="title">Photo review</h1>
+  <span class="counts"><b id="kept">0</b> kept · <b id="nrej">0</b> rejected</span>
+  <div class="tabs" role="group">
+    <button data-f="all" aria-pressed="true">All</button>
+    <button data-f="kept" aria-pressed="false">Kept</button>
+    <button data-f="rejected" aria-pressed="false">Rejected</button>
+  </div>
+  <span class="spacer"></span>
+  <span class="status" id="status"></span>
+  <button class="apply" id="apply">Apply to site</button>
+</header>
+<p class="help">Click a photo (or <kbd>x</kbd>) to reject / restore. <kbd>←</kbd><kbd>→</kbd> move · <kbd>Enter</kbd> view large · <kbd>Esc</kbd> close. Saves as you go; <b>Apply</b> rebuilds the trip without the rejects.</p>
+<main id="main"></main>
+
+<div id="view" hidden>
+  <img alt="" />
+  <div class="bar"><span id="vpos"></span><span class="verdict" id="verdict"></span><span><kbd>x</kbd> toggle · <kbd>←</kbd><kbd>→</kbd> step · <kbd>Esc</kbd> close</span></div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+let photos = [], rejected = new Set(), tiles = [], cur = 0;
+
+const fmtDate = (iso) => new Date(iso + 'T12:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+
+async function load() {
+  const d = await (await fetch('/data')).json();
+  document.title = `Review · ${d.title}`;
+  $('#title').textContent = d.title;
+  photos = d.photos;
+  rejected = new Set(d.rejected);
+  const dayName = Object.fromEntries(d.days.map((x) => [x.date, x.name]));
+
+  const main = $('#main');
+  let lastDay, lastPlace, grid;
+  photos.forEach((p, i) => {
+    if (p.date !== lastDay) {
+      const sec = document.createElement('section');
+      sec.className = 'day';
+      const label = fmtDate(p.date);
+      sec.innerHTML = `<h2>${label}<span>${dayName[label] ?? ''}</span></h2>`;
+      main.append(sec);
+      lastDay = p.date; lastPlace = undefined;
+    }
+    if (p.place !== lastPlace || !grid) {
+      const cap = document.createElement('p');
+      cap.className = 'place';
+      cap.innerHTML = `<span>${p.time}</span>${p.place ?? 'Unplaced'}`;
+      grid = document.createElement('div');
+      grid.className = 'grid';
+      main.lastElementChild.append(cap, grid);
+      lastPlace = p.place;
+    }
+    const t = document.createElement('button');
+    t.className = 'tile' + (rejected.has(p.name) ? ' no' : '');
+    t.innerHTML = `<img loading="lazy" src="/img/800/${p.file}" alt=""><span class="t">${p.time}</span>`;
+    t.onclick = () => { focus(i); toggle(i); };
+    t.ondblclick = () => openView(i);
+    grid.append(t);
+    tiles.push(t);
+  });
+  counts();
+}
+
+function counts() {
+  $('#nrej').textContent = rejected.size;
+  $('#kept').textContent = photos.length - rejected.size;
+}
+
+let saveTimer;
+function toggle(i) {
+  const name = photos[i].name;
+  rejected.has(name) ? rejected.delete(name) : rejected.add(name);
+  tiles[i].classList.toggle('no', rejected.has(name));
+  if (!$('#view').hidden) paintView();
+  counts();
+  $('#status').textContent = 'saving…';
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(async () => {
+    const r = await fetch('/rejected', { method: 'POST', body: JSON.stringify([...rejected]) });
+    $('#status').textContent = r.ok ? 'saved' : 'save failed!';
+  }, 300);
+}
+
+function focus(i) {
+  tiles[cur]?.classList.remove('focus');
+  cur = Math.max(0, Math.min(photos.length - 1, i));
+  tiles[cur].classList.add('focus');
+  tiles[cur].scrollIntoView({ block: 'nearest' });
+  if (!$('#view').hidden) paintView();
+}
+
+function openView(i) { focus(i); $('#view').hidden = false; paintView(); }
+function paintView() {
+  const p = photos[cur], no = rejected.has(p.name);
+  $('#view img').src = `/img/1600/${p.file}`;
+  $('#view').classList.toggle('no', no);
+  $('#verdict').textContent = no ? 'Rejected' : 'Kept';
+  $('#vpos').textContent = `${cur + 1} / ${photos.length} · ${fmtDate(p.date)} ${p.time} · ${p.place ?? 'Unplaced'}`;
+  new Image().src = `/img/1600/${photos[Math.min(cur + 1, photos.length - 1)].file}`;
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.metaKey || e.ctrlKey) return;
+  const cols = Math.max(1, Math.round(tiles[cur].parentElement.clientWidth / tiles[cur].offsetWidth));
+  const viewing = !$('#view').hidden;
+  if (e.key === 'ArrowRight') focus(cur + 1);
+  else if (e.key === 'ArrowLeft') focus(cur - 1);
+  else if (e.key === 'ArrowDown' && !viewing) focus(cur + cols);
+  else if (e.key === 'ArrowUp' && !viewing) focus(cur - cols);
+  else if (e.key === 'x' || e.key === ' ') toggle(cur);
+  else if (e.key === 'Enter') viewing ? ($('#view').hidden = true) : openView(cur);
+  else if (e.key === 'Escape') $('#view').hidden = true;
+  else return;
+  e.preventDefault();
+});
+$('#view').addEventListener('click', (e) => { if (e.target.id === 'view') $('#view').hidden = true; });
+
+document.querySelectorAll('.tabs button').forEach((b) => b.onclick = () => {
+  document.body.dataset.filter = b.dataset.f;
+  document.querySelectorAll('.tabs button').forEach((x) => x.setAttribute('aria-pressed', x === b));
+});
+
+$('#apply').onclick = async () => {
+  const btn = $('#apply');
+  btn.disabled = true; btn.textContent = 'Applying…';
+  const r = await (await fetch('/apply', { method: 'POST' })).json();
+  btn.disabled = false; btn.textContent = 'Apply to site';
+  let out = $('pre.out');
+  if (!out) { out = document.createElement('pre'); out.className = 'out'; out.onclick = () => out.remove(); document.body.append(out); }
+  out.textContent = (r.ok ? '✓ Applied — the dev site has updated.\n\n' : '✗ Import failed:\n\n') + r.out + '\n(click to dismiss)';
+};
+
+load();
+</script>
+</body>
+</html>

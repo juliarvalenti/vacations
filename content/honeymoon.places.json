@@ -1,0 +1,77 @@
+{
+  "_comment": "Gazetteer for scripts/import_local.py. Photos are labelled with the nearest place within radius km (default 1.5). Optional after/before (HH:MM) restrict a place by time of day, for spots that share a location. Coordinates are approximate.",
+  "places": [
+    { "name": "Horizon Guest House", "lat": 19.364, "lon": -155.873 },
+    { "name": "Don's Mai Tai Bar", "lat": 19.632, "lon": -155.990 },
+
+    { "name": "Greenwell Farms", "lat": 19.506, "lon": -155.915 },
+    { "name": "Makāula-ʻOʻoma Trail", "lat": 19.727, "lon": -155.955, "radius": 0.1 },
+    { "name": "Puʻukoholā Heiau", "lat": 20.026, "lon": -155.822 },
+    { "name": "Puakō Petroglyphs", "lat": 19.957, "lon": -155.859, "radius": 0.6 },
+    { "name": "Kalahuipuaʻa fishponds", "lat": 19.946, "lon": -155.867, "radius": 0.6, "before": "18:55" },
+    { "name": "CanoeHouse", "lat": 19.947, "lon": -155.867, "radius": 0.6, "after": "18:55" },
+
+    { "name": "Hula Daddy", "lat": 19.581, "lon": -155.967 },
+    { "name": "Uihā Hat Bar, Waimea", "lat": 20.021, "lon": -155.668, "before": "13:00" },
+    { "name": "Paniolo Adventures", "lat": 20.135, "lon": -155.803, "radius": 2.5 },
+    { "name": "Kohala Mountain Road", "lat": 20.055, "lon": -155.740, "radius": 3 },
+    { "name": "Waimea", "lat": 20.022, "lon": -155.667, "after": "16:30", "before": "17:20" },
+    { "name": "Merriman's", "lat": 20.023, "lon": -155.677, "after": "17:20" },
+
+    { "name": "Kealakekua Bay", "lat": 19.476, "lon": -155.920, "radius": 2 },
+    { "name": "Kaloko-Honokōhau", "lat": 19.678, "lon": -156.021, "radius": 2 },
+    { "name": "Noio", "lat": 19.829, "lon": -155.991, "radius": 3, "after": "18:30" },
+
+    { "name": "South Point", "lat": 18.913, "lon": -155.681, "radius": 5 },
+    { "name": "Punaluʻu", "lat": 19.136, "lon": -155.505, "radius": 5 },
+    { "name": "Volcano Village Lodge", "lat": 19.437, "lon": -155.233 },
+    { "name": "Mauna Kea visitor station", "lat": 19.760, "lon": -155.456, "radius": 1 },
+    { "name": "Mauna Kea summit", "lat": 19.822, "lon": -155.470, "radius": 2.5 },
+
+    { "name": "Kīlauea caldera", "lat": 19.420, "lon": -155.288, "radius": 2 },
+    { "name": "Volcano House", "lat": 19.429, "lon": -155.258, "radius": 0.8 },
+    { "name": "Kilauea Lodge", "lat": 19.431, "lon": -155.228, "radius": 0.6, "after": "18:00" },
+
+    { "name": "Puʻu ʻŌʻō Trail", "lat": 19.665, "lon": -155.388, "radius": 2.5 },
+    { "name": "Palila Discovery Trail", "lat": 19.830, "lon": -155.600, "radius": 2.5 },
+
+    { "name": "Chain of Craters Road", "lat": 19.330, "lon": -155.190, "radius": 4 },
+    { "name": "Hōlei Sea Arch", "lat": 19.292, "lon": -155.107, "radius": 1.5 },
+    { "name": "ʻAkaka Falls", "lat": 19.854, "lon": -155.152 },
+    { "name": "Hawaiʻi Tropical Botanical Garden", "lat": 19.810, "lon": -155.100 },
+    { "name": "Hilo Honu Inn", "lat": 19.720, "lon": -155.090 },
+    { "name": "The Seaside", "lat": 19.733, "lon": -155.029, "after": "18:00" },
+
+    { "name": "Honolulu airport", "lat": 21.332, "lon": -157.920, "radius": 2 },
+    { "name": "Royal Hawaiian", "lat": 21.2775, "lon": -157.829, "radius": 0.35, "before": "15:30" },
+    { "name": "Mai Tai Bar", "lat": 21.2775, "lon": -157.829, "radius": 0.35, "after": "15:30", "before": "18:00" },
+    { "name": "natuRe", "lat": 21.281, "lon": -157.827, "radius": 0.35, "after": "18:00", "before": "20:00" },
+    { "name": "Lewers Lounge", "lat": 21.279, "lon": -157.832, "radius": 0.5, "after": "20:00" },
+
+    { "name": "Bishop Museum", "lat": 21.333, "lon": -157.871 },
+    { "name": "La Mariana Sailing Club", "lat": 21.322, "lon": -157.893 },
+    { "name": "Skull & Crown Trading Co.", "lat": 21.312, "lon": -157.863, "radius": 0.8 },
+
+    { "name": "ʻAiea Loop Trail", "lat": 21.402, "lon": -157.896, "radius": 2.5 },
+    { "name": "Hoʻomaluhia Botanical Garden", "lat": 21.388, "lon": -157.810 },
+    { "name": "Nuʻuanu Pali Lookout", "lat": 21.367, "lon": -157.793 },
+    { "name": "Puʻu ʻUalakaʻa", "lat": 21.316, "lon": -157.818 },
+    { "name": "Helena's Hawaiian Food", "lat": 21.334, "lon": -157.866, "radius": 0.5 },
+    { "name": "House Without A Key", "lat": 21.278, "lon": -157.8325, "radius": 0.3 },
+
+    { "name": "Hanauma Bay", "lat": 21.271, "lon": -157.694, "radius": 1.2 },
+    { "name": "Lānaʻi Lookout", "lat": 21.283, "lon": -157.675, "radius": 0.6 },
+    { "name": "Makapuʻu", "lat": 21.310, "lon": -157.650, "radius": 2 },
+    { "name": "Hau Tree", "lat": 21.262, "lon": -157.822, "radius": 0.4 },
+
+    { "name": "White terns at UH Mānoa", "lat": 21.300, "lon": -157.818, "radius": 0.8 },
+    { "name": "ʻIolani Palace", "lat": 21.3066, "lon": -157.8588, "radius": 0.5 },
+    { "name": "Waikīkī", "lat": 21.272, "lon": -157.824, "radius": 0.8, "after": "16:30", "before": "17:45" },
+    { "name": "Michel's at the Colony Surf", "lat": 21.263, "lon": -157.821, "radius": 0.4, "after": "17:45" },
+
+    { "name": "Kaʻena Point", "lat": 21.576, "lon": -158.250, "radius": 3 },
+    { "name": "Haleʻiwa", "lat": 21.593, "lon": -158.103, "radius": 2 },
+    { "name": "Azure", "lat": 21.2775, "lon": -157.829, "radius": 0.35, "after": "18:00" },
+    { "name": "Waikīkī Aquarium", "lat": 21.2655, "lon": -157.8216, "radius": 0.05 }
+  ]
+}

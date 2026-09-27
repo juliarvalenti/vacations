@@ -1,6 +1,7 @@
 {
   "title": "Hawaiʻi Honeymoon",
   "subtitle": "September 6–20, 2026",
+  "map": "hawaii",
   "days": [
     { "date": "September 6", "name": "aloha", "stops": [
       "Check in at Horizon Guest House after 2pm",

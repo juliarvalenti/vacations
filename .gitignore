@@ -1,4 +1,6 @@
 _import/originals/
+_import/review/
+_import/*.manifest.json
 .DS_Store
 node_modules/
 dist/

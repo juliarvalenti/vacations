@@ -27,7 +27,7 @@ const extraCss = trip ? tripCss[`../styles/trips/${trip.slug}.css`] : undefined;
     <main><slot /></main>
     <footer class="wrap foot">Family photo albums · {new Date().getFullYear()}</footer>
 
-    <Lightbox />
+    <Lightbox trip={trip} />
   </body>
 </html>
 

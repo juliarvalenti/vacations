@@ -1,7 +1,8 @@
 ---
 // Bespoke page for the honeymoon: a day-by-day journal driven by the itinerary.
 // Each section in content/honeymoon.json is one day: heading = the day's name,
-// subtitle = the date, text = the stops. Photos are placeholders until the real ones land.
+// subtitle = the date, text = the stops. Photo blocks are built by scripts/import_local.py from
+// EXIF time + GPS; each block's caption is the place the photos were taken.
 import Base from '../Base.astro';
 import Hero from '../../components/Hero.astro';
 import Grid from '../../components/Grid.astro';
@@ -16,7 +17,7 @@ const islands = (i: number) => (i < 8 ? 'Hawaiʻi' : 'Oʻahu'); // day 9 onward 
   <Hero trip={trip} eyebrow={trip.subtitle ?? ''} />
 
   <section class="wrap intro">
-    <p>Two weeks, two islands, a lot of birds. This is the plan as written — photos to follow.</p>
+    <p>Two weeks, two islands, a lot of birds.</p>
   </section>
 
   {trip.sections.map((s, i) => (
@@ -28,11 +29,14 @@ const islands = (i: number) => (i < 8 ? 'Hawaiʻi' : 'Oʻahu'); // day 9 onward 
       <div class="body">
         <h2>{s.heading}</h2>
         <ul class="stops">{s.text.map((t) => <li>{t}</li>)}</ul>
-        {s.blocks.map((b) =>
-          b.type === 'carousel'
-            ? <Carousel images={b.images} trip={trip.slug} />
-            : <Grid images={b.images} trip={trip.slug} />
-        )}
+        {s.blocks.map((b) => (
+          <div class="stop">
+            {b.caption && <p class="cap"><span>{b.images[0].time}</span>{b.caption}</p>}
+            {b.type === 'carousel'
+              ? <Carousel images={b.images} trip={trip.slug} />
+              : <Grid images={b.images} trip={trip.slug} />}
+          </div>
+        ))}
       </div>
     </article>
   ))}
@@ -50,6 +54,11 @@ const islands = (i: number) => (i < 8 ? 'Hawaiʻi' : 'Oʻahu'); // day 9 onward 
   h2 { font-size: clamp(34px, 5vw, 64px); font-style: italic; font-weight: 400; text-transform: lowercase; }
   .stops { margin: 0; padding: 0 0 0 1.1em; color: var(--muted); font-size: 15px; max-width: 64ch; display: grid; gap: 4px; }
   .stops li::marker { color: var(--accent); }
+  .stop { display: grid; gap: 10px; margin-top: 12px; }
+  .cap { margin: 0; font-size: 13px; font-weight: 600; display: flex; gap: 10px; align-items: baseline; }
+  .cap span { color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums; }
+  /* carousels sit inside the day column here, not full-bleed */
+  .body :global(.carousel) { margin-inline: 0; width: auto; border-radius: 8px; }
   @media (max-width: 800px) {
     .day { grid-template-columns: 1fr; gap: 12px; }
     .rail { position: static; grid-auto-flow: column; justify-content: start; gap: 12px; align-items: baseline; }

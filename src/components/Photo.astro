@@ -14,5 +14,7 @@ const p = `${import.meta.env.BASE_URL}assets/${trip}/${img.file}`;
   loading={eager ? 'eager' : 'lazy'}
   decoding="async"
   style={`background: url(${p}-24.jpg) center / cover`}
-  alt=""
+  alt={img.place ?? ''}
+  data-place={img.place ?? undefined}
+  data-time={img.time}
 />
